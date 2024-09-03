@@ -1,0 +1,52 @@
+{
+	
+    "multipart": [
+	
+		{  
+		
+			"apply": { "model": "mechanicraft:block/structure_pipe/core/structure_pipe_core" }
+		
+		},
+		{
+	
+			"when": { "pipe_down": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_bottom" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_east": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_east" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_north": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_north" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_south": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_south" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_up": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_top" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_west": true },
+			"apply": { "model": "mechanicraft:block/structure_pipe/connections/structure_pipe_west" }
+	
+		}
+	]
+}

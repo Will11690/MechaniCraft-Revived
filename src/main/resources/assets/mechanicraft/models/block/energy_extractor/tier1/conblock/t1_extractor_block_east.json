@@ -1,0 +1,44 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"4": "east",
+		"5": "east_connector",
+		"particle": "connector_core"
+	},
+	"elements": [
+		{
+			"name": "eastcon",
+			"from": [12, 4, 4],
+			"to": [16, 12, 12],
+			"faces": {
+				"north": {"uv": [8, 0, 12, 8], "texture": "#5"},
+				"east": {"uv": [0, 0, 8, 8], "texture": "#5"},
+				"south": {"uv": [8, 8, 12, 16], "texture": "#5"},
+				"west": {"uv": [0, 8, 8, 16], "texture": "#5"},
+				"up": {"uv": [16, 8, 12, 0], "texture": "#5"},
+				"down": {"uv": [16, 8, 12, 16], "texture": "#5"}
+			}
+		},
+		{
+			"name": "east",
+			"from": [10, 6, 6],
+			"to": [12, 10, 10],
+			"faces": {
+				"north": {"uv": [4, 0, 6, 4], "texture": "#4"},
+				"east": {"uv": [0, 0, 4, 4], "texture": "#4"},
+				"south": {"uv": [4, 4, 6, 8], "texture": "#4"},
+				"west": {"uv": [0, 4, 4, 8], "texture": "#4"},
+				"up": {"uv": [8, 4, 6, 0], "texture": "#4"},
+				"down": {"uv": [8, 4, 6, 8], "texture": "#4"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "block_east",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

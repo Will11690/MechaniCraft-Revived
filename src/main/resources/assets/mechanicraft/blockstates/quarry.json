@@ -1,0 +1,21 @@
+{
+    "variants": 
+    {
+        "mining=false,complete=false,stalled=false,facing=north": { "model": "mechanicraft:/block/quarry_idle" },
+        "mining=false,complete=false,stalled=false,facing=east": { "model": "mechanicraft:/block/quarry_idle", "y": 90 },
+        "mining=false,complete=false,stalled=false,facing=south": { "model": "mechanicraft:/block/quarry_idle", "y": 180 },
+        "mining=false,complete=false,stalled=false,facing=west": { "model": "mechanicraft:/block/quarry_idle", "y": 270 },
+        "mining=false,complete=false,stalled=true,facing=north": { "model": "mechanicraft:/block/quarry_mining_stalled" },
+        "mining=false,complete=false,stalled=true,facing=east": { "model": "mechanicraft:/block/quarry_mining_stalled", "y": 90 },
+        "mining=false,complete=false,stalled=true,facing=south": { "model": "mechanicraft:/block/quarry_mining_stalled", "y": 180 },
+        "mining=false,complete=false,stalled=true,facing=west": { "model": "mechanicraft:/block/quarry_mining_stalled", "y": 270 },
+        "mining=false,complete=true,stalled=false,facing=north": { "model": "mechanicraft:/block/quarry_mining" },
+        "mining=false,complete=true,stalled=false,facing=east": { "model": "mechanicraft:/block/quarry_mining", "y": 90 },
+        "mining=false,complete=true,stalled=false,facing=south": { "model": "mechanicraft:/block/quarry_mining", "y": 180 },
+        "mining=false,complete=true,stalled=false,facing=west": { "model": "mechanicraft:/block/quarry_mining", "y": 270 },
+        "mining=true,complete=false,stalled=false,facing=north": { "model": "mechanicraft:/block/quarry_mining" },
+        "mining=true,complete=false,stalled=false,facing=east": { "model": "mechanicraft:/block/quarry_mining", "y": 90 },
+        "mining=true,complete=false,stalled=false,facing=south": { "model": "mechanicraft:/block/quarry_mining", "y": 180 },
+        "mining=true,complete=false,stalled=false,facing=west": { "model": "mechanicraft:/block/quarry_mining", "y":270  }
+    }
+}

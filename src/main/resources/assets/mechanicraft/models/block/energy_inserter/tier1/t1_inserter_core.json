@@ -1,0 +1,29 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"6": "connector_core",
+		"particle": "connector_core"
+	},
+	"elements": [
+		{
+			"from": [6, 6, 6],
+			"to": [10, 10, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#6"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#6"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#6"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#6"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#6"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#6"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "core",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

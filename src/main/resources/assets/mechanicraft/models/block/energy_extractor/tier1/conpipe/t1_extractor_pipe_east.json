@@ -1,0 +1,30 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"6": "east_pipe",
+		"particle": "connector_core"
+	},
+	"elements": [
+		{
+			"name": "east",
+			"from": [10, 6, 6],
+			"to": [16, 10, 10],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 4], "texture": "#6"},
+				"east": {"uv": [0, 8, 4, 12], "texture": "#6"},
+				"south": {"uv": [0, 4, 6, 8], "texture": "#6"},
+				"west": {"uv": [4, 8, 8, 12], "texture": "#6"},
+				"up": {"uv": [12, 4, 6, 0], "texture": "#6"},
+				"down": {"uv": [12, 4, 6, 8], "texture": "#6"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "pipe_east",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

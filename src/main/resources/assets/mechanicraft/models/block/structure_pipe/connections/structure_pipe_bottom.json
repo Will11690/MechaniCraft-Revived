@@ -1,0 +1,41 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"1": "mechanicraft:models/structure_pipe/connections/structure_bottom",
+		"particle": "mechanicraft:models/structure_pipe/core/structure_core"
+	},
+	"elements": [
+		{
+			"name": "structure_bottom",
+			"from": [5, 0, 5],
+			"to": [11, 5, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 6, 5], "texture": "#1"},
+				"east": {"uv": [6, 0, 12, 5], "texture": "#1"},
+				"south": {"uv": [6, 5, 12, 10], "texture": "#1"},
+				"west": {"uv": [0, 5, 6, 10], "texture": "#1"},
+				"up": {"uv": [15, 16, 14, 15], "texture": "#1"},
+				"down": {"uv": [16, 15, 15, 16], "texture": "#1"}
+			}
+		}
+	],
+	"display": {
+		"ground": {
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"gui": {
+			"scale": [2, 2, 2]
+		},
+		"fixed": {
+			"scale": [1.5, 1.5, 1.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "connections",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

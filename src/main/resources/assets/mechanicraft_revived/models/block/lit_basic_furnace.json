@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mechanicraft_revived:block/basic_machine",
+        "up": "mechanicraft_revived:block/basic_machine",
+        "down": "mechanicraft_revived:block/basic_machine",
+        "north": "mechanicraft_revived:block/basic_furnace_front_on",
+        "east": "mechanicraft_revived:block/basic_machine",
+        "south": "mechanicraft_revived:block/basic_machine",
+        "west": "mechanicraft_revived:block/basic_machine"
+    }
+}

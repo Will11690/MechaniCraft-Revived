@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mechanicraft_revived:block/tier6_machine",
+        "up": "mechanicraft_revived:block/tier6_machine",
+        "down": "mechanicraft_revived:block/tier6_machine",
+        "north": "mechanicraft_revived:block/t6powered_sieve_front_on",
+        "east": "mechanicraft_revived:block/tier6_machine",
+        "south": "mechanicraft_revived:block/tier6_machine",
+        "west": "mechanicraft_revived:block/tier6_machine"
+    }
+}

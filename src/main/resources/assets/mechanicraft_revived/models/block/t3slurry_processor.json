@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mechanicraft_revived:block/tier3_machine",
+        "up": "mechanicraft_revived:block/tier3_machine",
+        "down": "mechanicraft_revived:block/tier3_machine",
+        "north": "mechanicraft_revived:block/t3slurry_processor_front_off",
+        "east": "mechanicraft_revived:block/tier3_machine_input1",
+        "south": "mechanicraft_revived:block/tier3_machine_output",
+        "west": "mechanicraft_revived:block/tier3_machine_input2"
+    }
+}

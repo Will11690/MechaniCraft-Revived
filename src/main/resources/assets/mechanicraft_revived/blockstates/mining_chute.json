@@ -1,0 +1,15 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "mechanicraft_revived:block/mining_chute",
+        "textures": {
+            "mining_chute": "mechanicraft_revived:models/mining_chute"
+        },
+        "uvlock": false
+    },
+    "variants": {
+        "": [{
+            "model": "mechanicraft_revived:block/mining_chute"
+        }]
+    }
+}

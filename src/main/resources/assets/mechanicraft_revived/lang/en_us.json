@@ -7,7 +7,7 @@
 	"block.mechanicraft_revived.ruby_ore": "Ruby Ore",
 	"block.mechanicraft_revived.sapphire_ore": "Sapphire Ore",
 	"block.mechanicraft_revived.ender_ore": "Ender Ore",
-	
+
 	"block.mechanicraft_revived.bronze_block": "Bronze Block",
 	"block.mechanicraft_revived.emeronium_block": "Emeronium Block",
 	"block.mechanicraft_revived.endonium_block": "Endonium Block",
@@ -23,6 +23,7 @@
 	"block.mechanicraft_revived.tin_block": "Tin Block",
 	"block.mechanicraft_revived.steel_block": "Steel Block",
 	"block.mechanicraft_revived.ender_block": "Ender Block",
+
 	"block.mechanicraft_revived.machine_block": "Machine Block",
 	"block.mechanicraft_revived.t1_gear_box": "Gear Box Lv. 1",
 	"block.mechanicraft_revived.t2_gear_box": "Gear Box Lv. 2",
@@ -73,6 +74,10 @@
 	"item.mechanicraft_revived.lead_ore_slurry_bucket": "Lead Ore Slurry Bucket",
 	"item.mechanicraft_revived.copper_ore_slurry_bucket": "Copper Ore Slurry Bucket",
 	"item.mechanicraft_revived.liquid_slag_bucket": "Liquid Slag Bucket",
+
+	"item.mechanicraft_revived.raw_tin": "Raw Tin",
+	"item.mechanicraft_revived.raw_silver": "Raw Silver",
+	"item.mechanicraft_revived.raw_lead": "Raw Lead",
 
 	"item.mechanicraft_revived.tin_ingot": "Tin Ingot",
 	"item.mechanicraft_revived.bronze_ingot": "Bronze Ingot",

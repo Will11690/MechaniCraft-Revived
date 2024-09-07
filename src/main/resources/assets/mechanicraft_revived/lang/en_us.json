@@ -12,7 +12,7 @@
 	"block.mechanicraft_revived.emeronium_block": "Emeronium Block",
 	"block.mechanicraft_revived.endonium_block": "Endonium Block",
 	"block.mechanicraft_revived.endonium_crystal_block": "Endonium Crystal Block",
-	"block.mechanicraft_revived.gold_infused_iron_block": "AuFe Block",
+	"block.mechanicraft_revived.au_fe_block": "AuFe Block",
 	"block.mechanicraft_revived.lead_block": "Lead Block",
 	"block.mechanicraft_revived.obsidium_block": "Obsidium Block",
 	"block.mechanicraft_revived.rubonium_block": "Rubonium Block",
@@ -302,11 +302,11 @@
 	
 	"com.github.will11690.mechanicraft_revived.screen.upgrade": "Contains Upgrades",
 	
-	"creativemodetab.mechanicraft_revived_blocks_tab": "MechaniCraft Blocks",
-	"creativemodetab.mechanicraft_revived_machines_tab": "MechaniCraft Machines",
-	"creativemodetab.mechanicraft_revived_items_tab": "MechaniCraft Items",
-	"creativemodetab.mechanicraft_revived_tools_tab": "MechaniCraft Tools",
-	"creativemodetab.mechanicraft_revived_armor_tab": "MechaniCraft Armor",
+	"creativemodetab.mechanicraft_revived.blocks_tab": "MechaniCraft Blocks",
+	"creativemodetab.mechanicraft_revived.machines_tab": "MechaniCraft Machines",
+	"creativemodetab.mechanicraft_revived.items_tab": "MechaniCraft Items",
+	"creativemodetab.mechanicraft_revived.tools_tab": "MechaniCraft Tools",
+	"creativemodetab.mechanicraft_revived.armor_tab": "MechaniCraft Armor",
 	
 	"block.mechanicraft_revived.t1_energy_chute": "Energy Chute Tier 1",
 	"block.mechanicraft_revived.t2_energy_chute": "Energy Chute Tier 2",

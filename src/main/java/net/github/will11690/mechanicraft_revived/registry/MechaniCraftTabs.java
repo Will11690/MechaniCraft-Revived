@@ -147,6 +147,12 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.SilverOre.get());
                 output.accept(MechaniCraftBlocks.TinOre.get());
 
+                output.accept(MechaniCraftBlocks.DeepslateLeadOre.get());
+                output.accept(MechaniCraftBlocks.DeepslateRubyOre.get());
+                output.accept(MechaniCraftBlocks.DeepslateSapphireOre.get());
+                output.accept(MechaniCraftBlocks.DeepslateSilverOre.get());
+                output.accept(MechaniCraftBlocks.DeepslateTinOre.get());
+
                 output.accept(MechaniCraftBlocks.RawLeadBlock.get());
                 output.accept(MechaniCraftBlocks.RawSilverBlock.get());
                 output.accept(MechaniCraftBlocks.RawTinBlock.get());

@@ -24,6 +24,12 @@ public class MechaniCraftBlocks {
     public static final RegistryObject<Block> SilverOre = registerBlock("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> TinOre = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
+    public static final RegistryObject<Block> DeepslateLeadOre = registerBlock("deepslate_lead_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> DeepslateRubyOre = registerBlock("deepslate_ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> DeepslateSapphireOre = registerBlock("deepslate_sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> DeepslateSilverOre = registerBlock("deepslate_silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> DeepslateTinOre = registerBlock("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
     public static final RegistryObject<Block> RawLeadBlock = registerBlock("raw_lead_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> RawSilverBlock = registerBlock("raw_silver_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> RawTinBlock = registerBlock("raw_tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));

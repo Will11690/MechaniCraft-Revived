@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:rods/wooden"
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:wooden_gear",
+		"item": "mechanicraft_revived:wooden_gear",
 		"count": 2
 	
 	}

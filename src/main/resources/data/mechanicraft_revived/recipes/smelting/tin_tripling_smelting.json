@@ -3,12 +3,12 @@
 	
 	"ingredient": {
 	
-		"item": "mechanicraft:tin_refined_chunks"
+		"item": "mechanicraft_revived:tin_refined_chunks"
 		
 		},
 	
 	"result": { 
-	"item": "mechanicraft:tin_ingot",
+	"item": "mechanicraft_revived:tin_ingot",
 	"count": 3,
     "experience": 0.7,
     "cookingtime": 200

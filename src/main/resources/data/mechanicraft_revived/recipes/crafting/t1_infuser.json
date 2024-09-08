@@ -12,21 +12,21 @@
     {
         "I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         },
         "M":
         {
-            "item": "mechanicraft:t1_gear_box"
+            "item": "mechanicraft_revived:t1_gear_box"
         },
         "B":
         {
-            "item": "mechanicraft:basic_metallic_infuser"
+            "item": "mechanicraft_revived:basic_metallic_infuser"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t1_metallic_infuser",
+        "item": "mechanicraft_revived:t1_metallic_infuser",
         "count": 1
     }
 }

@@ -10,13 +10,13 @@
     {
         "I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:gold_infused_iron_nugget",
+        "item": "mechanicraft_revived:au_fe_nugget",
         "count": 9
     }
 }

@@ -7,9 +7,11 @@
 		
 		},
 	
-	"result": "mechanicraft:saphonium_ingot",
-    "experience": 0.0,
-    "cookingtime": 200
+	"result":  {
+		"item": "mechanicraft_revived:saphonium_ingot",
+		"count": 1,
+    	"experience": 0.0,
+    	"cookingtime": 200
 	
 	}
 

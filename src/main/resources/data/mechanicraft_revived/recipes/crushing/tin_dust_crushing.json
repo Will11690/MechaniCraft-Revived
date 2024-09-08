@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:ingots/tin"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:tin_dust"
+		"item": "mechanicraft_revived:tin_dust"
 	
 	},
 	

@@ -15,13 +15,13 @@
         },
 		"G":
         {
-            "item": "mechanicraft:glass_helmet"
+            "item": "mechanicraft_revived:glass_helmet"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:emeronium_helmet",
+        "item": "mechanicraft_revived:emeronium_helmet",
         "count": 1
     }
 }

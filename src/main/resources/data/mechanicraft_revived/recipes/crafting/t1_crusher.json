@@ -12,11 +12,11 @@
     {
         "I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         },
         "M":
         {
-            "item": "mechanicraft:t1_gear_box"
+            "item": "mechanicraft_revived:t1_gear_box"
         },
         "P":
         {
@@ -30,7 +30,7 @@
     
     "result":
     {
-        "item": "mechanicraft:t1_crusher",
+        "item": "mechanicraft_revived:t1_crusher",
         "count": 1
     }
 }

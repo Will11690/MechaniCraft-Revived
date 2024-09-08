@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:nuggets/obsidium"
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:emeronium_gear",
+		"item": "mechanicraft_revived:emeronium_gear",
 		"count": 2
 	
 	}

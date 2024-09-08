@@ -16,13 +16,13 @@
         },
 		"G":
         {
-            "item": "mechanicraft:glass_leggings"
+            "item": "mechanicraft_revived:glass_leggings"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:saphonium_leggings",
+        "item": "mechanicraft_revived:saphonium_leggings",
         "count": 1
     }
 }

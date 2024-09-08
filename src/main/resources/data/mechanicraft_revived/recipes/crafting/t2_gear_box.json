@@ -16,17 +16,17 @@
         },
         "M":
         {
-            "item": "mechanicraft:t1_gear_box"
+            "item": "mechanicraft_revived:t1_gear_box"
         },
         "G":
         {
-            "tag": "forge:gears/gold_infused_iron"
+            "tag": "forge:gears/au_fe"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t2_gear_box",
+        "item": "mechanicraft_revived:t2_gear_box",
         "count": 1
     }
 }

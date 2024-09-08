@@ -16,17 +16,17 @@
         },
         "M":
         {
-            "item": "mechanicraft:t4_gear_box"
+            "item": "mechanicraft_revived:t4_gear_box"
         },
         "S":
         {
-            "item": "mechanicraft:t3_powered_sieve"
+            "item": "mechanicraft_revived:t3_powered_sieve"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t4_powered_sieve",
+        "item": "mechanicraft_revived:t4_powered_sieve",
         "count": 1
     }
 }

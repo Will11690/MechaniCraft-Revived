@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:gems/sapphire"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:sapphire_dust"
+		"item": "mechanicraft_revived:sapphire_dust"
 	
 	},
 	

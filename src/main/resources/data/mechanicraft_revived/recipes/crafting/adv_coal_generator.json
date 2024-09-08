@@ -12,11 +12,11 @@
     {
         "I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         },
         "B":
         {
-            "item": "mechanicraft:basic_coal_generator"
+            "item": "mechanicraft_revived:basic_coal_generator"
         },
         "N":
         {
@@ -26,7 +26,7 @@
     
     "result":
     {
-        "item": "mechanicraft:advanced_coal_generator",
+        "item": "mechanicraft_revived:advanced_coal_generator",
         "count": 1
     }
 }

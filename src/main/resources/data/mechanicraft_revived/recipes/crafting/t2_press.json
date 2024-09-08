@@ -16,7 +16,7 @@
         },
         "M":
         {
-            "item": "mechanicraft:t2_gear_box"
+            "item": "mechanicraft_revived:t2_gear_box"
         },
         "S":
         {
@@ -24,13 +24,13 @@
         },
         "P":
         {
-            "item": "mechanicraft:t1_press"
+            "item": "mechanicraft_revived:t1_press"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t2_press",
+        "item": "mechanicraft_revived:t2_press",
         "count": 1
     }
 }

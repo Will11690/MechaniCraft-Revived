@@ -16,7 +16,7 @@
         },
         "M":
         {
-            "item": "mechanicraft:t6_gear_box"
+            "item": "mechanicraft_revived:t6_gear_box"
         },
         "R":
         {
@@ -24,13 +24,13 @@
         },
         "C":
         {
-            "item": "mechanicraft:t5_energy_cube"
+            "item": "mechanicraft_revived:t5_energy_cube"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t6_energy_cube",
+        "item": "mechanicraft_revived:t6_energy_cube",
         "count": 1
     }
 }

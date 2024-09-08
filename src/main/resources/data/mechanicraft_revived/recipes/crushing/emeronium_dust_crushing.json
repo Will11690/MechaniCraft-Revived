@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:ingots/emeronium"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:emeronium_dust"
+		"item": "mechanicraft_revived:emeronium_dust"
 	
 	},
 	

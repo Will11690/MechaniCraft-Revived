@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:reinforced_steel_mesh"
+		"item": "mechanicraft_revived:reinforced_steel_mesh"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:diamond_mesh"
+		"item": "mechanicraft_revived:diamond_mesh"
 	
 	}
 

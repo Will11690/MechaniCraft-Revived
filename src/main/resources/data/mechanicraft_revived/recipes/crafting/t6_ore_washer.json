@@ -16,21 +16,21 @@
         },
         "M":
         {
-            "item": "mechanicraft:t6_gear_box"
+            "item": "mechanicraft_revived:t6_gear_box"
         },
         "T":
         {
-            "item": "mechanicraft:ultimate_fluid_tank"
+            "item": "mechanicraft_revived:ultimate_fluid_tank"
         },
         "C":
         {
-            "item": "mechanicraft:t5_ore_washer"
+            "item": "mechanicraft_revived:t5_ore_washer"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t6_ore_washer",
+        "item": "mechanicraft_revived:t6_ore_washer",
         "count": 1
     }
 }

@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:ingots/copper"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:copper_dust"
+		"item": "mechanicraft_revived:copper_dust"
 	
 	},
 	

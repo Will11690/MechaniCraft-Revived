@@ -1,20 +1,20 @@
 {
-	"type": "mechanicraft:sieve_recipes",
+	"type": "mechanicraft_revived:sieve_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:copper_dirty_chunks"
+		"item": "mechanicraft_revived:copper_dirty_chunks"
 		
 		},
 		
 	"input2": {
 	
-		"item": "mechanicraft:reinforced_gem_mesh"
+		"item": "mechanicraft_revived:reinforced_gem_mesh"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:copper_refined_chunks"
+		"item": "mechanicraft_revived:copper_refined_chunks"
 	
 	},
 	

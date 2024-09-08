@@ -3,12 +3,12 @@
 	
     "ingredient": {
 	
-		"item": "mechanicraft:silver_pure_chunks"
+		"item": "mechanicraft_revived:silver_pure_chunks"
 		
     },
 	
     "result": { 
-	"item": "mechanicraft:silver_ingot",
+	"item": "mechanicraft_revived:silver_ingot",
 	"count": 4,
     "experience": 1.0,
     "cookingtime": 100

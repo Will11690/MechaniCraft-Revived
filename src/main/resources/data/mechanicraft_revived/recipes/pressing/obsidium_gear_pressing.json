@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
-		"tag": "forge:nuggets/gold_infused_iron"
+		"tag": "forge:nuggets/au_fe"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"input3": {
 	
-		"tag": "forge:nuggets/gold_infused_iron"
+		"tag": "forge:nuggets/au_fe"
 		
 		},
 		
@@ -26,7 +26,7 @@
 		
 	"input5": {
 	
-		"tag": "forge:nuggets/gold_infused_iron"
+		"tag": "forge:nuggets/au_fe"
 		
 		},
 		
@@ -38,7 +38,7 @@
 		
 	"input7": {
 	
-		"tag": "forge:nuggets/gold_infused_iron"
+		"tag": "forge:nuggets/au_fe"
 		
 		},
 		
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:obsidium_gear",
+		"item": "mechanicraft_revived:obsidium_gear",
 		"count": 2
 	
 	}

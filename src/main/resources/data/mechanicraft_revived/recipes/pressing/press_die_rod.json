@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:ingots/iron"
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:rod_press_die",
+		"item": "mechanicraft_revived:rod_press_die",
 		"count": 1
 	
 	}

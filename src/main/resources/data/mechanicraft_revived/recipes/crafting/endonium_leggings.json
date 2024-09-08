@@ -16,25 +16,25 @@
         },
 		"O":
         {
-            "item": "mechanicraft:obsidium_leggings"
+            "item": "mechanicraft_revived:obsidium_leggings"
         },
 		"E":
         {
-            "item": "mechanicraft:emeronium_leggings"
+            "item": "mechanicraft_revived:emeronium_leggings"
         },
 		"S":
         {
-            "item": "mechanicraft:saphonium_leggings"
+            "item": "mechanicraft_revived:saphonium_leggings"
         },
 		"R":
         {
-            "item": "mechanicraft:rubonium_leggings"
+            "item": "mechanicraft_revived:rubonium_leggings"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:endonium_leggings",
+        "item": "mechanicraft_revived:endonium_leggings",
         "count": 1
     }
 }

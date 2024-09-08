@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:nuggets/diamond"
@@ -50,13 +50,13 @@
 	
 	"input9": {
 	
-		"item": "mechanicraft:steel_mesh"
+		"item": "mechanicraft_revived:steel_mesh"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:reinforced_steel_mesh"
+		"item": "mechanicraft_revived:reinforced_steel_mesh"
 	
 	}
 

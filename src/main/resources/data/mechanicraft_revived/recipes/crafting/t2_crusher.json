@@ -16,17 +16,17 @@
         },
         "M":
         {
-            "item": "mechanicraft:t2_gear_box"
+            "item": "mechanicraft_revived:t2_gear_box"
         },
         "C":
         {
-            "item": "mechanicraft:t1_crusher"
+            "item": "mechanicraft_revived:t1_crusher"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t2_crusher",
+        "item": "mechanicraft_revived:t2_crusher",
         "count": 1
     }
 }

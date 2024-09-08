@@ -16,7 +16,7 @@
         },
         "M":
         {
-            "item": "mechanicraft:machine_block"
+            "item": "mechanicraft_revived:machine_block"
         },
         "R":
         {
@@ -30,7 +30,7 @@
     
     "result":
     {
-        "item": "mechanicraft:basic_coal_generator",
+        "item": "mechanicraft_revived:basic_coal_generator",
         "count": 1
     }
 }

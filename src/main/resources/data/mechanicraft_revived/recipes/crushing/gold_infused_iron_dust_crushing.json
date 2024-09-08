@@ -1,14 +1,14 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
-		"tag": "forge:ingots/gold_infused_iron"
+		"tag": "forge:ingots/au_fe"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:gold_infused_iron_dust"
+		"item": "mechanicraft_revived:au_fe_dust"
 	
 	},
 	

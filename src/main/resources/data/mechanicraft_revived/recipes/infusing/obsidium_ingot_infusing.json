@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"tag": "forge:ingots/gold_infused_iron"
+		"tag": "forge:ingots/au_fe"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:obsidium_ingot"
+		"item": "mechanicraft_revived:obsidium_ingot"
 	
 	}
 

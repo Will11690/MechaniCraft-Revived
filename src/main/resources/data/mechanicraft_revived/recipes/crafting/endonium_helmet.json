@@ -15,25 +15,25 @@
         },
 		"O":
         {
-            "item": "mechanicraft:obsidium_helmet"
+            "item": "mechanicraft_revived:obsidium_helmet"
         },
 		"E":
         {
-            "item": "mechanicraft:emeronium_helmet"
+            "item": "mechanicraft_revived:emeronium_helmet"
         },
 		"S":
         {
-            "item": "mechanicraft:saphonium_helmet"
+            "item": "mechanicraft_revived:saphonium_helmet"
         },
 		"R":
         {
-            "item": "mechanicraft:rubonium_helmet"
+            "item": "mechanicraft_revived:rubonium_helmet"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:endonium_helmet",
+        "item": "mechanicraft_revived:endonium_helmet",
         "count": 1
     }
 }

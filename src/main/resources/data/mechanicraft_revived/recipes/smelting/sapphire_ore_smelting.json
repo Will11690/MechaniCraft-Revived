@@ -1,5 +1,5 @@
 {
-    "type": "minecraft:smelting",
+    "type": "mechanicraft_revived_revived:smelting",
 	
     "ingredient": {
 	
@@ -7,7 +7,7 @@
 		
     },
 	
-    "result": "mechanicraft:sapphire_gem",
+    "result": "mechanicraft_revived_revived:sapphire_gem",
     "experience": 1.0,
     "cookingtime": 200
 	

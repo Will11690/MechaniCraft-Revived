@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"tag": "forge:storage_blocks/gold_infused_iron"
+		"tag": "forge:storage_blocks/au_fe"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:rubonium_block"
+		"item": "mechanicraft_revived:rubonium_block"
 	
 	}
 

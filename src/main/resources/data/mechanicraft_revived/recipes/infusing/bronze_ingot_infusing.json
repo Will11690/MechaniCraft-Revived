@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
 		"tag": "forge:ingots/copper"
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:bronze_ingot"
+		"item": "mechanicraft_revived:bronze_ingot"
 	
 	}
 

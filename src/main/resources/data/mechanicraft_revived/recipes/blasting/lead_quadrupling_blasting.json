@@ -3,12 +3,12 @@
 	
     "ingredient": {
 	
-		"item": "mechanicraft:lead_pure_chunks"
+		"item": "mechanicraft_revived:lead_pure_chunks"
 		
     },
 	
     "result": { 
-	"item": "mechanicraft:lead_ingot",
+	"item": "mechanicraft_revived:lead_ingot",
 	"count": 4,
     "experience": 1.0,
     "cookingtime": 100

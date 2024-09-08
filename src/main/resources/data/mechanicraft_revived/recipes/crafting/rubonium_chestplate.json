@@ -16,13 +16,13 @@
         },
 		"G":
         {
-            "item": "mechanicraft:glass_chestplate"
+            "item": "mechanicraft_revived:glass_chestplate"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:rubonium_chestplate",
+        "item": "mechanicraft_revived:rubonium_chestplate",
         "count": 1
     }
 }

@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:ender_dust"
+		"item": "mechanicraft_revived:ender_dust"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:ender_ingot"
+		"item": "mechanicraft_revived:ender_ingot"
 	
 	}
 

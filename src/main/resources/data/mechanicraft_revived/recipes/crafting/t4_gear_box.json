@@ -16,7 +16,7 @@
         },
         "M":
         {
-            "item": "mechanicraft:t3_gear_box"
+            "item": "mechanicraft_revived:t3_gear_box"
         },
         "G":
         {
@@ -26,7 +26,7 @@
     
     "result":
     {
-        "item": "mechanicraft:t4_gear_box",
+        "item": "mechanicraft_revived:t4_gear_box",
         "count": 1
     }
 }

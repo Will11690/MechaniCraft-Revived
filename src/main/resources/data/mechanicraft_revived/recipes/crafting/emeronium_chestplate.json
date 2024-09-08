@@ -16,13 +16,13 @@
         },
 		"G":
         {
-            "item": "mechanicraft:glass_chestplate"
+            "item": "mechanicraft_revived:glass_chestplate"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:emeronium_chestplate",
+        "item": "mechanicraft_revived:emeronium_chestplate",
         "count": 1
     }
 }

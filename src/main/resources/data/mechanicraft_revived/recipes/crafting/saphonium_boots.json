@@ -15,13 +15,13 @@
         },
 		"G":
         {
-            "item": "mechanicraft:glass_boots"
+            "item": "mechanicraft_revived:glass_boots"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:saphonium_boots",
+        "item": "mechanicraft_revived:saphonium_boots",
         "count": 1
     }
 }

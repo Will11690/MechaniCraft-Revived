@@ -1,20 +1,20 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"tag": "forge:ingots/gold_infused_iron"
+		"tag": "forge:ingots/au_fe"
 		
 		},
 		
 	"input2": {
 	
-		"item": "mechanicraft:ender_ingot"
+		"item": "mechanicraft_revived:ender_ingot"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:endonium_ingot"
+		"item": "mechanicraft_revived:endonium_ingot"
 	
 	}
 

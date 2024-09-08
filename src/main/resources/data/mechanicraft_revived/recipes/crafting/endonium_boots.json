@@ -15,25 +15,25 @@
         },
 		"O":
         {
-            "item": "mechanicraft:obsidium_boots"
+            "item": "mechanicraft_revived:obsidium_boots"
         },
 		"E":
         {
-            "item": "mechanicraft:emeronium_boots"
+            "item": "mechanicraft_revived:emeronium_boots"
         },
 		"S":
         {
-            "item": "mechanicraft:saphonium_boots"
+            "item": "mechanicraft_revived:saphonium_boots"
         },
 		"R":
         {
-            "item": "mechanicraft:rubonium_boots"
+            "item": "mechanicraft_revived:rubonium_boots"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:endonium_boots",
+        "item": "mechanicraft_revived:endonium_boots",
         "count": 1
     }
 }

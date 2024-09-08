@@ -10,13 +10,13 @@
     {
         "B":
         {
-            "tag": "forge:storage_blocks/gold_infused_iron"
+            "tag": "forge:storage_blocks/au_fe"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:gold_infused_iron_ingot",
+        "item": "mechanicraft_revived:au_fe_ingot",
         "count": 9
     }
 }

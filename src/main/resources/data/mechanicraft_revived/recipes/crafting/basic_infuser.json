@@ -16,7 +16,7 @@
         },
         "M":
         {
-            "item": "mechanicraft:machine_block"
+            "item": "mechanicraft_revived:machine_block"
         },
         "C":
         {
@@ -26,7 +26,7 @@
     
     "result":
     {
-        "item": "mechanicraft:basic_metallic_infuser",
+        "item": "mechanicraft_revived:basic_metallic_infuser",
         "count": 1
     }
 }

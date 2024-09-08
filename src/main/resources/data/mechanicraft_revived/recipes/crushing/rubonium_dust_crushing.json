@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:ingots/rubonium"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:rubonium_dust"
+		"item": "mechanicraft_revived:rubonium_dust"
 	
 	},
 	

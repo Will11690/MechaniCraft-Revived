@@ -1,20 +1,20 @@
 {
-	"type": "mechanicraft:sieve_recipes",
+	"type": "mechanicraft_revived:sieve_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:lead_dirty_chunks"
+		"item": "mechanicraft_revived:lead_dirty_chunks"
 		
 		},
 		
 	"input2": {
 	
-		"item": "mechanicraft:endonium_mesh"
+		"item": "mechanicraft_revived:endonium_mesh"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:lead_refined_chunks"
+		"item": "mechanicraft_revived:lead_refined_chunks"
 	
 	},
 	

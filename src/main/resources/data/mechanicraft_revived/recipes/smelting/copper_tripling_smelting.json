@@ -3,12 +3,12 @@
 	
 	"ingredient": {
 	
-		"item": "mechanicraft:copper_refined_chunks"
+		"item": "mechanicraft_revived:copper_refined_chunks"
 		
 		},
 	
 	"result": { 
-	"item": "mechanicraft:copper_ingot",
+	"item": "minecraft:copper_ingot",
 	"count": 3,
     "experience": 0.7,
     "cookingtime": 200

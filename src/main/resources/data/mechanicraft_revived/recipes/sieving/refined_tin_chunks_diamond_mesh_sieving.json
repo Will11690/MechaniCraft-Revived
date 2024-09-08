@@ -1,20 +1,20 @@
 {
-	"type": "mechanicraft:sieve_recipes",
+	"type": "mechanicraft_revived:sieve_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:tin_dirty_chunks"
+		"item": "mechanicraft_revived:tin_dirty_chunks"
 		
 		},
 		
 	"input2": {
 	
-		"item": "mechanicraft:diamond_mesh"
+		"item": "mechanicraft_revived:diamond_mesh"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:tin_refined_chunks"
+		"item": "mechanicraft_revived:tin_refined_chunks"
 	
 	},
 	

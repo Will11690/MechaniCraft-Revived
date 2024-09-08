@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
-		"item": "mechanicraft:reinforced_gem_mesh"
+		"item": "mechanicraft_revived:reinforced_gem_mesh"
 		
 		},
 		
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:endonium_mesh"
+		"item": "mechanicraft_revived:endonium_mesh"
 	
 	}
 

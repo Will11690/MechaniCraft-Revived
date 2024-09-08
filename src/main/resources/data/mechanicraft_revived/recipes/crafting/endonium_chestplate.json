@@ -16,25 +16,25 @@
         },
 		"O":
         {
-            "item": "mechanicraft:obsidium_chestplate"
+            "item": "mechanicraft_revived:obsidium_chestplate"
         },
 		"E":
         {
-            "item": "mechanicraft:emeronium_chestplate"
+            "item": "mechanicraft_revived:emeronium_chestplate"
         },
 		"S":
         {
-            "item": "mechanicraft:saphonium_chestplate"
+            "item": "mechanicraft_revived:saphonium_chestplate"
         },
 		"R":
         {
-            "item": "mechanicraft:rubonium_chestplate"
+            "item": "mechanicraft_revived:rubonium_chestplate"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:endonium_chestplate",
+        "item": "mechanicraft_revived:endonium_chestplate",
         "count": 1
     }
 }

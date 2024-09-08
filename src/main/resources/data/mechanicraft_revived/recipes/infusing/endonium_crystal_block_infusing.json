@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:infuser_recipes",
+	"type": "mechanicraft_revived:infuser_recipes",
 	"input1": {
 	
 		"tag": "forge:gems/diamonium_crystal"
@@ -14,7 +14,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:endonium_crystal_block"
+		"item": "mechanicraft_revived:endonium_crystal_block"
 	
 	}
 

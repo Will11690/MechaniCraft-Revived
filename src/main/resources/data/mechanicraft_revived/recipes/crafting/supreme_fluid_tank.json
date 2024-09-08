@@ -16,7 +16,7 @@
         },
         "B":
         {
-            "item": "mechanicraft:superior_fluid_tank"
+            "item": "mechanicraft_revived:superior_fluid_tank"
         },
         "G":
         {
@@ -26,7 +26,7 @@
     
     "result":
     {
-        "item": "mechanicraft:supreme_fluid_tank",
+        "item": "mechanicraft_revived:supreme_fluid_tank",
         "count": 1
     }
 }

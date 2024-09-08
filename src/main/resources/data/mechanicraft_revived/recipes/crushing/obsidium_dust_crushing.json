@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:crusher_recipes",
+	"type": "mechanicraft_revived:crusher_recipes",
 	"input": {
 	
 		"tag": "forge:ingots/obsidium"
@@ -8,7 +8,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:obsidium_dust"
+		"item": "mechanicraft_revived:obsidium_dust"
 	
 	},
 	

@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:gems/endonium_crystal"
@@ -8,7 +8,7 @@
 		
 	"input2": {
 	
-		"item": "mechanicraft:endonium_axe"
+		"item": "mechanicraft_revived:endonium_axe"
 		
 		},
 		
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:endonium_crystal_axe"
+		"item": "mechanicraft_revived:endonium_crystal_axe"
 	
 	}
 

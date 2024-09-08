@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:washer_recipes",
+	"type": "mechanicraft_revived:washer_recipes",
 	"inputStack": {
 	
-		"item": "mechanicraft:silver_refined_chunks"
+		"item": "mechanicraft_revived:silver_refined_chunks"
 		
 		},
 		
@@ -15,7 +15,7 @@
 		
 	"outputFluid": {
 	
-		"fluid": "mechanicraft:silver_ore_slurry_fluid",
+		"fluid": "mechanicraft_revived:silver_ore_slurry_fluid",
 		"amount": 1000
 	
 	}

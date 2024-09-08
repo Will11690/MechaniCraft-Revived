@@ -28,13 +28,13 @@
         },
         "M":
         {
-            "item": "mechanicraft:t5_gear_box"
+            "item": "mechanicraft_revived:t5_gear_box"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:line_miner",
+        "item": "mechanicraft_revived:line_miner",
         "count": 1
     }
 }

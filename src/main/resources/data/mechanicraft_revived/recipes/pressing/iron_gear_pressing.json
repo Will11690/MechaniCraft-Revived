@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:nuggets/iron"
@@ -56,7 +56,7 @@
 		
 	"output": {
 	
-		"item": "mechanicraft:iron_gear",
+		"item": "mechanicraft_revived:iron_gear",
 		"count": 2
 	
 	}

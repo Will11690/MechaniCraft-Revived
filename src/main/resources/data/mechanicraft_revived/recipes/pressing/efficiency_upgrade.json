@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"item": "minecraft:stone"
@@ -50,13 +50,13 @@
 	
 	"input9": {
 	
-		"tag": "forge:gears/gold_infused_iron"
+		"tag": "forge:gears/au_fe"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:efficiency_upgrade"
+		"item": "mechanicraft_revived:efficiency_upgrade"
 	
 	}
 

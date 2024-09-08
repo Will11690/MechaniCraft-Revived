@@ -12,7 +12,7 @@
     {
 		"I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         },
 		
         "G":
@@ -28,7 +28,7 @@
     
     "result":
     {
-        "item": "mechanicraft:gold_infused_iron_gear",
+        "item": "mechanicraft_revived:au_fe_gear",
         "count": 1
     }
 }

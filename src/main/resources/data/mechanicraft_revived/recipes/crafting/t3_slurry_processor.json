@@ -16,21 +16,21 @@
         },
         "M":
         {
-            "item": "mechanicraft:t3_gear_box"
+            "item": "mechanicraft_revived:t3_gear_box"
         },
         "T":
         {
-            "item": "mechanicraft:elite_fluid_tank"
+            "item": "mechanicraft_revived:elite_fluid_tank"
         },
         "S":
         {
-            "item": "mechanicraft:t2_slurry_processor"
+            "item": "mechanicraft_revived:t2_slurry_processor"
         }
     },
     
     "result":
     {
-        "item": "mechanicraft:t3_slurry_processor",
+        "item": "mechanicraft_revived:t3_slurry_processor",
         "count": 1
     }
 }

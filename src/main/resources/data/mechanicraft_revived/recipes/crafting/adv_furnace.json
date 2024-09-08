@@ -12,11 +12,11 @@
     {
         "I":
         {
-            "tag": "forge:ingots/gold_infused_iron"
+            "tag": "forge:ingots/au_fe"
         },
         "B":
         {
-            "item": "mechanicraft:basic_furnace"
+            "item": "mechanicraft_revived:basic_furnace"
         },
         "N":
         {
@@ -30,7 +30,7 @@
     
     "result":
     {
-        "item": "mechanicraft:advanced_furnace",
+        "item": "mechanicraft_revived:advanced_furnace",
         "count": 1
     }
 }

@@ -1,8 +1,8 @@
 {
-	"type": "mechanicraft:washer_recipes",
+	"type": "mechanicraft_revived:washer_recipes",
 	"inputStack": {
 	
-		"item": "mechanicraft:gold_refined_chunks"
+		"item": "mechanicraft_revived:gold_refined_chunks"
 		
 		},
 		
@@ -15,7 +15,7 @@
 		
 	"outputFluid": {
 	
-		"fluid": "mechanicraft:gold_ore_slurry_fluid",
+		"fluid": "mechanicraft_revived:gold_ore_slurry_fluid",
 		"amount": 1000
 	
 	}

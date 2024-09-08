@@ -1,5 +1,5 @@
 {
-	"type": "mechanicraft:press_recipes",
+	"type": "mechanicraft_revived:press_recipes",
 	"input1": {
 	
 		"tag": "forge:nuggets/endonium_crystal"
@@ -50,13 +50,13 @@
 	
 	"input9": {
 	
-		"item": "mechanicraft:endonium_mesh"
+		"item": "mechanicraft_revived:endonium_mesh"
 		
 		},
 		
 	"output": {
 	
-		"item": "mechanicraft:reinforced_endonium_mesh"
+		"item": "mechanicraft_revived:reinforced_endonium_mesh"
 	
 	}
 

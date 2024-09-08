@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    
+    "pattern":
+    [
+        "NNN",
+        "NNN",
+        "NNN"      
+    ],
+    
+    "key":
+    {
+        "N":
+        {
+            "tag": "forge:nuggets/au_fe"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mechanicraft_revived:au_fe_ingot",
+        "count": 1
+    }
+}

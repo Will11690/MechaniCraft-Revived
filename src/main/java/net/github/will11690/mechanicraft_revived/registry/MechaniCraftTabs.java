@@ -147,9 +147,9 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.SilverOre.get());
                 output.accept(MechaniCraftBlocks.TinOre.get());
 
-                output.accept(MechaniCraftBlocks.RawLead.get());
-                output.accept(MechaniCraftBlocks.RawSilver.get());
-                output.accept(MechaniCraftBlocks.RawTin.get());
+                output.accept(MechaniCraftBlocks.RawLeadBlock.get());
+                output.accept(MechaniCraftBlocks.RawSilverBlock.get());
+                output.accept(MechaniCraftBlocks.RawTinBlock.get());
 
                 output.accept(MechaniCraftBlocks.AuFeBlock.get());
                 output.accept(MechaniCraftBlocks.BronzeBlock.get());

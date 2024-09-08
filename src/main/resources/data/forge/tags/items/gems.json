@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:diamonium_crystal",
+    "mechanicraft_revived:endonium_crystal",
+    "mechanicraft_revived:ruby_gem",
+    "mechanicraft_revived:sapphire_gem"
+  ]
+}

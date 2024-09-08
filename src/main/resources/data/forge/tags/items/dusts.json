@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:bronze_dust",
+    "mechanicraft_revived:gold_dust",
+    "mechanicraft_revived:au_fe_dust",
+    "mechanicraft_revived:endonium_dust",
+    "mechanicraft_revived:endonium_crystal_dust",
+    "mechanicraft_revived:ender_dust",
+    "mechanicraft_revived:emeronium_dust",
+    "mechanicraft_revived:emerald_dust",
+    "mechanicraft_revived:diamonium_crystal_dust",
+    "mechanicraft_revived:diamond_dust",
+    "mechanicraft_revived:copper_dust",
+    "mechanicraft_revived:iron_dust",
+    "mechanicraft_revived:lead_dust",
+    "mechanicraft_revived:obsidian_dust",
+    "mechanicraft_revived:obsidium_dust",
+    "mechanicraft_revived:rubonium_dust",
+    "mechanicraft_revived:ruby_dust",
+    "mechanicraft_revived:saphonium_dust",
+    "mechanicraft_revived:sapphire_dust",
+    "mechanicraft_revived:silver_dust",
+    "mechanicraft_revived:steel_dust",
+    "mechanicraft_revived:tin_dust"
+  ]
+}

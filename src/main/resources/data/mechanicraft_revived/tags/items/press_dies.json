@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:plate_press_die",
+    "mechanicraft_revived:gear_press_die",
+    "mechanicraft_revived:rod_press_die"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:diamonium_gear",
+    "mechanicraft_revived:emeronium_gear",
+    "mechanicraft_revived:endonium_gear",
+    "mechanicraft_revived:au_fe_gear",
+    "mechanicraft_revived:iron_gear",
+    "mechanicraft_revived:obsidium_gear",
+    "mechanicraft_revived:rubonium_gear",
+    "mechanicraft_revived:saphonium_gear",
+    "mechanicraft_revived:stone_gear",
+    "mechanicraft_revived:wooden_gear"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:bronze_nugget",
+    "mechanicraft_revived:endonium_nugget",
+    "mechanicraft_revived:endonium_crystal_nugget",
+    "mechanicraft_revived:ender_nugget",
+    "mechanicraft_revived:emeronium_nugget",
+    "mechanicraft_revived:emerald_nugget",
+    "mechanicraft_revived:diamonium_crystal_nugget",
+    "mechanicraft_revived:diamond_nugget",
+    "mechanicraft_revived:copper_nugget",
+    "mechanicraft_revived:au_fe_nugget",
+    "mechanicraft_revived:lead_nugget",
+    "mechanicraft_revived:obsidium_nugget",
+    "mechanicraft_revived:rubonium_nugget",
+    "mechanicraft_revived:ruby_nugget",
+    "mechanicraft_revived:saphonium_nugget",
+    "mechanicraft_revived:sapphire_nugget",
+    "mechanicraft_revived:silver_nugget",
+    "mechanicraft_revived:steel_nugget",
+    "mechanicraft_revived:tin_nugget"
+  ]
+}

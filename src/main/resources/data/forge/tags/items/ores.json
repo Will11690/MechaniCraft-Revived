@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:ender_ore",
+    "mechanicraft_revived:lead_ore",
+    "mechanicraft_revived:ruby_ore",
+    "mechanicraft_revived:sapphire_ore",
+    "mechanicraft_revived:silver_ore",
+    "mechanicraft_revived:tin_ore"
+  ]
+}

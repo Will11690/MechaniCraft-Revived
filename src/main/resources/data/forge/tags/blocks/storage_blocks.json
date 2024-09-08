@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "mechanicraft_revived:bronze_block",
+    "mechanicraft_revived:tin_block",
+    "mechanicraft_revived:endonium_crystal_block",
+    "mechanicraft_revived:ender_block",
+    "mechanicraft_revived:endonium_block",
+    "mechanicraft_revived:emeronium_block",
+    "mechanicraft_revived:au_fe_block",
+    "mechanicraft_revived:lead_block",
+    "mechanicraft_revived:obsidium_block",
+    "mechanicraft_revived:rubonium_block",
+    "mechanicraft_revived:ruby_block",
+    "mechanicraft_revived:saphonium_block",
+    "mechanicraft_revived:sapphire_block",
+    "mechanicraft_revived:silver_block",
+    "mechanicraft_revived:steel_block"
+  ]
+}

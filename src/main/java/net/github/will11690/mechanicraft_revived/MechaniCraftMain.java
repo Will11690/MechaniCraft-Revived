@@ -5,10 +5,8 @@ import net.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
 import net.github.will11690.mechanicraft_revived.registry.MechaniCraftItems;
 import net.github.will11690.mechanicraft_revived.registry.MechaniCraftTabs;
 import net.minecraft.client.Minecraft;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -25,7 +23,7 @@ public class MechaniCraftMain {
 
     //TODO List
 
-    //DO NEXT - Raw ores(need models and textures) & blocks(need blockstates, textures, and models)
+    //DO NEXT - Mesh re-texture & ingot texture update to new ingot textures
 
     //Void storages(large, upgradable, tiered, single item storage blocks[lockable?])
     //Machining Table(5x5 powered crafting table for tier 2-4 machines)

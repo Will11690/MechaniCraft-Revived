@@ -1,6 +1,6 @@
-package net.github.will11690.mechanicraft_revived.registry;
+package com.github.will11690.mechanicraft_revived.registry;
 
-import net.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

@@ -1,9 +1,9 @@
-package net.github.will11690.mechanicraft_revived;
+package com.github.will11690.mechanicraft_revived;
 
 import com.mojang.logging.LogUtils;
-import net.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
-import net.github.will11690.mechanicraft_revived.registry.MechaniCraftItems;
-import net.github.will11690.mechanicraft_revived.registry.MechaniCraftTabs;
+import com.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
+import com.github.will11690.mechanicraft_revived.registry.MechaniCraftItems;
+import com.github.will11690.mechanicraft_revived.registry.MechaniCraftTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;

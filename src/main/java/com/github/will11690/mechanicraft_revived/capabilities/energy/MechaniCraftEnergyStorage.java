@@ -1,4 +1,4 @@
-package net.github.will11690.mechanicraft_revived.capabilities.energy;
+package com.github.will11690.mechanicraft_revived.capabilities.energy;
 
 import net.minecraft.nbt.IntTag;
 import net.minecraft.nbt.Tag;

@@ -1,4 +1,4 @@
-package net.github.will11690.mechanicraft_revived;
+package com.github.will11690.mechanicraft_revived;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

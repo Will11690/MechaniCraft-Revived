@@ -161,6 +161,7 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.BronzeBlock.get());
                 output.accept(MechaniCraftBlocks.EmeroniumBlock.get());
                 output.accept(MechaniCraftBlocks.EnderBlock.get());
+                output.accept(MechaniCraftBlocks.EnderDustBlock.get());
                 output.accept(MechaniCraftBlocks.EndoniumBlock.get());
                 output.accept(MechaniCraftBlocks.EndoniumCrystalBlock.get());
                 output.accept(MechaniCraftBlocks.LeadBlock.get());

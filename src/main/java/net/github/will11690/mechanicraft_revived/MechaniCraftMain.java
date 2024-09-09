@@ -25,6 +25,8 @@ public class MechaniCraftMain {
 
     //DO NEXT - Mesh re-texture & ingot texture update to new ingot textures
 
+    //Block properties(remove property copies where appropriate and change copies to proper block types)
+
     //Void storages(large, upgradable, tiered, single item storage blocks[lockable?])
     //Machining Table(5x5 powered crafting table for tier 2-4 machines)
     //Ultimate Machining Table(7x7 powered crafting table for tier 5-6 machines)

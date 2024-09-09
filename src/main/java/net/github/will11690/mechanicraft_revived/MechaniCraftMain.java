@@ -25,7 +25,7 @@ public class MechaniCraftMain {
 
     //TODO List
 
-    //DO NEXT - Deepslate ores(need blockstates and models), raw ores(need models and textures) & blocks(need blockstates, textures, and models), ore re-textures
+    //DO NEXT - Raw ores(need models and textures) & blocks(need blockstates, textures, and models)
 
     //Void storages(large, upgradable, tiered, single item storage blocks[lockable?])
     //Machining Table(5x5 powered crafting table for tier 2-4 machines)

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mechanicraft_revived:ruby_ore"
+    "mechanicraft_revived:ruby_ore",
+    "mechanicraft_revived:deepslate_ruby_ore"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mechanicraft_revived:lead_ore"
+    "mechanicraft_revived:lead_ore",
+    "mechanicraft_revived:deepslate_lead_ore"
   ]
 }

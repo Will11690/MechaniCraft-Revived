@@ -17,18 +17,18 @@ public class MechaniCraftBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MechaniCraftMain.MODID);
 
-    public static final RegistryObject<Block> EnderOre = registerBlock("ender_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> LeadOre = registerBlock("lead_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> RubyOre = registerBlock("ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> SapphireOre = registerBlock("sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> SilverOre = registerBlock("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> TinOre = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> EnderOre = registerBlock("ender_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LeadOre = registerBlock("lead_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RubyOre = registerBlock("ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SapphireOre = registerBlock("sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SilverOre = registerBlock("silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> TinOre = registerBlock("tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> DeepslateLeadOre = registerBlock("deepslate_lead_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> DeepslateRubyOre = registerBlock("deepslate_ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> DeepslateSapphireOre = registerBlock("deepslate_sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> DeepslateSilverOre = registerBlock("deepslate_silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> DeepslateTinOre = registerBlock("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> DeepslateLeadOre = registerBlock("deepslate_lead_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DeepslateRubyOre = registerBlock("deepslate_ruby_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DeepslateSapphireOre = registerBlock("deepslate_sapphire_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DeepslateSilverOre = registerBlock("deepslate_silver_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> DeepslateTinOre = registerBlock("deepslate_tin_ore", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RawLeadBlock = registerBlock("raw_lead_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> RawSilverBlock = registerBlock("raw_silver_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -58,7 +58,7 @@ public class MechaniCraftBlocks {
     public static final RegistryObject<Block> T5GearBox = registerBlock("t5_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> T6GearBox = registerBlock("t6_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
-    /** TODO List (Blocks with custom block bases and/or tiles)
+    /* TODO List (Blocks with custom block bases and/or tiles)
      *
      * 	public static final RegistryObject<Block> TestBlock = registerBlock("basic_fluid_tank", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      * 	public static final RegistryObject<Block> TestBlock = registerBlock("advanced_fluid_tank", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));

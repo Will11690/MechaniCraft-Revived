@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mechanicraft_revived:tin_ore"
+    "mechanicraft_revived:tin_ore",
+    "mechanicraft_revived:deepslate_tin_ore"
   ]
 }

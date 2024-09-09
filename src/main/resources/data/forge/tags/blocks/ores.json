@@ -2,6 +2,11 @@
   "replace": false,
   "values": [
     "mechanicraft_revived:ender_ore",
+    "mechanicraft_revived:deepslate_lead_ore",
+    "mechanicraft_revived:deepslate_ruby_ore",
+    "mechanicraft_revived:deepslate_sapphire_ore",
+    "mechanicraft_revived:deepslate_silver_ore",
+    "mechanicraft_revived:deepslate_tin_ore",
     "mechanicraft_revived:lead_ore",
     "mechanicraft_revived:ruby_ore",
     "mechanicraft_revived:sapphire_ore",

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "mechanicraft_revived:sapphire_ore"
+    "mechanicraft_revived:sapphire_ore",
+    "mechanicraft_revived:deepslate_sapphire_ore"
   ]
 }

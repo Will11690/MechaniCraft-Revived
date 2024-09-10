@@ -5,9 +5,10 @@
 
     "mechanicraft_revived:lead_ore",
     "mechanicraft_revived:deepslate_lead_ore",
+    "mechanicraft_revived:raw_lead_block",
     "mechanicraft_revived:tin_ore",
-    "mechanicraft_revived:deepslate_tin_ore"
-
+    "mechanicraft_revived:deepslate_tin_ore",
+    "mechanicraft_revived:raw_tin_block"
   ]
 
 }

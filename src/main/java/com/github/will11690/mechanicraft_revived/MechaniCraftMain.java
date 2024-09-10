@@ -23,16 +23,18 @@ public class MechaniCraftMain {
 
     //TODO List
 
-    //DO NEXT - Mesh re-texture & ingot texture update to new ingot textures
+    //DO NEXT - Start re-adding machines
 
     //Block properties(remove property copies where appropriate and change copies to proper block types)
 
+    //TODO Ideas
     //Void storages(large, upgradable, tiered, single item storage blocks[lockable?])
     //Machining Table(5x5 powered crafting table for tier 2-4 machines)
     //Ultimate Machining Table(7x7 powered crafting table for tier 5-6 machines)
     //Ultimate Smiting Table(For Endonium Crystal tier tools, armor, gears, and ingots) AUTOMATE-ABLE!!!
     //Chunkloader block(configurable range? chickenbones loader replacement)
     //Schematics for machining tables(loot with custom structures?)
+    //revive larger chests from 1.7.10??(create a chest network addon with a central controller that is powered)
 
     public static final String MODID = "mechanicraft_revived";
 

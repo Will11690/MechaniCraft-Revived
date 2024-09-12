@@ -1,9 +1,11 @@
 {
 	"type": "minecraft:smelting",
+	"category": "misc",
+	"group": "silver_ingot",
 	
 	"ingredient": {
 	
-		"item": "mechanicraft_revived:silver_refined_chunks"
+		"item": "mechanicraft_revived:silver_pure_chunks"
 		
 		},
 	

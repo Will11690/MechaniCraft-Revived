@@ -1,5 +1,7 @@
 {
 	"type": "minecraft:smelting",
+	"category": "misc",
+	"group": "au_fe_ingot",
 	
 	"ingredient": {
 	

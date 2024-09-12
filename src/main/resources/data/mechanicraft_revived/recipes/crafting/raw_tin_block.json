@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"category": "misc",
+	"group": "raw_tin_block",
+    
+    "pattern":
+    [
+        "III",
+        "III",
+        "III"      
+    ],
+    
+    "key":
+    {
+        "I":
+        {
+            "tag": "forge:raw_materials/raw_tin"
+        }
+    },
+    
+    "result":
+    {
+        "item": "mechanicraft_revived:raw_tin_block",
+        "count": 1
+    }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+
+    "mechanicraft_revived:raw_lead",
+    "mechanicraft_revived:raw_silver",
+    "mechanicraft_revived:raw_tin"
+  ]
+}

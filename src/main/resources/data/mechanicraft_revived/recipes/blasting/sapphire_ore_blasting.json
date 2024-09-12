@@ -1,5 +1,7 @@
 {
     "type": "minecraft:blasting",
+	"category": "misc",
+	"group": "sapphire",
 	
     "ingredient": {
 	

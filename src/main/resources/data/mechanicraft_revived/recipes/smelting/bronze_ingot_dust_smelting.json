@@ -1,5 +1,7 @@
 {
 	"type": "minecraft:smelting",
+	"category": "misc",
+	"group": "bronze_ingot",
 	
 	"ingredient": {
 	

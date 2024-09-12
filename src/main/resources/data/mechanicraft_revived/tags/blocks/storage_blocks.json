@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+
+    "mechanicraft_revived:raw_lead_block",
+    "mechanicraft_revived:raw_silver_block",
+    "mechanicraft_revived:raw_tin_block",
+
     "mechanicraft_revived:bronze_block",
     "mechanicraft_revived:tin_block",
     "mechanicraft_revived:endonium_crystal_block",

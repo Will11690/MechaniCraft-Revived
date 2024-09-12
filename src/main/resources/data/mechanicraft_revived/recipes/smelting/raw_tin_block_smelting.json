@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smelting",
+	"category": "misc",
+	"group": "tin_block",
+	
+    "ingredient": {
+
+        "tag": "forge:storage_blocks/raw_tin"
+		
+    },
+	
+    "result": "mechanicraft_revived:tin_block",
+    "experience": 0.7,
+    "cookingtime": 200
+	
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:smelting",
+	"category": "misc",
+	"group": "silver_ingot",
+	
+    "ingredient": {
+
+        "tag": "forge:raw_materials/raw_silver"
+		
+    },
+	
+    "result": "mechanicraft_revived:silver_ingot",
+    "experience": 0.7,
+    "cookingtime": 200
+	
+}

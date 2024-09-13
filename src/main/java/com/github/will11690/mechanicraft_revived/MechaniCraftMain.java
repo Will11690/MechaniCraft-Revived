@@ -7,6 +7,10 @@ import com.github.will11690.mechanicraft_revived.registry.MechaniCraftTabs;
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.TierSortingRegistry;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.level.ChunkDataEvent;
+import net.minecraftforge.event.level.PistonEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,6 +26,8 @@ import org.slf4j.Logger;
 public class MechaniCraftMain {
 
     //TODO List
+
+    //TODO figure out why emeronium tools can mine ender ore but not rub, saph, or obsisium(BUG)
 
     //DO NEXT - Start re-adding machines
 
@@ -74,6 +80,20 @@ public class MechaniCraftMain {
 
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+    }
+
+    @SubscribeEvent
+    public void tickEvent(PistonEvent event) {
+
+        //TODO remove when done with tool testing
+
+        if(!event.getLevel().isClientSide()) {
+
+            for (int i = 0; i < 13; i++) {
+
+                System.out.println(TierSortingRegistry.getSortedTiers().get(i).toString());
+            }
+        }
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

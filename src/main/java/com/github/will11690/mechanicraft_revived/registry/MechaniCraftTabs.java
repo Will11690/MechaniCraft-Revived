@@ -196,22 +196,93 @@ public class MechaniCraftTabs {
             .withTabsAfter(MechaniCraftTabs.MachinesTab.getKey())
             .icon(() -> new ItemStack(MechaniCraftItems.SteelNugget.get()))
             .title(Component.translatable("creativemodetab.mechanicraft_revived.armor_tab"))
-            .displayItems((itemDisplayParameters, output) ->
+            .displayItems((itemDisplayParameters, output) -> {
 
-                    output.accept(MechaniCraftItems.SteelNugget.get())
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                /*output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
 
-            ).build()
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.SteelNugget.get());*/
+            }).build()
     );
 
     public static final RegistryObject<CreativeModeTab> ToolsTab = CREATIVEMODETABS.register("tools_tab", () -> CreativeModeTab.builder()
             .withTabsAfter(MechaniCraftTabs.ArmorTab.getKey())
-            .icon(() -> new ItemStack(MechaniCraftItems.SteelNugget.get()))
+            .icon(() -> new ItemStack(MechaniCraftItems.EndoniumCrystalPickaxe.get()))
             .title(Component.translatable("creativemodetab.mechanicraft_revived.tools_tab"))
-            .displayItems((itemDisplayParameters, output) ->
+            .displayItems((itemDisplayParameters, output) -> {
 
-                    output.accept(MechaniCraftItems.SteelNugget.get())
+                output.accept(MechaniCraftItems.EmeroniumAxe.get());
+                output.accept(MechaniCraftItems.EmeroniumHoe.get());
+                output.accept(MechaniCraftItems.EmeroniumPickaxe.get());
+                output.accept(MechaniCraftItems.EmeroniumShovel.get());
+                output.accept(MechaniCraftItems.EmeroniumSword.get());
 
-            ).build()
+                output.accept(MechaniCraftItems.EndoniumAxe.get());
+                output.accept(MechaniCraftItems.EndoniumHoe.get());
+                output.accept(MechaniCraftItems.EndoniumPickaxe.get());
+                output.accept(MechaniCraftItems.EndoniumShovel.get());
+                output.accept(MechaniCraftItems.EndoniumSword.get());
+
+                output.accept(MechaniCraftItems.EndoniumCrystalAxe.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalHoe.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalPickaxe.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalShovel.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalSword.get());
+
+                output.accept(MechaniCraftItems.GlassAxe.get());
+                output.accept(MechaniCraftItems.GlassHoe.get());
+                output.accept(MechaniCraftItems.GlassPickaxe.get());
+                output.accept(MechaniCraftItems.GlassShovel.get());
+                output.accept(MechaniCraftItems.GlassSword.get());
+
+                output.accept(MechaniCraftItems.ObsidiumAxe.get());
+                output.accept(MechaniCraftItems.ObsidiumHoe.get());
+                output.accept(MechaniCraftItems.ObsidiumPickaxe.get());
+                output.accept(MechaniCraftItems.ObsidiumShovel.get());
+                output.accept(MechaniCraftItems.ObsidiumSword.get());
+
+                output.accept(MechaniCraftItems.RuboniumAxe.get());
+                output.accept(MechaniCraftItems.RuboniumHoe.get());
+                output.accept(MechaniCraftItems.RuboniumPickaxe.get());
+                output.accept(MechaniCraftItems.RuboniumShovel.get());
+                output.accept(MechaniCraftItems.RuboniumSword.get());
+
+                output.accept(MechaniCraftItems.SaphoniumAxe.get());
+                output.accept(MechaniCraftItems.SaphoniumHoe.get());
+                output.accept(MechaniCraftItems.SaphoniumPickaxe.get());
+                output.accept(MechaniCraftItems.SaphoniumShovel.get());
+                output.accept(MechaniCraftItems.SaphoniumSword.get());
+            }).build()
     );
 
     public static void register(IEventBus outputBus) {

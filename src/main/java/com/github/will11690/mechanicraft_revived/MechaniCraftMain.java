@@ -27,8 +27,6 @@ public class MechaniCraftMain {
 
     //TODO List
 
-    //TODO fix tools not able to mine blocks correctly[test is ender ore vs diamond and up tools] currently only saph+ can break for drops(BUG)
-
     //DO NEXT - Start re-adding machines
 
     //Block properties(remove property copies where appropriate and change copies to proper block types)

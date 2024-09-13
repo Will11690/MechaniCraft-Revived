@@ -25,10 +25,10 @@ public class MechaniCraftTags {
 
     public static class Blocks {
 
-        public static final TagKey<Block> NEEDS_OBSIDIUM_TOOL = tag("needs_obsidium_tool");
-        public static final TagKey<Block> NEEDS_SAPHONIUM_TOOL = tag("needs_saphonium_tool");
-        public static final TagKey<Block> NEEDS_RUBONIUM_TOOL = tag("needs_rubonium_tool");
-        public static final TagKey<Block> NEEDS_EMERONIUM_TOOL = tag("needs_emeronium_tool");
+        //public static final TagKey<Block> NEEDS_OBSIDIUM_TOOL = tag("needs_obsidium_tool");
+        //public static final TagKey<Block> NEEDS_SAPHONIUM_TOOL = tag("needs_saphonium_tool");
+        //public static final TagKey<Block> NEEDS_RUBONIUM_TOOL = tag("needs_rubonium_tool");
+        //public static final TagKey<Block> NEEDS_EMERONIUM_TOOL = tag("needs_emeronium_tool");
 
         private static TagKey<Block> tag(String name) {
 

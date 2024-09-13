@@ -27,7 +27,7 @@ public class MechaniCraftMain {
 
     //TODO List
 
-    //TODO figure out why emeronium tools can mine ender ore but not rub, saph, or obsisium(BUG)
+    //TODO fix tools not able to mine blocks correctly[test is ender ore vs diamond and up tools] currently only saph+ can break for drops(BUG)
 
     //DO NEXT - Start re-adding machines
 

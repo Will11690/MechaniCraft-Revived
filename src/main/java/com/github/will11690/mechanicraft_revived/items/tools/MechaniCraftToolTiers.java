@@ -32,9 +32,9 @@ public class MechaniCraftToolTiers {
                     /*efficiency*/6.00f,
                     /*damage*/4.00f,
                     /*enchantability*/12,
-                    /*mining level tag*/MechaniCraftTags.Blocks.NEEDS_OBSIDIUM_TOOL,
+                    /*mining level tag*//*MechaniCraftTags.Blocks.NEEDS_OBSIDIUM_TOOL*/BlockTags.NEEDS_DIAMOND_TOOL,
                     () -> Ingredient.of(MechaniCraftItems.ObsidiumIngot.get())),
-            new ResourceLocation(MechaniCraftMain.MODID, "obsidium"), List.of(Tiers.DIAMOND), List.of());
+            new ResourceLocation(MechaniCraftMain.MODID, "obsidium"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
 
     public static final Tier EMERONIUM = TierSortingRegistry.registerTier( new ForgeTier(
                 /*harvest level*/3,
@@ -42,9 +42,9 @@ public class MechaniCraftToolTiers {
                 /*efficiency*/8.50f,
                 /*damage*/3.75f,
                 /*enchantability*/12,
-                /*mining level tag*/MechaniCraftTags.Blocks.NEEDS_EMERONIUM_TOOL,
+                /*mining level tag*/BlockTags.NEEDS_DIAMOND_TOOL,
                 () -> Ingredient.of(MechaniCraftItems.EmeroniumIngot.get())),
-        new ResourceLocation(MechaniCraftMain.MODID, "emeronium"), List.of(MechaniCraftToolTiers.OBSIDIUM), List.of());
+        new ResourceLocation(MechaniCraftMain.MODID, "emeronium"), List.of(MechaniCraftToolTiers.OBSIDIUM), List.of(Tiers.NETHERITE));
 
     public static final Tier RUBONIUM = TierSortingRegistry.registerTier( new ForgeTier(
                 /*harvest level*/3,
@@ -52,9 +52,9 @@ public class MechaniCraftToolTiers {
                 /*efficiency*/8.50f,
                 /*damage*/3.75f,
                 /*enchantability*/12,
-                /*mining level tag*/MechaniCraftTags.Blocks.NEEDS_RUBONIUM_TOOL,
+                /*mining level tag*/BlockTags.NEEDS_DIAMOND_TOOL,
                 () -> Ingredient.of(MechaniCraftItems.RuboniumIngot.get())),
-        new ResourceLocation(MechaniCraftMain.MODID, "rubonium"), List.of(MechaniCraftToolTiers.EMERONIUM), List.of());
+        new ResourceLocation(MechaniCraftMain.MODID, "rubonium"), List.of(MechaniCraftToolTiers.EMERONIUM), List.of(Tiers.NETHERITE));
 
     public static final Tier SAPHONIUM = TierSortingRegistry.registerTier( new ForgeTier(
                 /*harvest level*/3,
@@ -62,9 +62,9 @@ public class MechaniCraftToolTiers {
                 /*efficiency*/8.50f,
                 /*damage*/3.75f,
                 /*enchantability*/12,
-                /*mining level tag*/MechaniCraftTags.Blocks.NEEDS_SAPHONIUM_TOOL,
+                /*mining level tag*/BlockTags.NEEDS_DIAMOND_TOOL,
                 () -> Ingredient.of(MechaniCraftItems.SaphoniumIngot.get())),
-        new ResourceLocation(MechaniCraftMain.MODID, "saphonium"), List.of(MechaniCraftToolTiers.RUBONIUM), List.of());
+        new ResourceLocation(MechaniCraftMain.MODID, "saphonium"), List.of(MechaniCraftToolTiers.RUBONIUM), List.of(Tiers.NETHERITE));
 
     public static final Tier ENDONIUM = TierSortingRegistry.registerTier( new ForgeTier(
                     /*harvest level*/4,

@@ -27,7 +27,7 @@ public class MechaniCraftToolTiers {
             new ResourceLocation(MechaniCraftMain.MODID, "glass"), List.of(Tiers.STONE), List.of(Tiers.IRON));
 
     public static final Tier OBSIDIUM = TierSortingRegistry.registerTier( new ForgeTier(
-                    /*harvest level*/4,
+                    /*harvest level*/3,
                     /*durability*/1600,
                     /*efficiency*/6.00f,
                     /*damage*/4.00f,

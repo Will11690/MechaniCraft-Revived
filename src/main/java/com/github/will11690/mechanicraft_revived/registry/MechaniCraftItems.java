@@ -1,6 +1,8 @@
 package com.github.will11690.mechanicraft_revived.registry;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.items.armor.MechaniCraftArmorItem;
+import com.github.will11690.mechanicraft_revived.items.armor.MechaniCraftArmorMaterials;
 import com.github.will11690.mechanicraft_revived.items.tools.MechaniCraftToolTiers;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -177,22 +179,21 @@ public class MechaniCraftItems {
     public static final RegistryObject<Item> TransferUpgrade = ITEMS.register("transfer_upgrade", () -> new Item(new Item.Properties()));
 
     //Mesh(organized by durability not alphabetical)
-    //TODO
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("string_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_string_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("iron_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_iron_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("steel_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_steel_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("diamond_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_diamond_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("gem_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_gem_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("endonium_mesh", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RawLead = ITEMS.register("reinforced_endonium_mesh", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> StringMesh = ITEMS.register("string_mesh", () -> new Item(new Item.Properties().durability(32)));
+    public static final RegistryObject<Item> ReinforcedStringMesh = ITEMS.register("reinforced_string_mesh", () -> new Item(new Item.Properties().durability(64)));
+    public static final RegistryObject<Item> IronMesh = ITEMS.register("iron_mesh", () -> new Item(new Item.Properties().durability(128)));
+    public static final RegistryObject<Item> ReinforcedIronMesh = ITEMS.register("reinforced_iron_mesh", () -> new Item(new Item.Properties().durability(256)));
+    public static final RegistryObject<Item> SteelMesh = ITEMS.register("steel_mesh", () -> new Item(new Item.Properties().durability(512)));
+    public static final RegistryObject<Item> ReinforcedSteelMesh = ITEMS.register("reinforced_steel_mesh", () -> new Item(new Item.Properties().durability(1024)));
+    public static final RegistryObject<Item> DiamondMesh = ITEMS.register("diamond_mesh", () -> new Item(new Item.Properties().durability(2048)));
+    public static final RegistryObject<Item> ReinforcedDiamondMesh = ITEMS.register("reinforced_diamond_mesh", () -> new Item(new Item.Properties().durability(4096)));
+    public static final RegistryObject<Item> GemMesh = ITEMS.register("gem_mesh", () -> new Item(new Item.Properties().durability(8192).fireResistant()));
+    public static final RegistryObject<Item> ReinforcedGemMesh = ITEMS.register("reinforced_gem_mesh", () -> new Item(new Item.Properties().durability(16384).fireResistant()));
+    public static final RegistryObject<Item> EndoniumMesh = ITEMS.register("endonium_mesh", () -> new Item(new Item.Properties().durability(32768).fireResistant()));
+    public static final RegistryObject<Item> ReinforcedEndoniumMesh = ITEMS.register("reinforced_endonium_mesh", () -> new Item(new Item.Properties().durability(65536).fireResistant()));
 
     //Tool
-    //TODO modifiers
+    //TODO modifiers/effects? i.e end crystal 3x3 mining?
     public static final RegistryObject<Item> EmeroniumAxe = ITEMS.register("emeronium_axe",
             () -> new AxeItem(MechaniCraftToolTiers.EMERONIUM, 1, 1, new Item.Properties()));
     public static final RegistryObject<Item> EmeroniumHoe = ITEMS.register("emeronium_hoe",
@@ -205,26 +206,26 @@ public class MechaniCraftItems {
             () -> new SwordItem(MechaniCraftToolTiers.EMERONIUM, 1, 1, new Item.Properties()));
 
     public static final RegistryObject<Item> EndoniumAxe = ITEMS.register("endonium_axe",
-            () -> new AxeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties()));
+            () -> new AxeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumHoe = ITEMS.register("endonium_hoe",
-            () -> new HoeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties()));
+            () -> new HoeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumPickaxe = ITEMS.register("endonium_pickaxe",
-            () -> new PickaxeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumShovel = ITEMS.register("endonium_shovel",
-            () -> new ShovelItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumSword = ITEMS.register("endonium_sword",
-            () -> new SwordItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties()));
+            () -> new SwordItem(MechaniCraftToolTiers.ENDONIUM, 1, 1, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> EndoniumCrystalAxe = ITEMS.register("endonium_crystal_axe",
-            () -> new AxeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties()));
+            () -> new AxeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumCrystalHoe = ITEMS.register("endonium_crystal_hoe",
-            () -> new HoeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties()));
+            () -> new HoeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumCrystalPickaxe = ITEMS.register("endonium_crystal_pickaxe",
-            () -> new PickaxeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumCrystalShovel = ITEMS.register("endonium_crystal_shovel",
-            () -> new ShovelItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> EndoniumCrystalSword = ITEMS.register("endonium_crystal_sword",
-            () -> new SwordItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties()));
+            () -> new SwordItem(MechaniCraftToolTiers.ENDONIUM_CRYSTAL, 1, 1, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> GlassAxe = ITEMS.register("glass_axe",
             () -> new AxeItem(MechaniCraftToolTiers.GLASS, 1, 1, new Item.Properties()));
@@ -238,15 +239,15 @@ public class MechaniCraftItems {
             () -> new SwordItem(MechaniCraftToolTiers.GLASS, 1, 1, new Item.Properties()));
 
     public static final RegistryObject<Item> ObsidiumAxe = ITEMS.register("obsidium_axe",
-            () -> new AxeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties()));
+            () -> new AxeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ObsidiumHoe = ITEMS.register("obsidium_hoe",
-            () -> new HoeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties()));
+            () -> new HoeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ObsidiumPickaxe = ITEMS.register("obsidium_pickaxe",
-            () -> new PickaxeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties()));
+            () -> new PickaxeItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ObsidiumShovel = ITEMS.register("obsidium_shovel",
-            () -> new ShovelItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties()));
+            () -> new ShovelItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties().fireResistant()));
     public static final RegistryObject<Item> ObsidiumSword = ITEMS.register("obsidium_sword",
-            () -> new SwordItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties()));
+            () -> new SwordItem(MechaniCraftToolTiers.OBSIDIUM, 1, 1, new Item.Properties().fireResistant()));
 
     public static final RegistryObject<Item> RuboniumAxe = ITEMS.register("rubonium_axe",
             () -> new AxeItem(MechaniCraftToolTiers.RUBONIUM, 1, 1, new Item.Properties()));
@@ -271,7 +272,69 @@ public class MechaniCraftItems {
             () -> new SwordItem(MechaniCraftToolTiers.SAPHONIUM, 1, 1, new Item.Properties()));
 
     //Armor
-    //TODO
+    //TODO Armor Effects
+    public static final RegistryObject<Item> EmeroniumHelmet = ITEMS.register("emeronium_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.EMERONIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumChestplate = ITEMS.register("emeronium_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.EMERONIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumLeggings = ITEMS.register("emeronium_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.EMERONIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumBoots = ITEMS.register("emeronium_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.EMERONIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> EndoniumHelmet = ITEMS.register("endonium_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM, ArmorItem.Type.HELMET, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumChestplate = ITEMS.register("endonium_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumLeggings = ITEMS.register("endonium_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumBoots = ITEMS.register("endonium_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> EndoniumCrystalHelmet = ITEMS.register("endonium_crystal_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM_CRYSTAL, ArmorItem.Type.HELMET, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumCrystalChestplate = ITEMS.register("endonium_crystal_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM_CRYSTAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumCrystalLeggings = ITEMS.register("endonium_crystal_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM_CRYSTAL, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> EndoniumCrystalBoots = ITEMS.register("endonium_crystal_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.ENDONIUM_CRYSTAL, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> GlassHelmet = ITEMS.register("glass_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.GLASS, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> GlassChestplate = ITEMS.register("glass_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.GLASS, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> GlassLeggings = ITEMS.register("glass_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.GLASS, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> GlassBoots = ITEMS.register("glass_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.GLASS, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> ObsidiumHelmet = ITEMS.register("obsidium_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.OBSIDIUM, ArmorItem.Type.HELMET, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ObsidiumChestplate = ITEMS.register("obsidium_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.OBSIDIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ObsidiumLeggings = ITEMS.register("obsidium_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.OBSIDIUM, ArmorItem.Type.LEGGINGS, new Item.Properties().fireResistant()));
+    public static final RegistryObject<Item> ObsidiumBoots = ITEMS.register("obsidium_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.OBSIDIUM, ArmorItem.Type.BOOTS, new Item.Properties().fireResistant()));
+
+    public static final RegistryObject<Item> RuboniumHelmet = ITEMS.register("rubonium_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.RUBONIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> RuboniumChestplate = ITEMS.register("rubonium_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.RUBONIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> RuboniumLeggings = ITEMS.register("rubonium_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.RUBONIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> RuboniumBoots = ITEMS.register("rubonium_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.RUBONIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
+
+    public static final RegistryObject<Item> SaphoniumHelmet = ITEMS.register("saphonium_helmet",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.SAPHONIUM, ArmorItem.Type.HELMET, new Item.Properties()));
+    public static final RegistryObject<Item> SaphoniumChestplate = ITEMS.register("saphonium_chestplate",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.SAPHONIUM, ArmorItem.Type.CHESTPLATE, new Item.Properties()));
+    public static final RegistryObject<Item> SaphoniumLeggings = ITEMS.register("saphonium_leggings",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.SAPHONIUM, ArmorItem.Type.LEGGINGS, new Item.Properties()));
+    public static final RegistryObject<Item> SaphoniumBoots = ITEMS.register("saphonium_boots",
+            () -> new MechaniCraftArmorItem(MechaniCraftArmorMaterials.SAPHONIUM, ArmorItem.Type.BOOTS, new Item.Properties()));
     
     public static void registerItems(IEventBus eventBus) {
 

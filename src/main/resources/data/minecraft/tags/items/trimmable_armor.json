@@ -1,0 +1,38 @@
+{
+  "values": [
+    "mechanicraft_revived:emeronium_helmet",
+    "mechanicraft_revived:emeronium_chestplate",
+    "mechanicraft_revived:emeronium_leggings",
+    "mechanicraft_revived:emeronium_boots",
+
+    "mechanicraft_revived:endonium_helmet",
+    "mechanicraft_revived:endonium_chestplate",
+    "mechanicraft_revived:endonium_leggings",
+    "mechanicraft_revived:endonium_boots",
+
+    "mechanicraft_revived:endonium_crystal_helmet",
+    "mechanicraft_revived:endonium_crystal_chestplate",
+    "mechanicraft_revived:endonium_crystal_leggings",
+    "mechanicraft_revived:endonium_crystal_boots",
+
+    "mechanicraft_revived:glass_helmet",
+    "mechanicraft_revived:glass_chestplate",
+    "mechanicraft_revived:glass_leggings",
+    "mechanicraft_revived:glass_boots",
+
+    "mechanicraft_revived:obsidium_helmet",
+    "mechanicraft_revived:obsidium_chestplate",
+    "mechanicraft_revived:obsidium_leggings",
+    "mechanicraft_revived:obsidium_boots",
+
+    "mechanicraft_revived:rubonium_helmet",
+    "mechanicraft_revived:rubonium_chestplate",
+    "mechanicraft_revived:rubonium_leggings",
+    "mechanicraft_revived:rubonium_boots",
+
+    "mechanicraft_revived:saphonium_helmet",
+    "mechanicraft_revived:saphonium_chestplate",
+    "mechanicraft_revived:saphonium_leggings",
+    "mechanicraft_revived:saphonium_boots"
+  ]
+}

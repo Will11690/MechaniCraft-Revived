@@ -122,6 +122,19 @@ public class MechaniCraftTabs {
                 //output.accept(MechaniCraftItems.TinGear.get());
                 output.accept(MechaniCraftItems.WoodenGear.get());
 
+                output.accept(MechaniCraftItems.StringMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedStringMesh.get());
+                output.accept(MechaniCraftItems.IronMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedIronMesh.get());
+                output.accept(MechaniCraftItems.SteelMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedSteelMesh.get());
+                output.accept(MechaniCraftItems.DiamondMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedDiamondMesh.get());
+                output.accept(MechaniCraftItems.GemMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedGemMesh.get());
+                output.accept(MechaniCraftItems.EndoniumMesh.get());
+                output.accept(MechaniCraftItems.ReinforcedEndoniumMesh.get());
+
                 output.accept(MechaniCraftItems.PressDieGear.get());
                 output.accept(MechaniCraftItems.PressDiePlate.get());
                 output.accept(MechaniCraftItems.PressDieRod.get());
@@ -194,44 +207,44 @@ public class MechaniCraftTabs {
 
     public static final RegistryObject<CreativeModeTab> ArmorTab = CREATIVEMODETABS.register("armor_tab", () -> CreativeModeTab.builder()
             .withTabsAfter(MechaniCraftTabs.MachinesTab.getKey())
-            .icon(() -> new ItemStack(MechaniCraftItems.SteelNugget.get()))
+            .icon(() -> new ItemStack(MechaniCraftItems.EndoniumCrystalChestplate.get()))
             .title(Component.translatable("creativemodetab.mechanicraft_revived.armor_tab"))
             .displayItems((itemDisplayParameters, output) -> {
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                /*output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.EmeroniumHelmet.get());
+                output.accept(MechaniCraftItems.EmeroniumChestplate.get());
+                output.accept(MechaniCraftItems.EmeroniumLeggings.get());
+                output.accept(MechaniCraftItems.EmeroniumBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.EndoniumHelmet.get());
+                output.accept(MechaniCraftItems.EndoniumChestplate.get());
+                output.accept(MechaniCraftItems.EndoniumLeggings.get());
+                output.accept(MechaniCraftItems.EndoniumBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalHelmet.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalChestplate.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalLeggings.get());
+                output.accept(MechaniCraftItems.EndoniumCrystalBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.GlassHelmet.get());
+                output.accept(MechaniCraftItems.GlassChestplate.get());
+                output.accept(MechaniCraftItems.GlassLeggings.get());
+                output.accept(MechaniCraftItems.GlassBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.ObsidiumHelmet.get());
+                output.accept(MechaniCraftItems.ObsidiumChestplate.get());
+                output.accept(MechaniCraftItems.ObsidiumLeggings.get());
+                output.accept(MechaniCraftItems.ObsidiumBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
+                output.accept(MechaniCraftItems.RuboniumHelmet.get());
+                output.accept(MechaniCraftItems.RuboniumChestplate.get());
+                output.accept(MechaniCraftItems.RuboniumLeggings.get());
+                output.accept(MechaniCraftItems.RuboniumBoots.get());
 
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());
-                output.accept(MechaniCraftItems.SteelNugget.get());*/
+                output.accept(MechaniCraftItems.SaphoniumHelmet.get());
+                output.accept(MechaniCraftItems.SaphoniumChestplate.get());
+                output.accept(MechaniCraftItems.SaphoniumLeggings.get());
+                output.accept(MechaniCraftItems.SaphoniumBoots.get());
             }).build()
     );
 

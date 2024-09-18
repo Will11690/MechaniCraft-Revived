@@ -53,7 +53,7 @@ public class MechaniCraftBlocks {
     public static final RegistryObject<Block> SteelBlock = registerBlock("steel_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> TinBlock = registerBlock("tin_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
-    public static final RegistryObject<Block> MachineBlock = registerBlock("machine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> MachineBlock = registerBlock("machine_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion()));
     public static final RegistryObject<Block> T1GearBox = registerBlock("t1_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> T2GearBox = registerBlock("t2_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> T3GearBox = registerBlock("t3_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));

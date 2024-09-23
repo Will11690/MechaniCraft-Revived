@@ -202,6 +202,8 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.T4GearBox.get());
                 output.accept(MechaniCraftBlocks.T5GearBox.get());
                 output.accept(MechaniCraftBlocks.T6GearBox.get());
+
+                output.accept(MechaniCraftBlocks.PrimitiveInfuser.get());
             }).build()
     );
 

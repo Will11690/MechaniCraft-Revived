@@ -1,6 +1,7 @@
 package com.github.will11690.mechanicraft_revived.registry;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuser;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -75,9 +76,11 @@ public class MechaniCraftBlocks {
      * 	public static final RegistryObject<Block> TestBlock = registerBlock("t3_energy_chute", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      * 	public static final RegistryObject<Block> TestBlock = registerBlock("t4_energy_chute", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      * 	public static final RegistryObject<Block> TestBlock = registerBlock("t5_energy_chute", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     * 	public static final RegistryObject<Block> TestBlock = registerBlock("t6_energy_chute", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+     * 	public static final RegistryObject<Block> TestBlock = registerBlock("t6_energy_chute", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));*/
+
+    public static final RegistryObject<Block> PrimitiveInfuser = registerBlock("primitive_metallic_infuser", () -> new PrimitiveInfuser(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+     /* public static final RegistryObject<Block> TestBlock = registerBlock("basic_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_coal_generator", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *

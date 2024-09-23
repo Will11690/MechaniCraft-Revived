@@ -1,10 +1,11 @@
 package com.github.will11690.mechanicraft_revived;
 
+import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserBE;
+import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserScreen;
+import com.github.will11690.mechanicraft_revived.registry.*;
 import com.mojang.logging.LogUtils;
-import com.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
-import com.github.will11690.mechanicraft_revived.registry.MechaniCraftItems;
-import com.github.will11690.mechanicraft_revived.registry.MechaniCraftTabs;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -22,6 +23,21 @@ import org.slf4j.Logger;
 public class MechaniCraftMain {
 
     //TODO List
+
+    /*Reworking Tiers to get rid of numbers in names.
+    Coal powered machines are now primitive
+    Base powered machines are now powered
+    1st tier Producers will be in basic in addition to tanks
+    2nd tier will be Advanced
+    3rd tier will be Elite
+    4th tier will be Superior
+    5th tier will be Supreme
+    final tier will be Ultimate
+    misc package will be for non-tiered blocks such as the line miner and quarries
+    void quarries will have tiered structures so may get their own package later*/
+
+    //Pipes will NOT have capacitance(energy/fluid/gas/item storage) they will only move resources(more per tier)
+    //
 
     //DO NEXT - Start re-adding machines (create a base class for all common logic per machine, create separate classes for non-shared logic)
 
@@ -54,6 +70,15 @@ public class MechaniCraftMain {
 
         //Register creative tabs
         MechaniCraftTabs.register(modEventBus);
+
+        //Register Block Entities
+        MechaniCraftBlockEntities.register(modEventBus);
+
+        //Register Containers
+        MechaniCraftContainers.register(modEventBus);
+
+        //Register Recipes
+        MechaniCraftRecipes.register(modEventBus);
 
         //Register commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -88,6 +113,9 @@ public class MechaniCraftMain {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+            //Register screens on the client
+            MenuScreens.register(MechaniCraftContainers.PrimitiveInfuserCont.get(), PrimitiveInfuserScreen::new);
         }
     }
 }

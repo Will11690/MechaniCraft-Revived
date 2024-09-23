@@ -325,11 +325,10 @@
 	"block.mechanicraft_revived.t4_energy_chute": "Energy Chute Tier 4",
 	"block.mechanicraft_revived.t5_energy_chute": "Energy Chute Tier 5",
 	"block.mechanicraft_revived.t6_energy_chute": "Energy Chute Tier 6",
-	 
-	"container.mechanicraft_revived.basic_metallic_infuser": "Basic Metallic Infuser",
-	"block.mechanicraft_revived.basic_metallic_infuser": "Basic Metallic Infuser",
-	"com.github.will11690.mechanicraft_revived.screen.basic_metallic_infuser.cook_progress": "Infusing Time Left: %s/%s Ticks",
-	"com.github.will11690.mechanicraft_revived.screen.basic_metallic_infuser.burn_time": "Burn Time Left: %s/%s Ticks",
+
+	"block.mechanicraft_revived.primitive_metallic_infuser": "Primitive Metallic Infuser",
+	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.cook_progress": "Infusing Time Left: %s/%s Ticks",
+	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.burn_time": "Burn Time Left: %s/%s Ticks",
 	
 	"container.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",
 	"block.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",

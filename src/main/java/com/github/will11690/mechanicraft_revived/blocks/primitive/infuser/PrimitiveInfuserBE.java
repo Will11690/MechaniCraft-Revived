@@ -1,13 +1,15 @@
 package com.github.will11690.mechanicraft_revived.blocks.primitive.infuser;
 
-import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.recipe.InfuserRecipes;
 import com.github.will11690.mechanicraft_revived.registry.MechaniCraftBlockEntities;
 import com.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
+import com.google.common.collect.Iterables;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -29,25 +31,51 @@ import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
+import java.util.Collection;
+import java.util.Optional;
 
-    //TODO add functionality, BE works and saves data to the block(data is lost on world reload, need to fix this!). Now just need to make the recipes and smelting logic
+public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
 
     private final ItemStackHandler inputHandler = new ItemStackHandler(2) {
         //Inputs
         @Override
         protected void onContentsChanged(int slot) {
 
-            BlockState state = level.getBlockState(worldPosition);
-            level.sendBlockUpdated(worldPosition, state, state, 3);
-            setChanged();
+            if(level != null) {
+
+                BlockState state = level.getBlockState(worldPosition);
+                level.sendBlockUpdated(worldPosition, state, state, 3);
+                setChanged();
+            }
             super.onContentsChanged(slot);
         }
 
         @Override
         public boolean isItemValid(int slot, @NotNull ItemStack stack) {
 
-            //TODO Get recipe inputs and make them only valid inputs for these slots
+            final int other = (slot == 0) ? 1 : 0;
+            final ItemStack otherStack = getStackInSlot(other);
+
+            final boolean input1 = isRecipeInput1(level, stack);
+            final boolean input2 = isRecipeInput2(level, stack);
+
+            if (otherStack.isEmpty()) {
+                return input1 || input2;
+            }
+
+            final boolean otherSlot1 = isRecipeInput1(level, otherStack);
+            final boolean otherSlot2 = isRecipeInput2(level, otherStack);
+
+            if (!otherSlot1 && !otherSlot2) return false;
+
+            if (slot == 0) {
+                return otherSlot1 ? input2 : input1;
+            }
+
+            if (slot == 1) {
+                return otherSlot2 ? input1 : input2;
+            }
+
             return super.isItemValid(slot, stack);
         }
     };
@@ -57,9 +85,12 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
         @Override
         protected void onContentsChanged(int slot) {
 
-            BlockState state = level.getBlockState(worldPosition);
-            level.sendBlockUpdated(worldPosition, state, state, 3);
-            setChanged();
+            if(level != null) {
+
+                BlockState state = level.getBlockState(worldPosition);
+                level.sendBlockUpdated(worldPosition, state, state, 3);
+                setChanged();
+            }
             super.onContentsChanged(slot);
         }
 
@@ -76,9 +107,12 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
         @Override
         protected void onContentsChanged(int slot) {
 
-            BlockState state = level.getBlockState(worldPosition);
-            level.sendBlockUpdated(worldPosition, state, state, 3);
-            setChanged();
+            if(level != null) {
+
+                BlockState state = level.getBlockState(worldPosition);
+                level.sendBlockUpdated(worldPosition, state, state, 3);
+                setChanged();
+            }
             super.onContentsChanged(slot);
         }
 
@@ -95,19 +129,13 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
     //TODO replace with packets
     protected final ContainerData data;
     public int burnTime = 0;
-    //TODO get burn time from stack in fuel slot and set accordingly;
-    public int maxBurnTime = 78;
+    public int maxBurnTime = 0;
     public int progress = 0;
-    public int maxProgress = 78;
+    public int maxProgress = 200;
 
     public LazyOptional<IItemHandler> inventory = LazyOptional.empty();
     public LazyOptional<IItemHandler> fuelInventory = LazyOptional.empty();
     public LazyOptional<IItemHandler> craftingInventory = LazyOptional.empty();
-
-    public static final int INPUT1 = 0;
-    public static final int INPUT2 = 1;
-    public static final int OUTPUT = 2;
-    public static final int FUEL = 3;
 
     public PrimitiveInfuserBE(BlockPos pos, BlockState state) {
 
@@ -145,24 +173,103 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
         };
     }
 
+    public static Iterable<InfuserRecipes> getRecipes(Level level) {
+
+        Collection<InfuserRecipes> unfilteredRecipes = level.getRecipeManager().getAllRecipesFor(InfuserRecipes.InfuserType.INSTANCE);
+
+        return Iterables.filter(unfilteredRecipes, InfuserRecipes.class);
+    }
+
+    public static boolean isRecipeInput1(Level level, ItemStack stack) {
+
+        for (InfuserRecipes recipe : getRecipes(level)) {
+
+            if (recipe.getInput1().test(stack)) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isRecipeInput2(Level level, ItemStack stack) {
+
+        for (InfuserRecipes recipe : getRecipes(level)) {
+
+            if (recipe.getInput2().test(stack)) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void tick(Level level, BlockPos pos, BlockState state) {
+
+        if(level != null) {
+
+            if(!fuelHandler.getStackInSlot(0).isEmpty() && (maxBurnTime <= 0 || maxBurnTime != ForgeHooks.getBurnTime(fuelHandler.getStackInSlot(0), RecipeType.SMELTING))) {
+                setMaxBurn();
+            }
+
+            if(burnTime <=0 && maxBurnTime > 0) {
+
+                maxBurnTime = 0;
+            }
+
+            if(burnTime > 0) {
+
+                level.setBlockAndUpdate(worldPosition, getBlockState().setValue(PrimitiveInfuser.LIT, Boolean.TRUE));
+            }
+
+            if(burnTime <= 0 && getBlockState().getValue(PrimitiveInfuser.LIT)) {
+
+                level.setBlockAndUpdate(worldPosition, getBlockState().setValue(PrimitiveInfuser.LIT, Boolean.FALSE));
+            }
+
+            if(burnTime == 0 && canCraft()) {
+
+                consumeFuel();
+            }
+
+            if(burnTime > 0 && canCraft()) {
+
+                startCrafting();
+            }
+
+            if(burnTime > 0) {
+
+                --burnTime;
+            }
+
+            if(progress > 0 && burnTime == 0) {
+
+                progress -=2;
+            }
+
+            if(!canCraft() && progress > 0) {
+
+                progress -= 2;
+            }
+        }
+    }
+
     @Override
-    public Component getDisplayName() {
+    public @NotNull Component getDisplayName() {
 
         return MechaniCraftBlocks.PrimitiveInfuser.get().getName();
     }
 
     @Override
-    public @Nullable AbstractContainerMenu createMenu(int containerID, Inventory playerInventory, Player player) {
+    public @Nullable AbstractContainerMenu createMenu(int containerID, @NotNull Inventory playerInventory, @NotNull Player player) {
+
         return new PrimitiveInfuserContainer(containerID, playerInventory, this, this.data);
-    }
-
-    public void tick(Level level, BlockPos pos, BlockState state) {
-
     }
 
     @Override
     public void onLoad() {
         super.onLoad();
+
         inventory = LazyOptional.of(() -> allSlots);
         craftingInventory = LazyOptional.of(() -> craftingSlots);
         fuelInventory = LazyOptional.of(() -> fuelHandler);
@@ -170,6 +277,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
 
     @Override
     public void invalidateCaps() {
+
         super.invalidateCaps();
         inventory.invalidate();
     }
@@ -188,7 +296,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
     }
 
     @Override
-    public void load(CompoundTag tag) {
+    public void load(@NotNull CompoundTag tag) {
         super.load(tag);
 
         inputHandler.deserializeNBT(tag.getCompound("inputs"));
@@ -209,7 +317,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
                 return inventory.cast();
             }
 
-            if(this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.NORTH) {
+            if(level != null && this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.NORTH) {
 
                 if(side == Direction.SOUTH) {
                     //Sided fuel slot access
@@ -217,7 +325,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
                 }
             }
 
-            if(this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.SOUTH) {
+            if(level != null && this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.SOUTH) {
 
                 if(side == Direction.NORTH) {
                     //Sided fuel slot access
@@ -225,7 +333,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
                 }
             }
 
-            if(this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.EAST) {
+            if(level != null && this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.EAST) {
 
                 if(side == Direction.WEST) {
                     //Sided fuel slot access
@@ -233,7 +341,7 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
                 }
             }
 
-            if(this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.WEST) {
+            if(level != null && this.level.getBlockState(this.worldPosition).getValue(PrimitiveInfuser.FACING) == Direction.WEST) {
 
                 if(side == Direction.EAST) {
                     //Sided fuel slot access
@@ -262,11 +370,117 @@ public class PrimitiveInfuserBE extends BlockEntity implements MenuProvider {
                     continue;
                 }
                 ItemEntity entityItem = new ItemEntity(level, pos.getX(), pos.getY() + 0.5, pos.getZ(), allSlots.getStackInSlot(i));
-                entityItem.setPickUpDelay(40);
+                entityItem.setPickUpDelay(20);
                 entityItem.setDeltaMovement(entityItem.getDeltaMovement().multiply(0, 1, 0));
 
                 level.addFreshEntity(entityItem);
             }
         }
     }
+
+    /* CRAFTING LOGIC START*/
+
+    private void startCrafting() {
+
+        SimpleContainer craftingInventory = craftingInventory();
+        InfuserRecipes recipe = getCurrentRecipe().orElse(null);
+
+        ItemStack current = craftingInventory.getItem(2);
+        ItemStack output = recipe.assemble(craftingInventory, getLevel().registryAccess());
+
+        if(burnTime > 0) {
+
+            if(progress < maxProgress) {
+
+                ++progress;
+            }
+
+            if(progress >= maxProgress) {
+
+                if(current.isEmpty()) {
+
+                    craftingInventory.setItem(2, output.copy());
+                    outputHandler.setStackInSlot(0, craftingInventory.getItem(2));
+                    progress = 0;
+                    craftingInventory.removeItem(0, 1);
+                    craftingInventory.removeItem(1, 1);
+
+                } else {
+
+                    if(current.getItem().equals(output.getItem()) && current.getCount() < output.getMaxStackSize()) {
+
+                        current.grow(output.getCount());
+                        outputHandler.setStackInSlot(0, craftingInventory.getItem(2));
+                        progress = 0;
+                        craftingInventory.removeItem(0, 1);
+                        craftingInventory.removeItem(1, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    private void consumeFuel() {
+
+        if(!fuelHandler.getStackInSlot(0).isEmpty()) {
+
+            ItemStack fuelStack = fuelHandler.getStackInSlot(0);
+
+            if(ForgeHooks.getBurnTime(fuelHandler.getStackInSlot(0), RecipeType.SMELTING) > 0) {
+
+                int burn = ForgeHooks.getBurnTime(fuelHandler.getStackInSlot(0), RecipeType.SMELTING);
+
+                fuelStack.shrink(1);
+                burnTime = burn;
+            }
+        }
+    }
+
+    private int setMaxBurn() {
+
+        return maxBurnTime = ForgeHooks.getBurnTime(fuelHandler.getStackInSlot(0), RecipeType.SMELTING);
+    }
+
+    private boolean canCraft() {
+
+        SimpleContainer recipeInventory = craftingInventory();
+        InfuserRecipes recipe = getCurrentRecipe().orElse(null);
+        ItemStack outputStack = ItemStack.EMPTY;
+
+        if(inventory.isPresent()) {
+
+            if(recipe != null) {
+
+                outputStack = recipe.assemble(recipeInventory, getLevel().registryAccess()).copy();
+            }
+        }
+
+        ItemStack outputHandlerStack = outputHandler.getStackInSlot(0);
+
+        if(recipe != null &&
+                (outputHandlerStack.getItem().equals(outputHandler.getStackInSlot(0).getItem()) || outputHandler.equals(ItemStack.EMPTY)) &&
+                (outputHandlerStack.getCount() + outputStack.getCount() <= outputHandler.getSlotLimit(0))) {
+
+            return true;
+        }
+        return false;
+    }
+
+    private SimpleContainer craftingInventory() {
+
+        if(inventory.isPresent()) {
+
+            return new SimpleContainer(craftingSlots.getStackInSlot(0), craftingSlots.getStackInSlot(1), craftingSlots.getStackInSlot(2));
+        }
+        return null;
+    }
+
+    private Optional<InfuserRecipes> getCurrentRecipe() {
+
+        SimpleContainer recipeInventory = craftingInventory();
+
+        return this.level.getRecipeManager().getRecipeFor(InfuserRecipes.InfuserType.INSTANCE, recipeInventory, level);
+    }
+
+    /* CRAFTING LOGIC END*/
 }

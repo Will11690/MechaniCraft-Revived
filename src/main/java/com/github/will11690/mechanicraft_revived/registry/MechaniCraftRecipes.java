@@ -11,6 +11,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class MechaniCraftRecipes {
 
     //TODO update crusher, washer, press, sieve, slurry recipes as the blocks are added
+
     public static final DeferredRegister<RecipeSerializer<?>> RECIPES = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, MechaniCraftMain.MODID);
 
     public static final RegistryObject<RecipeSerializer<CrusherRecipes>> CrusherRecipe =

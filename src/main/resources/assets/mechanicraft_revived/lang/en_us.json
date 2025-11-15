@@ -328,7 +328,9 @@
 
 	"block.mechanicraft_revived.primitive_metallic_infuser": "Primitive Metallic Infuser",
 	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.cook_progress": "Infusing Time Left: %s/%s Ticks",
+	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.cook_progress.no_shift": "Infusing Time Left: %s/%s",
 	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.burn_time": "Burn Time Left: %s/%s Ticks",
+	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.burn_time.no_shift": "Burn Time Left: %s/%s",
 	
 	"container.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",
 	"block.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",

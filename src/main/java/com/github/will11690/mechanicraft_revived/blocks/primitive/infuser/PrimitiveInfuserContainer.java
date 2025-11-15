@@ -66,10 +66,29 @@ public class PrimitiveInfuserContainer extends AbstractContainerMenu {
         return this.data.get(0) > 0;
     }
 
-
     public boolean isBurning() {
 
         return this.data.get(2) > 0;
+    }
+
+    public int getBurnTime() {
+
+        return this.data.get(2);
+    }
+
+    public int getMaxBurnTime() {
+
+        return this.data.get(3);
+    }
+
+    public int getProgress() {
+
+        return this.data.get(0);
+    }
+
+    public int getMaxProgress() {
+
+        return this.data.get(1);
     }
 
     public int getProgressScaled(int width) {

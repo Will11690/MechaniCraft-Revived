@@ -332,10 +332,10 @@
 	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.burn_time": "Burn Time Left: %s/%s Ticks",
 	"com.github.will11690.mechanicraft_revived.screen.primitive_metallic_infuser.burn_time.no_shift": "Burn Time Left: %s/%s",
 	
-	"container.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",
-	"block.mechanicraft_revived.basic_coal_generator": "Basic Coal Generator",
-	"com.github.will11690.mechanicraft_revived.screen.basic_coal_generator.energy": "Energy: %s/%s FE",
-	"com.github.will11690.mechanicraft_revived.screen.basic_coal_generator.burn_time": "Burn Time Left: %s/%s Ticks",
+	"container.mechanicraft-revived.basic_solid_fuel_generator": "Basic Solid Fuel Generator",
+	"block.mechanicraft_revived.basic_solid_fuel_generator": "Basic Solid Fuel Generator",
+	"com.github.will11690.mechanicraft_revived.screen.basic_solid_fuel_generator.energy": "Energy: %s/%s FE",
+	"com.github.will11690.mechanicraft_revived.screen.basic_solid_fuel_generator.burn_time": "Burn Time Left: %s/%s Ticks",
 	
 	"container.mechanicraft_revived.basic_furnace": "Basic Furnace",
 	"block.mechanicraft_revived.basic_furnace": "Basic Furnace",
@@ -505,7 +505,7 @@
 	"com.github.will11690.mechanicraft_revived.screen.t4_press.energy": "Energy: %s/%s FE",
 	"com.github.will11690.mechanicraft_revived.screen.t4_press.cook_progress": "Pressing Time Left: %s/%s Ticks",
 	
-	"block.mechanicraft_revived.line_miner": "Line Miner",
+	"block.mechanicraft_revived.mining_well": "Mining Well",
 	
 	"container.mechanicraft_revived.t5_ore_washer": "Ore Washer Tier 5",
 	"block.mechanicraft_revived.t5_ore_washer": "Ore Washer Tier 5",

@@ -1,6 +1,9 @@
 package com.github.will11690.mechanicraft_revived.registry;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen.BasicSolidFuelGenerator;
+import com.github.will11690.mechanicraft_revived.blocks.powered.miningwell.MiningWell;
+import com.github.will11690.mechanicraft_revived.blocks.powered.miningwell.miningpipe.MiningPipe;
 import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuser;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -80,9 +83,9 @@ public class MechaniCraftBlocks {
 
     public static final RegistryObject<Block> PrimitiveInfuser = registerBlock("primitive_metallic_infuser", () -> new PrimitiveInfuser(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
-     /* public static final RegistryObject<Block> TestBlock = registerBlock("basic_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_coal_generator", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+     // public static final RegistryObject<Block> TestBlock = registerBlock("basic_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> BasicSolidFuelGenerator = registerBlock("basic_solid_fuel_generator", () -> new BasicSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+     /*  public static final RegistryObject<Block> TestBlock = registerBlock("basic_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *
      *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_coal_generator", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -134,10 +137,10 @@ public class MechaniCraftBlocks {
      *  public static final RegistryObject<Block> TestBlock = registerBlock("t6_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("t6_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("t6_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("line_miner", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
      */
+
+    public static final RegistryObject<Block> MiningWell = registerBlock("mining_well", () -> new MiningWell(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> MiningPipe = registerBlock("mining_pipe", () -> new MiningPipe(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

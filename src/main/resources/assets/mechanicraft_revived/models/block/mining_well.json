@@ -1,0 +1,12 @@
+{
+   "parent": "block/cube_all",
+   "textures": {
+        "particle": "mechanicraft_revived:block/mining_well_sides",
+        "up": "mechanicraft_revived:block/mining_well_top",
+        "down": "mechanicraft_revived:block/mining_well_bottom",
+        "north": "mechanicraft_revived:block/mining_well_sides",
+        "east": "mechanicraft_revived:block/mining_well_sides",
+        "south": "mechanicraft_revived:block/mining_well_sides",
+        "west": "mechanicraft_revived:block/mining_well_sides"
+    }
+}

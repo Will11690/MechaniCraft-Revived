@@ -1,6 +1,8 @@
 package com.github.will11690.mechanicraft_revived.registry;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen.BasicSolidFuelGeneratorContainer;
+import com.github.will11690.mechanicraft_revived.blocks.powered.miningwell.MiningWellContainer;
 import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserContainer;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
@@ -17,6 +19,12 @@ public class MechaniCraftContainers {
 
     public static final RegistryObject<MenuType<PrimitiveInfuserContainer>> PrimitiveInfuserCont =
             registerContainer(PrimitiveInfuserContainer::new, "primitive_metallic_infuser_container");
+
+    public static final RegistryObject<MenuType<MiningWellContainer>> MiningWellContainer =
+            registerContainer(MiningWellContainer::new, "mining_well_container");
+
+    public static final RegistryObject<MenuType<BasicSolidFuelGeneratorContainer>> BasicSolidFuelGeneratorContainer =
+            registerContainer(BasicSolidFuelGeneratorContainer::new, "basic_solid_fuel_generator");
 
     private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerContainer(IContainerFactory<T> factory, String name) {
         return CONTAINERS.register(name, () -> IForgeMenuType.create(factory));

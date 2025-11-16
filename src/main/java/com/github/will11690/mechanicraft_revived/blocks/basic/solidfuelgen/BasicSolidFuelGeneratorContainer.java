@@ -1,42 +1,44 @@
-package com.github.will11690.mechanicraft_revived.blocks.primitive.infuser;
+package com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen;
 
 import com.github.will11690.mechanicraft_revived.registry.MechaniCraftBlocks;
 import com.github.will11690.mechanicraft_revived.registry.MechaniCraftContainers;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.SimpleContainerData;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
 
-public class PrimitiveInfuserContainer extends AbstractContainerMenu {
+public class BasicSolidFuelGeneratorContainer extends AbstractContainerMenu {
 
-    public final PrimitiveInfuserBE infuserBE;
+    public final BasicSolidFuelGeneratorBE generatorBE;
     private final Level level;
     private final ContainerData data;
 
-    public PrimitiveInfuserContainer(int containerID, Inventory inv, FriendlyByteBuf extraData) {
+    public BasicSolidFuelGeneratorContainer(int containerID, Inventory inv, FriendlyByteBuf extraData) {
         this(containerID, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(4));
     }
 
-    public PrimitiveInfuserContainer(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
-        super(MechaniCraftContainers.PrimitiveInfuserCont.get(), pContainerId);
-        checkContainerSize(inv, 4);
-        infuserBE = ((PrimitiveInfuserBE) entity);
+    public BasicSolidFuelGeneratorContainer(int containerID, Inventory inv, BlockEntity entity, ContainerData data) {
+        super(MechaniCraftContainers.BasicSolidFuelGeneratorContainer.get(), containerID);
+        checkContainerSize(inv, 1);
+        this.generatorBE = ((BasicSolidFuelGeneratorBE) entity);
         this.level = inv.player.level();
         this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.infuserBE.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
-            this.addSlot(new SlotItemHandler(itemHandler, 0, 30, 20));
-            this.addSlot(new SlotItemHandler(itemHandler, 1, 58, 20));
-            this.addSlot(new SlotItemHandler(itemHandler, 2, 124, 35));
-            this.addSlot(new SlotItemHandler(itemHandler, 3, 44, 53));
+        this.generatorBE.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
+            this.addSlot(new SlotItemHandler(itemHandler, 0, 80, 31));
         });
 
         addDataSlots(data);
@@ -44,10 +46,11 @@ public class PrimitiveInfuserContainer extends AbstractContainerMenu {
 
     @Override
     public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, infuserBE.getBlockPos()), player, MechaniCraftBlocks.PrimitiveInfuser.get());
+        return stillValid(ContainerLevelAccess.create(level, generatorBE.getBlockPos()), player, MechaniCraftBlocks.BasicSolidFuelGenerator.get());
     }
 
     private void addPlayerInventory(Inventory playerInventory) {
+
         for (int i = 0; i < 3; ++i) {
             for (int l = 0; l < 9; ++l) {
                 this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
@@ -56,19 +59,22 @@ public class PrimitiveInfuserContainer extends AbstractContainerMenu {
     }
 
     private void addPlayerHotbar(Inventory playerInventory) {
+
         for (int i = 0; i < 9; ++i) {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
 
-    public boolean isCrafting() {
+    /* DATA ACCESSORS */
 
-        return this.data.get(0) > 0;
+    public int getEnergy() {
+
+        return this.data.get(0);
     }
 
-    public boolean isBurning() {
+    public int getEnergyMax() {
 
-        return this.data.get(2) > 0;
+        return this.data.get(1);
     }
 
     public int getBurnTime() {
@@ -76,33 +82,9 @@ public class PrimitiveInfuserContainer extends AbstractContainerMenu {
         return this.data.get(2);
     }
 
-    public int getMaxBurnTime() {
+    public int getBurnTimeTotal() {
 
         return this.data.get(3);
-    }
-
-    public int getProgress() {
-
-        return this.data.get(0);
-    }
-
-    public int getMaxProgress() {
-
-        return this.data.get(1);
-    }
-
-    public int getProgressScaled(int width) {
-
-        int cookProgress = this.data.get(0);
-        int cookTimeForRecipe = this.data.get(1);
-        return cookTimeForRecipe != 0 && cookProgress != 0 ? cookProgress * width / cookTimeForRecipe : 0;
-    }
-
-    public int getBurnScaled(int height) {
-
-        int burnProgress = this.data.get(2);
-        int burnTimeForRecipe = this.data.get(3);
-        return burnTimeForRecipe != 0 && burnProgress != 0 ? burnProgress * height / burnTimeForRecipe : 0;
     }
 
     // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
@@ -121,21 +103,21 @@ public class PrimitiveInfuserContainer extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 1;  // must be the number of slots you have!
+
     @Override
-    public ItemStack quickMoveStack(Player playerIn, int index) {
+    public @NotNull ItemStack quickMoveStack(Player playerIn, int index) {
 
         Slot sourceSlot = slots.get(index);
-        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;  //EMPTY_ITEM
+        if (sourceSlot == null || !sourceSlot.hasItem()) return ItemStack.EMPTY;
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
         // Check if the slot clicked is one of the vanilla container slots
         if (index < VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT) {
             // This is a vanilla container slot so merge the stack into the tile inventory
-            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX
-                    + TE_INVENTORY_SLOT_COUNT, false)) {
-                return ItemStack.EMPTY;  // EMPTY_ITEM
+            if (!moveItemStackTo(sourceStack, TE_INVENTORY_FIRST_SLOT_INDEX, TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT, false)) {
+                return ItemStack.EMPTY;
             }
 
         } else if (index < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {

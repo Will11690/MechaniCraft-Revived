@@ -204,6 +204,9 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.T6GearBox.get());
 
                 output.accept(MechaniCraftBlocks.PrimitiveInfuser.get());
+
+                output.accept(MechaniCraftBlocks.BasicSolidFuelGenerator.get());
+                output.accept(MechaniCraftBlocks.MiningWell.get());
             }).build()
     );
 

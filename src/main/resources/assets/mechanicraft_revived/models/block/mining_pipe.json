@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "mechanicraft_revived:model/mining_chute",
-		"particle": "mechanicraft_revived:model/mining_chute"
+		"0": "mechanicraft_revived:model/mining_pipe",
+		"particle": "mechanicraft_revived:model/mining_pipe"
 	},
 	"elements": [
 		{

@@ -1,5 +1,6 @@
 package com.github.will11690.mechanicraft_revived;
 
+import com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen.BasicSolidFuelGeneratorScreen;
 import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserBE;
 import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserScreen;
 import com.github.will11690.mechanicraft_revived.registry.*;
@@ -116,6 +117,7 @@ public class MechaniCraftMain {
 
             //Register screens on the client
             MenuScreens.register(MechaniCraftContainers.PrimitiveInfuserCont.get(), PrimitiveInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.BasicSolidFuelGeneratorContainer.get(), BasicSolidFuelGeneratorScreen::new);
         }
     }
 }

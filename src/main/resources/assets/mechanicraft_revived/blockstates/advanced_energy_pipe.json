@@ -1,0 +1,93 @@
+{
+	
+    "multipart": [
+	
+		{  
+		
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/advanced_energy_pipe_core" }
+		
+		},
+		{
+	
+			"when": { "block_down": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_down_block" }
+	
+		},
+	
+		{
+	
+			"when": { "block_east": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_east_block" }
+	
+		},
+	
+		{
+	
+			"when": { "block_north": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_north_block" }
+	
+		},
+	
+		{
+	
+			"when": { "block_south": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_south_block" }
+	
+		},
+	
+		{
+	
+			"when": { "block_up": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_up_block" }
+	
+		},
+	
+		{
+	
+			"when": { "block_west": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conblock/advanced_energy_pipe_connected_west_block" }
+	
+		},
+		{
+	
+			"when": { "pipe_down": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_down_pipe" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_east": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_east_pipe" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_north": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_north_pipe" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_south": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_south_pipe" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_up": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_up_pipe" }
+	
+		},
+	
+		{
+	
+			"when": { "pipe_west": true },
+			"apply": { "model": "mechanicraft_revived:block/energy_pipe/advanced_energy_pipe/conpipe/advanced_energy_pipe_connected_west_pipe" }
+	
+		}
+	]
+}

@@ -27,12 +27,11 @@ public class MechaniCraftMain {
 
     /*Reworking Tiers to get rid of numbers in names.
     Coal powered machines are now primitive
-    Base powered machines are now powered
-    1st tier Producers will be in basic in addition to tanks
-    2nd tier will be Advanced
-    3rd tier will be Elite
-    4th tier will be Superior
-    5th tier will be Supreme
+    1st tier will be Basic
+    2nd tier will be Enhanced
+    3rd tier will be Advanced
+    4th tier will be Elite
+    5th tier will be Superior
     final tier will be Ultimate
     misc package will be for non-tiered blocks such as the line miner and quarries
     void quarries will have tiered structures so may get their own package later*/

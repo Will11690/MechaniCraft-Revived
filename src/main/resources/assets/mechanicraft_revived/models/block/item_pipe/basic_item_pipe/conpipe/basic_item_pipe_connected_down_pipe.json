@@ -1,0 +1,32 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/cube_all",
+	"texture_size": [32, 32],
+	"textures": {
+		"2": "mechanicraft_revived:model/item_pipe/basic_item_pipe_extension",
+		"particle": "mechanicraft_revived:model/item_pipe/basic_item_pipe_core"
+	},
+	"elements": [
+		{
+			"name": "extension_pipe_down",
+			"from": [6, 0, 6],
+			"to": [10, 6, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 9, 8]},
+			"faces": {
+				"north": {"uv": [8, 10, 12, 16], "texture": "#2"},
+				"east": {"uv": [8, 10, 12, 16], "texture": "#2"},
+				"south": {"uv": [8, 10, 12, 16], "texture": "#2"},
+				"west": {"uv": [8, 10, 12, 16], "texture": "#2"},
+				"up": {"uv": [0, 8, 8, 16], "texture": "#2"},
+				"down": {"uv": [0, 8, 8, 16], "texture": "#2"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "basic_item_pipe_down",
+			"origin": [8, 8, 8],
+			"children": [0]
+		}
+	]
+}

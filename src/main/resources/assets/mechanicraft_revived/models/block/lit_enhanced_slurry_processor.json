@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mechanicraft_revived:block/enhanced_machine",
+        "up": "mechanicraft_revived:block/enhanced_machine",
+        "down": "mechanicraft_revived:block/enhanced_machine",
+        "north": "mechanicraft_revived:block/enhanced_slurry_processor_front_on",
+        "east": "mechanicraft_revived:block/enhanced_machine_input1",
+        "south": "mechanicraft_revived:block/enhanced_machine_output",
+        "west": "mechanicraft_revived:block/enhanced_machine_input2"
+    }
+}

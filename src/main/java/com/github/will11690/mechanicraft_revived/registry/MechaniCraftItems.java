@@ -114,65 +114,88 @@ public class MechaniCraftItems {
     public static final RegistryObject<Item> PressDieRod = ITEMS.register("rod_press_die", () -> new Item(new Item.Properties()));
 
     //Gear
-    public static final RegistryObject<Item> AuFeGear = ITEMS.register("au_fe_gear", () -> new Item(new Item.Properties()));
-    //Bronze
-    //Copper
-    //Diamond
-    public static final RegistryObject<Item> DiamoniumGear = ITEMS.register("diamonium_gear", () -> new Item(new Item.Properties()));
-    //Emerald
-    public static final RegistryObject<Item> EmeroniumGear = ITEMS.register("emeronium_gear", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> EndoniumGear = ITEMS.register("endonium_gear", () -> new Item(new Item.Properties()));
+    //TODO
+    public static final RegistryObject<Item> WoodenGear = ITEMS.register("wooden_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> StoneGear = ITEMS.register("stone_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LeadGear = ITEMS.register("lead_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TinGear = ITEMS.register("tin_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CopperGear = ITEMS.register("copper_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BronzeGear = ITEMS.register("bronze_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SilverGear = ITEMS.register("silver_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GoldGear = ITEMS.register("gold_gear", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> IronGear = ITEMS.register("iron_gear", () -> new Item(new Item.Properties()));
-    //Lead
-    public static final RegistryObject<Item> ObsidiumGear = ITEMS.register("obsidium_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AuFeGear = ITEMS.register("au_fe_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SteelGear = ITEMS.register("steel_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RubyGear = ITEMS.register("ruby_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SapphireGear = ITEMS.register("sapphire_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamondGear = ITEMS.register("diamond_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeraldGear = ITEMS.register("emerald_gear", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RuboniumGear = ITEMS.register("rubonium_gear", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SaphoniumGear = ITEMS.register("saphonium_gear", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> StoneGear = ITEMS.register("stone_gear", () -> new Item(new Item.Properties()));
-    //Tin
-    public static final RegistryObject<Item> WoodenGear = ITEMS.register("wooden_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamoniumGear = ITEMS.register("diamonium_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumGear = ITEMS.register("emeronium_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ObsidiumGear = ITEMS.register("obsidium_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EndoniumGear = ITEMS.register("endonium_gear", () -> new Item(new Item.Properties()));
 
     //Plate
     //TODO
-    //public static final RegistryObject<Item> AuFeGear = ITEMS.register("au_fe_gear", () -> new Item(new Item.Properties()));
-    //Bronze
-    //Copper
-    //Diamond
-    //public static final RegistryObject<Item> DiamoniumGear = ITEMS.register("diamonium_gear", () -> new Item(new Item.Properties()));
-    //Emerald
-    //public static final RegistryObject<Item> EmeroniumGear = ITEMS.register("emeronium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> EndoniumGear = ITEMS.register("endonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> IronGear = ITEMS.register("iron_gear", () -> new Item(new Item.Properties()));
-    //Lead
-    //public static final RegistryObject<Item> ObsidiumGear = ITEMS.register("obsidium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RuboniumGear = ITEMS.register("rubonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> SaphoniumGear = ITEMS.register("saphonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> StoneGear = ITEMS.register("stone_gear", () -> new Item(new Item.Properties()));
-    //Tin
-    //public static final RegistryObject<Item> WoodenGear = ITEMS.register("wooden_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WoodenPlate = ITEMS.register("wooden_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> StonePlate = ITEMS.register("stone_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LeadPlate = ITEMS.register("lead_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TinPlate = ITEMS.register("tin_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CopperPlate = ITEMS.register("copper_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BronzePlate = ITEMS.register("bronze_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SilverPlate = ITEMS.register("silver_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GoldPlate = ITEMS.register("gold_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IronPlate = ITEMS.register("iron_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AuFePlate = ITEMS.register("au_fe_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SteelPlate = ITEMS.register("steel_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RubyPlate = ITEMS.register("ruby_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SapphirePlate = ITEMS.register("sapphire_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamondPlate = ITEMS.register("diamond_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeraldPlate = ITEMS.register("emerald_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RuboniumPlate = ITEMS.register("rubonium_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SaphoniumPlate = ITEMS.register("saphonium_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamoniumPlate = ITEMS.register("diamonium_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumPlate = ITEMS.register("emeronium_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ObsidiumPlate = ITEMS.register("obsidium_plate", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EndoniumPlate = ITEMS.register("endonium_plate", () -> new Item(new Item.Properties()));
 
     //Rod
     //TODO
-    //public static final RegistryObject<Item> AuFeGear = ITEMS.register("au_fe_gear", () -> new Item(new Item.Properties()));
-    //Bronze
-    //Copper
-    //Diamond
-    //public static final RegistryObject<Item> DiamoniumGear = ITEMS.register("diamonium_gear", () -> new Item(new Item.Properties()));
-    //Emerald
-    //public static final RegistryObject<Item> EmeroniumGear = ITEMS.register("emeronium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> EndoniumGear = ITEMS.register("endonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> IronGear = ITEMS.register("iron_gear", () -> new Item(new Item.Properties()));
-    //Lead
-    //public static final RegistryObject<Item> ObsidiumGear = ITEMS.register("obsidium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> RuboniumGear = ITEMS.register("rubonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> SaphoniumGear = ITEMS.register("saphonium_gear", () -> new Item(new Item.Properties()));
-    //public static final RegistryObject<Item> StoneGear = ITEMS.register("stone_gear", () -> new Item(new Item.Properties()));
-    //Tin
-    //public static final RegistryObject<Item> WoodenGear = ITEMS.register("wooden_gear", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> WoodenRod = ITEMS.register("wooden_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> StoneRod = ITEMS.register("stone_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LeadRod = ITEMS.register("lead_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> TinRod = ITEMS.register("tin_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> CopperRod = ITEMS.register("copper_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BronzeRod = ITEMS.register("bronze_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SilverRod = ITEMS.register("silver_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> GoldRod = ITEMS.register("gold_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> IronRod = ITEMS.register("iron_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AuFeRod = ITEMS.register("au_fe_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SteelRod = ITEMS.register("steel_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RubyRod = ITEMS.register("ruby_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SapphireRod = ITEMS.register("sapphire_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamondRod = ITEMS.register("diamond_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeraldRod = ITEMS.register("emerald_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RuboniumRod = ITEMS.register("rubonium_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SaphoniumRod = ITEMS.register("saphonium_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DiamoniumRod = ITEMS.register("diamonium_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EmeroniumRod = ITEMS.register("emeronium_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> ObsidiumRod = ITEMS.register("obsidium_rod", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EndoniumRod = ITEMS.register("endonium_rod", () -> new Item(new Item.Properties()));
 
     //Upgrade
     //TODO
+    public static final RegistryObject<Item> BasicMachineUpgradeKit = ITEMS.register("basic_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EnhancedMachineUpgradeKit = ITEMS.register("enhanced_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> AdvancedMachineUpgradeKit = ITEMS.register("advanced_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> EliteMachineUpgradeKit = ITEMS.register("elite_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> SuperiorMachineUpgradeKit = ITEMS.register("superior_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> UltimateMachineUpgradeKit = ITEMS.register("ultimate_machine_upgrade_kit", () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> CapacityUpgrade = ITEMS.register("capacity_upgrade", () -> new Item(new Item.Properties()));
-    //Chunkloader
+    public static final RegistryObject<Item> ChunkloaderUpgrade = ITEMS.register("chunkloader_upgrade", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> CreativeUpgrade = ITEMS.register("creative_upgrade", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> EfficiencyUpgrade = ITEMS.register("efficiency_upgrade", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SpeedUpgrade = ITEMS.register("speed_upgrade", () -> new Item(new Item.Properties()));

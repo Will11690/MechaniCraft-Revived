@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "mechanicraft_revived:block/advanced__machine",
+        "up": "mechanicraft_revived:block/advanced__machine",
+        "down": "mechanicraft_revived:block/advanced__machine",
+        "north": "mechanicraft_revived:block/advanced_crusher_front_on",
+        "east": "mechanicraft_revived:block/advanced__machine",
+        "south": "mechanicraft_revived:block/advanced__machine",
+        "west": "mechanicraft_revived:block/advanced__machine"
+    }
+}

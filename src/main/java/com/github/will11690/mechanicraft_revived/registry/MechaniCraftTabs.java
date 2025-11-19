@@ -191,21 +191,22 @@ public class MechaniCraftTabs {
 
     public static final RegistryObject<CreativeModeTab> MachinesTab = CREATIVEMODETABS.register("machines_tab", () -> CreativeModeTab.builder()
             .withTabsAfter(MechaniCraftTabs.BlocksTab.getKey())
-            .icon(() -> new ItemStack(MechaniCraftBlocks.T1GearBox.get()))
+            .icon(() -> new ItemStack(MechaniCraftBlocks.BasicGearBox.get()))
             .title(Component.translatable("creativemodetab.mechanicraft_revived.machines_tab"))
             .displayItems((itemDisplayParameters, output) -> {
 
                 output.accept(MechaniCraftBlocks.MachineBlock.get());
-                output.accept(MechaniCraftBlocks.T1GearBox.get());
-                output.accept(MechaniCraftBlocks.T2GearBox.get());
-                output.accept(MechaniCraftBlocks.T3GearBox.get());
-                output.accept(MechaniCraftBlocks.T4GearBox.get());
-                output.accept(MechaniCraftBlocks.T5GearBox.get());
-                output.accept(MechaniCraftBlocks.T6GearBox.get());
+                output.accept(MechaniCraftBlocks.BasicGearBox.get());
+                output.accept(MechaniCraftBlocks.EnhancedGearBox.get());
+                output.accept(MechaniCraftBlocks.AdvancedGearBox.get());
+                output.accept(MechaniCraftBlocks.EliteGearBox.get());
+                output.accept(MechaniCraftBlocks.SuperiorGearBox.get());
+                output.accept(MechaniCraftBlocks.UltimateGearBox.get());
 
                 output.accept(MechaniCraftBlocks.PrimitiveInfuser.get());
 
                 output.accept(MechaniCraftBlocks.BasicSolidFuelGenerator.get());
+                output.accept(MechaniCraftBlocks.BasicEnergyPipe.get());
                 output.accept(MechaniCraftBlocks.MiningWell.get());
             }).build()
     );

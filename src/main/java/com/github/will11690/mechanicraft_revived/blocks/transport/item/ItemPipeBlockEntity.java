@@ -289,6 +289,17 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
                 if (toExtract <= 0) continue;
 
                 ItemStack extracted = handler.extractItem(slot, toExtract, false);
+                ItemStack simulated = handler.extractItem(slot, remainingForSide, true);
+                if (simulated.isEmpty()) continue;
+                if (!filter.test(simulated)) continue;
+
+                ItemStack simRemaining =
+                        network.distributeItems(simulated, true, logicMode, handler, channel);
+
+                int canSend = simulated.getCount() - simRemaining.getCount();
+                if (canSend <= 0) continue;
+
+                ItemStack extracted = handler.extractItem(slot, canSend, false);
                 if (extracted.isEmpty()) continue;
 
                 ItemStack leftoverReal =
@@ -306,6 +317,7 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
                             remainder = handler.insertItem(backSlot, remainder, false);
                         }
                     }
+                    handler.insertItem(slot, leftoverReal, false);
                 }
             }
         }

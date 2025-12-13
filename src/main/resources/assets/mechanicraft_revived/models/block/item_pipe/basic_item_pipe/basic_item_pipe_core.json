@@ -3,8 +3,8 @@
 	"parent": "block/cube_all",
 	"texture_size": [32, 32],
 	"textures": {
-		"3": "mechanicraft_revived:block/block/model/item_pipe/basic_item_pipe_core",
-		"particle": "mechanicraft_revived:block/block/model/item_pipe/basic_item_pipe_core"
+                "3": "mechanicraft_revived:block/model/item_pipe/basic_item_pipe_core",
+                "particle": "mechanicraft_revived:block/model/item_pipe/basic_item_pipe_core"
 	},
 	"elements": [
 		{

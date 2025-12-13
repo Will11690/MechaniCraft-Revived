@@ -718,13 +718,13 @@ public class PipeNetworkManager {
          * @param source      handler we are draining from (never fill back into this)
          * @param channel     channel to use
          */
-        public int distributeFluid(FluidStack stack,
-                                   boolean simulate,
-                                   PipeLogicMode logicMode,
-                                   IFluidHandler source,
-                                   int channel) {
+        public FluidStack distributeFluid(FluidStack stack,
+                                          boolean simulate,
+                                          PipeLogicMode logicMode,
+                                          IFluidHandler source,
+                                          int channel) {
 
-            if (stack.isEmpty() || endpoints.isEmpty()) return 0;
+            if (stack.isEmpty() || endpoints.isEmpty()) return FluidStack.EMPTY;
 
             int remaining     = stack.getAmount();
             int acceptedTotal = 0;
@@ -780,7 +780,10 @@ public class PipeNetworkManager {
                 }
             }
 
-            return acceptedTotal;
+            int leftover = stack.getAmount() - acceptedTotal;
+            if (leftover <= 0) return FluidStack.EMPTY;
+
+            return new FluidStack(stack, leftover);
         }
 
         private List<Endpoint> orderByLogic(List<Endpoint> extract,

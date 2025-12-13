@@ -9,11 +9,12 @@ import com.github.will11690.mechanicraft_revived.blocks.transport.base.network.P
 import com.github.will11690.mechanicraft_revived.util.block.IOMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -52,10 +53,10 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
     };
 
     protected FluidPipeBlockEntity(BlockEntityType<?> type,
-                                    BlockPos pos,
-                                    BlockState state,
-                                    int tierMaxTransfer,
-                                    int tierIndex) {
+                                   BlockPos pos,
+                                   BlockState state,
+                                   int tierMaxTransfer,
+                                   int tierIndex) {
 
         super(type, pos, state, PipeType.FLUID, tierMaxTransfer);
         this.tierIndex = tierIndex;
@@ -80,7 +81,9 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
                 .isPresent();
     }
 
-    /** Not used for fluids (numeric FE style), so 0. */
+    /**
+     * Not used for fluids (numeric FE style), so 0.
+     */
     @Override
     public int receiveFromSide(Direction fromSide, int maxAmount, boolean simulate) {
         return 0;
@@ -89,10 +92,6 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
     /* --------------------------------------------------------------------- */
     /* Filters                                                               */
     /* --------------------------------------------------------------------- */
-
-    public ItemStackHandler getFilterInventory() {
-        return filterInv;
-    }
 
     private int sideFilterBase(Direction side) {
         return side.ordinal() * FILTER_SLOTS_PER_SIDE;
@@ -127,7 +126,7 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
             if (fs.isEmpty()) return false;
 
             boolean anyFilter = false;
-            boolean matches   = false;
+            boolean matches = false;
 
             for (int i = 0; i < FILTER_SLOTS_PER_SIDE; i++) {
 
@@ -225,7 +224,7 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
 
     public void serverTick() {
 
-        if (level == null || level.isClientSide()) return;
+        if (level == null || level.isClientSide) return;
 
         PipeNetworkManager.FluidNetwork network =
                 PipeNetworkManager.get(level).getFluidNetwork(worldPosition);
@@ -254,56 +253,46 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
             int remainingForSide = perSideLimit;
             int channel = cfg.extractChannel;
 
-            Predicate<FluidStack> filter = getFluidFilter(side); // EXTRACT filter
+            Predicate<FluidStack> extractFilter = getFluidFilter(side); // EXTRACT filter
 
             for (int tank = 0; tank < handler.getTanks() && remainingForSide > 0; tank++) {
 
-                FluidStack available = handler.drain(remainingForSide, IFluidHandler.FluidAction.SIMULATE);
+                FluidStack inTank = handler.getFluidInTank(tank);
+                if (inTank.isEmpty()) continue;
+
+                int drainAmount = Math.min(remainingForSide, inTank.getAmount());
+                if (drainAmount <= 0) continue;
+
+                FluidStack toDrain = new FluidStack(inTank, drainAmount);
+
+                // Simulate draining this tank
+                FluidStack available = handler.drain(toDrain, IFluidHandler.FluidAction.SIMULATE);
                 if (available.isEmpty()) continue;
-                if (!filter.test(available)) continue;
+                if (!extractFilter.test(available)) continue;
 
-                int acceptedSim =
+                // Ask network how much of this we could actually send
+                FluidStack simLeftover =
                         network.distributeFluid(available, true, cfg.logicMode, handler, channel);
-
-                int toExtract = Math.min(Math.min(acceptedSim, available.getAmount()), remainingForSide);
-                if (toExtract <= 0) continue;
-
-                FluidStack extracted = handler.drain(toExtract, IFluidHandler.FluidAction.EXECUTE);
-                if (extracted.isEmpty()) continue;
-
-                int acceptedReal =
-                        network.distributeFluid(extracted, false, cfg.logicMode, handler, channel);
-
-                remainingForSide -= acceptedReal;
-
-                int leftover = extracted.getAmount() - acceptedReal;
-                if (leftover > 0) {
-                    FluidStack toReturn = new FluidStack(extracted, leftover);
-                    int returned = handler.fill(toReturn, IFluidHandler.FluidAction.EXECUTE);
-
-                    int stillLeft = leftover - returned;
-                    if (stillLeft > 0) {
-                        network.distributeFluid(new FluidStack(extracted, stillLeft), false, cfg.logicMode, handler, channel);
-                    }
-                FluidStack simulated = handler.drain(remainingForSide, IFluidHandler.FluidAction.SIMULATE);
-                if (simulated.isEmpty()) continue;
-                if (!filter.test(simulated)) continue;
-
-                FluidStack simRemaining =
-                        network.distributeFluids(simulated, true, cfg.logicMode, handler, channel);
-
-                int canSend = simulated.getAmount() - simRemaining.getAmount();
+                int canSend = available.getAmount() - simLeftover.getAmount();
                 if (canSend <= 0) continue;
 
-                FluidStack extracted = handler.drain(canSend, IFluidHandler.FluidAction.EXECUTE);
+                canSend = Math.min(canSend, remainingForSide);
+
+                // Real drain
+                FluidStack extracted = handler.drain(
+                        new FluidStack(inTank, canSend),
+                        IFluidHandler.FluidAction.EXECUTE
+                );
                 if (extracted.isEmpty()) continue;
 
+                // Real distribute
                 FluidStack leftoverReal =
-                        network.distributeFluids(extracted, false, cfg.logicMode, handler, channel);
+                        network.distributeFluid(extracted, false, cfg.logicMode, handler, channel);
 
                 int sent = extracted.getAmount() - leftoverReal.getAmount();
                 remainingForSide -= sent;
 
+                // Try to put any leftover back into the source
                 if (!leftoverReal.isEmpty()) {
                     handler.fill(leftoverReal, IFluidHandler.FluidAction.EXECUTE);
                 }
@@ -316,13 +305,15 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
     /* --------------------------------------------------------------------- */
 
     @Override
-    protected void saveAdditional(@NotNull net.minecraft.nbt.CompoundTag tag) {
+    protected void saveAdditional(@NotNull CompoundTag tag) {
+
         super.saveAdditional(tag);
         tag.put("FilterItems", filterInv.serializeNBT());
     }
 
     @Override
-    public void load(@NotNull net.minecraft.nbt.CompoundTag tag) {
+    public void load(@NotNull CompoundTag tag) {
+
         super.load(tag);
         if (tag.contains("FilterItems")) {
             filterInv.deserializeNBT(tag.getCompound("FilterItems"));

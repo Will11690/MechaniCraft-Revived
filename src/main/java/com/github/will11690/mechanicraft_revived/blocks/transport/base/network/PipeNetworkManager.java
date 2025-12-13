@@ -19,6 +19,7 @@ import net.minecraftforge.fluids.capability.IFluidHandler;
 import net.minecraftforge.items.IItemHandler;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 /**
  * Per-level cached pipe networks.
@@ -33,9 +34,7 @@ public class PipeNetworkManager {
     private static final WeakHashMap<Level, PipeNetworkManager> BY_LEVEL = new WeakHashMap<>();
 
     public static PipeNetworkManager get(Level level) {
-
         synchronized (BY_LEVEL) {
-
             return BY_LEVEL.computeIfAbsent(level, PipeNetworkManager::new);
         }
     }
@@ -53,14 +52,11 @@ public class PipeNetworkManager {
     private final Map<Long, GasNetwork>    gasCache    = new HashMap<>();
 
     private PipeNetworkManager(Level level) {
-
         this.level = level;
     }
 
     public void markDirty(PipeType type) {
-
         switch (type) {
-
             case ENERGY -> {
                 energyTopologyVersion++;
                 energyCache.clear();
@@ -81,7 +77,6 @@ public class PipeNetworkManager {
     }
 
     public EnergyNetwork getEnergyNetwork(BlockPos startPos) {
-
         long key = startPos.asLong();
         EnergyNetwork cached = energyCache.get(key);
         if (cached != null && cached.version == energyTopologyVersion) return cached;
@@ -92,7 +87,6 @@ public class PipeNetworkManager {
     }
 
     public ItemNetwork getItemNetwork(BlockPos startPos) {
-
         long key = startPos.asLong();
         ItemNetwork cached = itemCache.get(key);
         if (cached != null && cached.version == itemTopologyVersion) return cached;
@@ -103,7 +97,6 @@ public class PipeNetworkManager {
     }
 
     public FluidNetwork getFluidNetwork(BlockPos startPos) {
-
         long key = startPos.asLong();
         FluidNetwork cached = fluidCache.get(key);
         if (cached != null && cached.version == fluidTopologyVersion) return cached;
@@ -114,7 +107,6 @@ public class PipeNetworkManager {
     }
 
     public GasNetwork getGasNetwork(BlockPos startPos) {
-
         long key = startPos.asLong();
         GasNetwork cached = gasCache.get(key);
         if (cached != null && cached.version == gasTopologyVersion) return cached;
@@ -132,7 +124,6 @@ public class PipeNetworkManager {
             ThreadLocal.withInitial(HashSet::new);
 
     private static long bridgeKey(PipeType type, int tier, BlockPos pos) {
-
         long k = pos.asLong();
         k ^= ((long) type.ordinal() & 0xF) << 52;
         k ^= ((long) tier & 0xFF) << 56;
@@ -429,6 +420,8 @@ public class PipeNetworkManager {
          * @param logicMode   NEAREST/FURTHEST/ROUND_ROBIN
          * @param source      handler we are pulling from (never insert back into this)
          * @param channel     channel to use (0–255)
+         *
+         * @return leftover items that could NOT be inserted
          */
         public ItemStack distributeItems(ItemStack stack,
                                          boolean simulate,
@@ -436,7 +429,8 @@ public class PipeNetworkManager {
                                          IItemHandler source,
                                          int channel) {
 
-            if (stack.isEmpty() || endpoints.isEmpty()) return stack;
+            if (stack.isEmpty()) return ItemStack.EMPTY;
+            if (endpoints.isEmpty()) return stack.copy();
 
             ItemStack remaining = stack.copy();
 
@@ -537,14 +531,14 @@ public class PipeNetworkManager {
             public final int priority;
             public final int transferLimit;
             public final int channel;
-            public final java.util.function.Predicate<ItemStack> insertFilter;
+            public final Predicate<ItemStack> insertFilter;
             public int distance; // set by builder
 
             public Endpoint(IItemHandler handler,
                             int priority,
                             int transferLimit,
                             int channel,
-                            java.util.function.Predicate<ItemStack> insertFilter) {
+                            Predicate<ItemStack> insertFilter) {
 
                 this.handler = handler;
                 this.priority = priority;
@@ -651,7 +645,7 @@ public class PipeNetworkManager {
                             int channel = (cfgHere != null) ? cfgHere.insertChannel : 0;
                             int epDist = baseDist + 1;
 
-                            java.util.function.Predicate<ItemStack> insertFilter =
+                            Predicate<ItemStack> insertFilter =
                                     pipe.getInsertItemFilter(dir);
 
                             Endpoint ep = new Endpoint(handler, prHere, bridgeLimit, channel, insertFilter);
@@ -717,6 +711,8 @@ public class PipeNetworkManager {
          * @param logicMode   NEAREST/FURTHEST/ROUND_ROBIN
          * @param source      handler we are draining from (never fill back into this)
          * @param channel     channel to use
+         *
+         * @return leftover fluid that could not be inserted anywhere
          */
         public FluidStack distributeFluid(FluidStack stack,
                                           boolean simulate,
@@ -724,7 +720,8 @@ public class PipeNetworkManager {
                                           IFluidHandler source,
                                           int channel) {
 
-            if (stack.isEmpty() || endpoints.isEmpty()) return FluidStack.EMPTY;
+            if (stack.isEmpty()) return FluidStack.EMPTY;
+            if (endpoints.isEmpty()) return stack.copy();
 
             int remaining     = stack.getAmount();
             int acceptedTotal = 0;
@@ -818,14 +815,14 @@ public class PipeNetworkManager {
             public final int priority;
             public final int transferLimit;
             public final int channel;
-            public final java.util.function.Predicate<FluidStack> insertFilter;
+            public final Predicate<FluidStack> insertFilter;
             public int distance; // set by builder
 
             public Endpoint(IFluidHandler handler,
                             int priority,
                             int transferLimit,
                             int channel,
-                            java.util.function.Predicate<FluidStack> insertFilter) {
+                            Predicate<FluidStack> insertFilter) {
 
                 this.handler = handler;
                 this.priority = priority;
@@ -932,7 +929,7 @@ public class PipeNetworkManager {
                             int channel = (cfgHere != null) ? cfgHere.insertChannel : 0;
                             int epDist = baseDist + 1;
 
-                            java.util.function.Predicate<FluidStack> insertFilter =
+                            Predicate<FluidStack> insertFilter =
                                     pipe.getInsertFluidFilter(dir);
 
                             Endpoint ep = new Endpoint(handler, prHere, bridgeLimit, channel, insertFilter);
@@ -973,13 +970,11 @@ public class PipeNetworkManager {
         final int tierIndex;
 
         private GasNetwork(long version, int tierIndex) {
-
             this.version = version;
             this.tierIndex = tierIndex;
         }
 
         public int distributeGas(Object gasStackLike, boolean simulate) {
-
             return 0; // stub until you pick a capability/API
         }
 

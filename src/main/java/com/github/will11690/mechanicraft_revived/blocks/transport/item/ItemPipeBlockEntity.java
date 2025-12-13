@@ -10,10 +10,11 @@ import com.github.will11690.mechanicraft_revived.blocks.transport.base.network.P
 import com.github.will11690.mechanicraft_revived.util.block.IOMode;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
@@ -45,17 +46,17 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
                 PipeNetworkManager.get(level).markDirty(PipeType.ITEM);
 
                 // Also push an update tag to clients (for client-side BE copy)
-                var state = level.getBlockState(worldPosition);
+                BlockState state = level.getBlockState(worldPosition);
                 level.sendBlockUpdated(worldPosition, state, state, 3);
             }
         }
     };
 
     protected ItemPipeBlockEntity(BlockEntityType<?> type,
-                                   BlockPos pos,
-                                   BlockState state,
-                                   int tierMaxTransfer,
-                                   int tierIndex) {
+                                  BlockPos pos,
+                                  BlockState state,
+                                  int tierMaxTransfer,
+                                  int tierIndex) {
 
         super(type, pos, state, PipeType.ITEM, tierMaxTransfer);
         this.tierIndex = tierIndex;
@@ -63,7 +64,6 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
 
     @Override
     public int getTierIndex() {
-
         return tierIndex;
     }
 
@@ -85,7 +85,6 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
     /** We don't use numeric "receiveFromSide" for items, so always 0. */
     @Override
     public int receiveFromSide(Direction fromSide, int maxAmount, boolean simulate) {
-
         return 0;
     }
 
@@ -93,13 +92,7 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
     /* Filters                                                               */
     /* --------------------------------------------------------------------- */
 
-    public ItemStackHandler getFilterInventory() {
-
-        return filterInv;
-    }
-
     private int sideFilterBase(Direction side) {
-
         return side.ordinal() * FILTER_SLOTS_PER_SIDE;
     }
 
@@ -242,7 +235,7 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
 
     public void serverTick() {
 
-        if (level == null || level.isClientSide()) return;
+        if (level == null || level.isClientSide) return;
 
         PipeNetworkManager.ItemNetwork network =
                 PipeNetworkManager.get(level).getItemNetwork(worldPosition);
@@ -253,7 +246,7 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
             PipeSideConfig cfg = getSideConfig(side);
             if (cfg == null || cfg.ioMode == IOMode.DISABLED) continue;
 
-            // INPUT or BOTH = extract items from neighbor into network
+            // EXTRACT or BOTH = pull items from neighbor into network
             if (cfg.ioMode != IOMode.EXTRACT && cfg.ioMode != IOMode.BOTH) continue;
 
             BlockPos neighborPos = worldPosition.relative(side);
@@ -282,42 +275,36 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
                 if (available.isEmpty()) continue;
                 if (!filter.test(available)) continue;
 
+                // Simulate sending through network
                 ItemStack simRemaining =
                         network.distributeItems(available, true, logicMode, handler, channel);
 
-                int toExtract = available.getCount() - simRemaining.getCount();
-                if (toExtract <= 0) continue;
-
-                ItemStack extracted = handler.extractItem(slot, toExtract, false);
-                ItemStack simulated = handler.extractItem(slot, remainingForSide, true);
-                if (simulated.isEmpty()) continue;
-                if (!filter.test(simulated)) continue;
-
-                ItemStack simRemaining =
-                        network.distributeItems(simulated, true, logicMode, handler, channel);
-
-                int canSend = simulated.getCount() - simRemaining.getCount();
+                int canSend = available.getCount() - simRemaining.getCount();
                 if (canSend <= 0) continue;
 
+                canSend = Math.min(canSend, remainingForSide);
+
+                // Real extraction
                 ItemStack extracted = handler.extractItem(slot, canSend, false);
                 if (extracted.isEmpty()) continue;
 
+                // Real distribution
                 ItemStack leftoverReal =
                         network.distributeItems(extracted, false, logicMode, handler, channel);
 
                 int sent = extracted.getCount() - leftoverReal.getCount();
                 remainingForSide -= sent;
 
+                // Try to return leftovers back into the same handler
                 if (!leftoverReal.isEmpty()) {
-
                     ItemStack remainder = handler.insertItem(slot, leftoverReal, false);
 
                     if (!remainder.isEmpty()) {
                         for (int backSlot = 0; backSlot < handler.getSlots() && !remainder.isEmpty(); backSlot++) {
+                            if (backSlot == slot) continue;
                             remainder = handler.insertItem(backSlot, remainder, false);
                         }
                     }
-                    handler.insertItem(slot, leftoverReal, false);
                 }
             }
         }
@@ -328,14 +315,14 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
     /* --------------------------------------------------------------------- */
 
     @Override
-    protected void saveAdditional(@NotNull net.minecraft.nbt.CompoundTag tag) {
+    protected void saveAdditional(@NotNull CompoundTag tag) {
 
         super.saveAdditional(tag);
         tag.put("FilterItems", filterInv.serializeNBT());
     }
 
     @Override
-    public void load(@NotNull net.minecraft.nbt.CompoundTag tag) {
+    public void load(@NotNull CompoundTag tag) {
 
         super.load(tag);
         if (tag.contains("FilterItems")) {

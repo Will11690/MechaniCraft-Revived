@@ -262,32 +262,50 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
                 if (available.isEmpty()) continue;
                 if (!filter.test(available)) continue;
 
-                FluidStack simRemaining =
+                int acceptedSim =
                         network.distributeFluid(available, true, cfg.logicMode, handler, channel);
 
-                int acceptedSim = available.getAmount() - simRemaining.getAmount();
                 int toExtract = Math.min(Math.min(acceptedSim, available.getAmount()), remainingForSide);
                 if (toExtract <= 0) continue;
 
                 FluidStack extracted = handler.drain(toExtract, IFluidHandler.FluidAction.EXECUTE);
                 if (extracted.isEmpty()) continue;
 
-                FluidStack realRemaining =
+                int acceptedReal =
                         network.distributeFluid(extracted, false, cfg.logicMode, handler, channel);
-
-                int acceptedReal = extracted.getAmount() - realRemaining.getAmount();
 
                 remainingForSide -= acceptedReal;
 
-                int leftover = realRemaining.getAmount();
+                int leftover = extracted.getAmount() - acceptedReal;
                 if (leftover > 0) {
-                    FluidStack toReturn = new FluidStack(realRemaining, leftover);
+                    FluidStack toReturn = new FluidStack(extracted, leftover);
                     int returned = handler.fill(toReturn, IFluidHandler.FluidAction.EXECUTE);
 
                     int stillLeft = leftover - returned;
                     if (stillLeft > 0) {
-                        network.distributeFluid(new FluidStack(realRemaining, stillLeft), false, cfg.logicMode, handler, channel);
+                        network.distributeFluid(new FluidStack(extracted, stillLeft), false, cfg.logicMode, handler, channel);
                     }
+                FluidStack simulated = handler.drain(remainingForSide, IFluidHandler.FluidAction.SIMULATE);
+                if (simulated.isEmpty()) continue;
+                if (!filter.test(simulated)) continue;
+
+                FluidStack simRemaining =
+                        network.distributeFluids(simulated, true, cfg.logicMode, handler, channel);
+
+                int canSend = simulated.getAmount() - simRemaining.getAmount();
+                if (canSend <= 0) continue;
+
+                FluidStack extracted = handler.drain(canSend, IFluidHandler.FluidAction.EXECUTE);
+                if (extracted.isEmpty()) continue;
+
+                FluidStack leftoverReal =
+                        network.distributeFluids(extracted, false, cfg.logicMode, handler, channel);
+
+                int sent = extracted.getAmount() - leftoverReal.getAmount();
+                remainingForSide -= sent;
+
+                if (!leftoverReal.isEmpty()) {
+                    handler.fill(leftoverReal, IFluidHandler.FluidAction.EXECUTE);
                 }
             }
         }

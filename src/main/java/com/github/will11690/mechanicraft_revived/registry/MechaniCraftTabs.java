@@ -231,18 +231,18 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.UltimateEnergyPipe.get());
 
                 output.accept(MechaniCraftBlocks.BasicItemPipe.get());
-                //output.accept(MechaniCraftBlocks.EnhancedItemPipe.get());
-                //output.accept(MechaniCraftBlocks.AdvancedItemPipe.get());
-                //output.accept(MechaniCraftBlocks.EliteItemPipe.get());
-                //output.accept(MechaniCraftBlocks.SuperiorItemPipe.get());
-                //output.accept(MechaniCraftBlocks.UltimateItemPipe.get());
+                output.accept(MechaniCraftBlocks.EnhancedItemPipe.get());
+                output.accept(MechaniCraftBlocks.AdvancedItemPipe.get());
+                output.accept(MechaniCraftBlocks.EliteItemPipe.get());
+                output.accept(MechaniCraftBlocks.SuperiorItemPipe.get());
+                output.accept(MechaniCraftBlocks.UltimateItemPipe.get());
 
                 output.accept(MechaniCraftBlocks.BasicFluidPipe.get());
-                //output.accept(MechaniCraftBlocks.EnhancedFluidPipe.get());
-                //output.accept(MechaniCraftBlocks.AdvancedFluidPipe.get());
-                //output.accept(MechaniCraftBlocks.EliteFluidPipe.get());
-                //output.accept(MechaniCraftBlocks.SuperiorFluidPipe.get());
-                //output.accept(MechaniCraftBlocks.UltimateFluidPipe.get());
+                output.accept(MechaniCraftBlocks.EnhancedFluidPipe.get());
+                output.accept(MechaniCraftBlocks.AdvancedFluidPipe.get());
+                output.accept(MechaniCraftBlocks.EliteFluidPipe.get());
+                output.accept(MechaniCraftBlocks.SuperiorFluidPipe.get());
+                output.accept(MechaniCraftBlocks.UltimateFluidPipe.get());
 
             }).build()
     );

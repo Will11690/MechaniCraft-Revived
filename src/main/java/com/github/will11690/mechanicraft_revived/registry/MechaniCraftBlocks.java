@@ -18,8 +18,18 @@ import com.github.will11690.mechanicraft_revived.blocks.transport.energy.ultimat
 import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell.MiningWell;
 import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell.miningpipe.MiningPipe;
 import com.github.will11690.mechanicraft_revived.blocks.machines.primitive.infuser.PrimitiveInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.advanced.AdvancedFluidPipe;
 import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.basic.BasicFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.elite.EliteFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.enhanced.EnhancedFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.superior.SuperiorFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.ultimate.UltimateFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.advanced.AdvancedItemPipe;
 import com.github.will11690.mechanicraft_revived.blocks.transport.item.basic.BasicItemPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.elite.EliteItemPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.enhanced.EnhancedItemPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.superior.SuperiorItemPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.ultimate.UltimateItemPipe;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -121,18 +131,18 @@ public class MechaniCraftBlocks {
      public static final RegistryObject<Block> UltimateEnergyPipe = registerBlock("ultimate_energy_pipe", () -> new UltimateEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
 
      public static final RegistryObject<Block> BasicItemPipe = registerBlock("basic_item_pipe", () -> new BasicItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     /*  public static final RegistryObject<Block> EnhancedItemPipe = registerBlock("enhanced_item_pipe", () -> new EnhancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> AdvancedItemPipe = registerBlock("advanced_item_pipe", () -> new AdvancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> EliteItemPipe = registerBlock("elite_item_pipe", () -> new EliteItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> SuperiorItemPipe = registerBlock("superior_item_pipe", () -> new SuperiorItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> UltimateItemPipe = registerBlock("ultimate_item_pipe", () -> new UltimateItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));*/
+    public static final RegistryObject<Block> EnhancedItemPipe = registerBlock("enhanced_item_pipe", () -> new EnhancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> AdvancedItemPipe = registerBlock("advanced_item_pipe", () -> new AdvancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> EliteItemPipe = registerBlock("elite_item_pipe", () -> new EliteItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> SuperiorItemPipe = registerBlock("superior_item_pipe", () -> new SuperiorItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> UltimateItemPipe = registerBlock("ultimate_item_pipe", () -> new UltimateItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
 
-     public static final RegistryObject<Block> BasicFluidPipe = registerBlock("basic_fluid_pipe", () -> new BasicFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     /*  public static final RegistryObject<Block> EnhancedFluidPipe = registerBlock("enhanced_fluid_pipe", () -> new EnhancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> AdvancedFluidPipe = registerBlock("advanced_fluid_pipe", () -> new AdvancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> EliteFluidPipe = registerBlock("elite_fluid_pipe", () -> new EliteFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> SuperiorFluidPipe = registerBlock("superior_fluid_pipe", () -> new SuperiorFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> UltimateFluidPipe = registerBlock("ultimate_fluid_pipe", () -> new UltimateFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));*/
+    public static final RegistryObject<Block> BasicFluidPipe = registerBlock("basic_fluid_pipe", () -> new BasicFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> EnhancedFluidPipe = registerBlock("enhanced_fluid_pipe", () -> new EnhancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> AdvancedFluidPipe = registerBlock("advanced_fluid_pipe", () -> new AdvancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> EliteFluidPipe = registerBlock("elite_fluid_pipe", () -> new EliteFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> SuperiorFluidPipe = registerBlock("superior_fluid_pipe", () -> new SuperiorFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> UltimateFluidPipe = registerBlock("ultimate_fluid_pipe", () -> new UltimateFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
 
     /* public static final RegistryObject<Block> BasicGasPipe = registerBlock("basic_gas_pipe", () -> new BasicGasPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      *  public static final RegistryObject<Block> EnhancedGasPipe = registerBlock("enhanced_gas_pipe", () -> new EnhancedGasPipe(Block.Properties.of().strength(1.0F).noOcclusion()));

@@ -16,8 +16,18 @@ import com.github.will11690.mechanicraft_revived.blocks.transport.energy.superio
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.ultimate.UltimateEnergyPipeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell.MiningWellBE;
 import com.github.will11690.mechanicraft_revived.blocks.machines.primitive.infuser.PrimitiveInfuserBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.advanced.AdvancedFluidPipeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.basic.BasicFluidPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.elite.EliteFluidPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.enhanced.EnhancedFluidPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.superior.SuperiorFluidPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.ultimate.UltimateFluidPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.advanced.AdvancedItemPipeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.transport.item.basic.BasicItemPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.elite.EliteItemPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.enhanced.EnhancedItemPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.superior.SuperiorItemPipeBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.ultimate.UltimateItemPipeBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -79,10 +89,30 @@ public class MechaniCraftBlockEntities {
     //ITEM PIPES
     public static final RegistryObject<BlockEntityType<BasicItemPipeBlockEntity>> BasicItemPipeBE = BLOCK_ENTITIES.register
             ("basic_item_pipe", () -> BlockEntityType.Builder.of(BasicItemPipeBlockEntity::new, BasicItemPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EnhancedItemPipeBlockEntity>> EnhancedItemPipeBE = BLOCK_ENTITIES.register
+            ("enhanced_item_pipe", () -> BlockEntityType.Builder.of(EnhancedItemPipeBlockEntity::new, EnhancedItemPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<AdvancedItemPipeBlockEntity>> AdvancedItemPipeBE = BLOCK_ENTITIES.register
+            ("advanced_item_pipe", () -> BlockEntityType.Builder.of(AdvancedItemPipeBlockEntity::new, AdvancedItemPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EliteItemPipeBlockEntity>> EliteItemPipeBE = BLOCK_ENTITIES.register
+            ("elite_item_pipe", () -> BlockEntityType.Builder.of(EliteItemPipeBlockEntity::new, EliteItemPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SuperiorItemPipeBlockEntity>> SuperiorItemPipeBE = BLOCK_ENTITIES.register
+            ("superior_item_pipe", () -> BlockEntityType.Builder.of(SuperiorItemPipeBlockEntity::new, SuperiorItemPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<UltimateItemPipeBlockEntity>> UltimateItemPipeBE = BLOCK_ENTITIES.register
+            ("ultimate_item_pipe", () -> BlockEntityType.Builder.of(UltimateItemPipeBlockEntity::new, UltimateItemPipe.get()).build(null));
 
     //FLUID PIPES
     public static final RegistryObject<BlockEntityType<BasicFluidPipeBlockEntity>> BasicFluidPipeBE = BLOCK_ENTITIES.register
             ("basic_fluid_pipe", () -> BlockEntityType.Builder.of(BasicFluidPipeBlockEntity::new, BasicFluidPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EnhancedFluidPipeBlockEntity>> EnhancedFluidPipeBE = BLOCK_ENTITIES.register
+            ("enhanced_fluid_pipe", () -> BlockEntityType.Builder.of(EnhancedFluidPipeBlockEntity::new, EnhancedFluidPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<AdvancedFluidPipeBlockEntity>> AdvancedFluidPipeBE = BLOCK_ENTITIES.register
+            ("advanced_fluid_pipe", () -> BlockEntityType.Builder.of(AdvancedFluidPipeBlockEntity::new, AdvancedFluidPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<EliteFluidPipeBlockEntity>> EliteFluidPipeBE = BLOCK_ENTITIES.register
+            ("elite_fluid_pipe", () -> BlockEntityType.Builder.of(EliteFluidPipeBlockEntity::new, EliteFluidPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<SuperiorFluidPipeBlockEntity>> SuperiorFluidPipeBE = BLOCK_ENTITIES.register
+            ("superior_fluid_pipe", () -> BlockEntityType.Builder.of(SuperiorFluidPipeBlockEntity::new, SuperiorFluidPipe.get()).build(null));
+    public static final RegistryObject<BlockEntityType<UltimateFluidPipeBlockEntity>> UltimateFluidPipeBE = BLOCK_ENTITIES.register
+            ("ultimate_fluid_pipe", () -> BlockEntityType.Builder.of(UltimateFluidPipeBlockEntity::new, UltimateFluidPipe.get()).build(null));
 
     public static void register(IEventBus eventBus) {
 

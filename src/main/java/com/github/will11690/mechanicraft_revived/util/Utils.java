@@ -14,11 +14,44 @@ public class Utils {
     }
 
     public static String withSuffixTime(int ticks) {
+        if (ticks <= 0) return "0s";
 
-        if (ticks < 20) return "0." + ticks + "s";
+        if (ticks < 20) {
+            double seconds = ticks / 20.0;
+            return String.format("%.2fs", seconds);
+        }
 
-        int exp = (int) (Math.log(ticks) / Math.log(20));
+        double seconds = ticks / 20.0;
 
-        return String.format("%.1f%c", ticks / Math.pow(20, exp), "smhDWY".charAt(exp - 1));
+        final double MINUTE = 60.0;
+        final double HOUR = 60.0 * MINUTE;
+        final double DAY = 24.0 * HOUR;
+        final double WEEK = 7.0 * DAY;
+        final double YEAR = 365.0 * DAY;
+
+        double value;
+        char suffix;
+
+        if (seconds < MINUTE) {
+            value = seconds;
+            suffix = 's';
+        } else if (seconds < HOUR) {
+            value = seconds / MINUTE;
+            suffix = 'm';
+        } else if (seconds < DAY) {
+            value = seconds / HOUR;
+            suffix = 'h';
+        } else if (seconds < WEEK) {
+            value = seconds / DAY;
+            suffix = 'D';
+        } else if (seconds < YEAR) {
+            value = seconds / WEEK;
+            suffix = 'W';
+        } else {
+            value = seconds / YEAR;
+            suffix = 'Y';
+        }
+
+        return String.format(value < 10 ? "%.1f%c" : "%.0f%c", value, suffix);
     }
 }

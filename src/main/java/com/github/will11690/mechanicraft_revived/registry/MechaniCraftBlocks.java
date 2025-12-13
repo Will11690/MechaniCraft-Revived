@@ -1,11 +1,25 @@
 package com.github.will11690.mechanicraft_revived.registry;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
-import com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen.BasicSolidFuelGenerator;
-import com.github.will11690.mechanicraft_revived.blocks.pipes.energy.basic.BasicEnergyPipe;
-import com.github.will11690.mechanicraft_revived.blocks.powered.miningwell.MiningWell;
-import com.github.will11690.mechanicraft_revived.blocks.powered.miningwell.miningpipe.MiningPipe;
-import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.generators.basic.solidfuelgen.BasicSolidFuelGenerator;
+import com.github.will11690.mechanicraft_revived.blocks.machines.advanced.infuser.AdvancedInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.machines.base.BaseMachine;
+import com.github.will11690.mechanicraft_revived.blocks.machines.basic.infuser.BasicInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.machines.elite.infuser.EliteInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.machines.enhanced.infuser.EnhancedInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.advanced.AdvancedEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.basic.BasicEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.elite.EliteEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.enhanced.EnhancedEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.superior.SuperiorEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.energy.ultimate.UltimateEnergyPipe;
+import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell.MiningWell;
+import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell.miningpipe.MiningPipe;
+import com.github.will11690.mechanicraft_revived.blocks.machines.primitive.infuser.PrimitiveInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.transport.fluid.basic.BasicFluidPipe;
+import com.github.will11690.mechanicraft_revived.blocks.transport.item.basic.BasicItemPipe;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -100,21 +114,21 @@ public class MechaniCraftBlocks {
      * 	public static final RegistryObject<Block> VoidCanister = registerBlock("void_canister", () -> new VoidCanister(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      */
      public static final RegistryObject<Block> BasicEnergyPipe = registerBlock("basic_energy_pipe", () -> new BasicEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     /* public static final RegistryObject<Block> EnhancedEnergyPipe = registerBlock("enhanced_energy_pipe", () -> new EnhancedEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> AdvancedEnergyPipe = registerBlock("advanced_energy_pipe", () -> new AdvancedEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> EliteEnergyPipe = registerBlock("elite_energy_pipe", () -> new EliteEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> SuperiorEnergyPipe = registerBlock("superior_energy_pipe", () -> new SuperiorEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     * 	public static final RegistryObject<Block> UltimateEnergyPipe = registerBlock("ultimate_energy_pipe", () -> new UltimateEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));*/
+     public static final RegistryObject<Block> EnhancedEnergyPipe = registerBlock("enhanced_energy_pipe", () -> new EnhancedEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> AdvancedEnergyPipe = registerBlock("advanced_energy_pipe", () -> new AdvancedEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> EliteEnergyPipe = registerBlock("elite_energy_pipe", () -> new EliteEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> SuperiorEnergyPipe = registerBlock("superior_energy_pipe", () -> new SuperiorEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> UltimateEnergyPipe = registerBlock("ultimate_energy_pipe", () -> new UltimateEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
 
-    /* public static final RegistryObject<Block> BasicItemPipe = registerBlock("basic_item_pipe", () -> new BasicItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     *  public static final RegistryObject<Block> EnhancedItemPipe = registerBlock("enhanced_item_pipe", () -> new EnhancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> BasicItemPipe = registerBlock("basic_item_pipe", () -> new BasicItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     /*  public static final RegistryObject<Block> EnhancedItemPipe = registerBlock("enhanced_item_pipe", () -> new EnhancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> AdvancedItemPipe = registerBlock("advanced_item_pipe", () -> new AdvancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> EliteItemPipe = registerBlock("elite_item_pipe", () -> new EliteItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> SuperiorItemPipe = registerBlock("superior_item_pipe", () -> new SuperiorItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> UltimateItemPipe = registerBlock("ultimate_item_pipe", () -> new UltimateItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));*/
 
-    /* public static final RegistryObject<Block> BasicFluidPipe = registerBlock("basic_fluid_pipe", () -> new BasicFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
-     *  public static final RegistryObject<Block> EnhancedFluidPipe = registerBlock("enhanced_fluid_pipe", () -> new EnhancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     public static final RegistryObject<Block> BasicFluidPipe = registerBlock("basic_fluid_pipe", () -> new BasicFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+     /*  public static final RegistryObject<Block> EnhancedFluidPipe = registerBlock("enhanced_fluid_pipe", () -> new EnhancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> AdvancedFluidPipe = registerBlock("advanced_fluid_pipe", () -> new AdvancedFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> EliteFluidPipe = registerBlock("elite_fluid_pipe", () -> new EliteFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> SuperiorFluidPipe = registerBlock("superior_fluid_pipe", () -> new SuperiorFluidPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
@@ -127,18 +141,35 @@ public class MechaniCraftBlocks {
      * 	public static final RegistryObject<Block> SuperiorGasPipe = registerBlock("superior_gas_pipe", () -> new SuperiorGasPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      * 	public static final RegistryObject<Block> UltimateGasPipe = registerBlock("ultimate_gas_pipe", () -> new UltimateGasPipe(Block.Properties.of().strength(1.0F).noOcclusion()));*/
 
-    public static final RegistryObject<Block> PrimitiveInfuser = registerBlock("primitive_metallic_infuser", () -> new PrimitiveInfuser(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> PrimitiveInfuser = registerBlock("primitive_metallic_infuser", () -> new PrimitiveInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
 
      /*
      *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_coal_generator", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      */
     public static final RegistryObject<Block> BasicSolidFuelGenerator = registerBlock("basic_solid_fuel_generator", () -> new BasicSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> BasicInfuser = registerBlock("basic_metallic_infuser", () -> new BasicInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> EnhancedInfuser = registerBlock("enhanced_metallic_infuser", () -> new EnhancedInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> AdvancedInfuser = registerBlock("advanced_metallic_infuser", () -> new AdvancedInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> EliteInfuser = registerBlock("elite_metallic_infuser", () -> new EliteInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> SuperiorInfuser = registerBlock("superior_metallic_infuser", () -> new SuperiorInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+
+    public static final RegistryObject<Block> UltimateInfuser = registerBlock("ultimate_metallic_infuser", () -> new UltimateInfuser(BlockBehaviour.Properties.copy(
+            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
      /*  public static final RegistryObject<Block> TestBlock = registerBlock("basic_smelter", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *
@@ -179,7 +210,7 @@ public class MechaniCraftBlocks {
      */
 
     public static final RegistryObject<Block> MiningWell = registerBlock("mining_well", () -> new MiningWell(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-    public static final RegistryObject<Block> MiningPipe = registerBlock("mining_pipe", () -> new MiningPipe(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    public static final RegistryObject<Block> MiningPipe = registerBlock("mining_pipe", () -> new MiningPipe(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

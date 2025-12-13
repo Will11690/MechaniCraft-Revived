@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "mechanicraft_revived:model/structure_pipe/connections/structure_bottom",
-		"particle": "mechanicraft_revived:model/structure_pipe/core/structure_core"
+		"1": "mechanicraft_revived:block/model/structure_pipe/connections/structure_bottom",
+		"particle": "mechanicraft_revived:block/model/structure_pipe/core/structure_core"
 	},
 	"elements": [
 		{

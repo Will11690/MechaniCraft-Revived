@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "mechanicraft_revived:model/fluid_tank/basic_fluid_tank/tank_connector",
-		"particle": "mechanicraft_revived:model/fluid_tank/basic_fluid_tank/tank_walls"
+		"0": "mechanicraft_revived:block/model/fluid_tank/basic_fluid_tank/tank_connector",
+		"particle": "mechanicraft_revived:block/model/fluid_tank/basic_fluid_tank/tank_walls"
 	},
 	"elements": [
 		{

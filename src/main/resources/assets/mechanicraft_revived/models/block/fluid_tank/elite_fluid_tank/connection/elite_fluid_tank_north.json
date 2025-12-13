@@ -1,12 +1,12 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_connector",
-		"2": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_walls",
-		"3": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_cap_1",
-		"4": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_cap_2",
-		"5": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_wall_interior",
-		"particle": "mechanicraft_revived:model/fluid_tank/elite_fluid_tank/tank_walls"
+		"0": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_connector",
+		"2": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_walls",
+		"3": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_cap_1",
+		"4": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_cap_2",
+		"5": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_wall_interior",
+		"particle": "mechanicraft_revived:block/model/fluid_tank/elite_fluid_tank/tank_walls"
 	},
 	"elements": [
 		{

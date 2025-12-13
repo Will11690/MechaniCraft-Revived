@@ -3,9 +3,9 @@
 	"parent": "block/cube_all",
 	"texture_size": [32, 32],
 	"textures": {
-		"2": "mechanicraft_revived:model/energy_pipe/ultimate_energy_pipe_extension",
-		"3": "mechanicraft_revived:model/energy_pipe/ultimate_energy_pipe_core",
-		"particle": "mechanicraft_revived:model/energy_pipe/ultimate_energy_pipe_core"
+		"2": "mechanicraft_revived:block/model/energy_pipe/ultimate_energy_pipe_extension",
+		"3": "mechanicraft_revived:block/model/energy_pipe/ultimate_energy_pipe_core",
+		"particle": "mechanicraft_revived:block/model/energy_pipe/ultimate_energy_pipe_core"
 	},
 	"elements": [
 		{

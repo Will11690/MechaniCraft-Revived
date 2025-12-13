@@ -1,8 +1,17 @@
 package com.github.will11690.mechanicraft_revived;
 
-import com.github.will11690.mechanicraft_revived.blocks.basic.solidfuelgen.BasicSolidFuelGeneratorScreen;
-import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserBE;
-import com.github.will11690.mechanicraft_revived.blocks.primitive.infuser.PrimitiveInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.generators.basic.solidfuelgen.BasicSolidFuelGeneratorScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.advanced.infuser.AdvancedInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.basic.infuser.BasicInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.elite.infuser.EliteInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.enhanced.infuser.EnhancedInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeConfigScreen;
+import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeFilterScreen;
+import com.github.will11690.mechanicraft_revived.blocks.transport.base.network.PipeEndpointFinders;
+import com.github.will11690.mechanicraft_revived.blocks.machines.primitive.infuser.PrimitiveInfuserScreen;
+import com.github.will11690.mechanicraft_revived.network.MechaniCraftNetwork;
 import com.github.will11690.mechanicraft_revived.registry.*;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
@@ -25,6 +34,8 @@ public class MechaniCraftMain {
 
     //TODO List
 
+    //Make sure blocked drop inventory when destroyed
+    //Upgrade kits for machine tiers(if going from primitive to basic make coal drop)
     /*Reworking Tiers to get rid of numbers in names.
     Coal powered machines are now primitive
     1st tier will be Basic
@@ -80,6 +91,9 @@ public class MechaniCraftMain {
         //Register Recipes
         MechaniCraftRecipes.register(modEventBus);
 
+        //Regiser Network finders
+        PipeEndpointFinders.registerAll();
+
         //Register commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -88,6 +102,8 @@ public class MechaniCraftMain {
 
         //Register our ForgeConfigSpec so Forge can create and load config file
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        MechaniCraftNetwork.register();
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -116,7 +132,17 @@ public class MechaniCraftMain {
 
             //Register screens on the client
             MenuScreens.register(MechaniCraftContainers.PrimitiveInfuserCont.get(), PrimitiveInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.BasicInfuserCont.get(), BasicInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.EnhancedInfuserCont.get(), EnhancedInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.AdvancedInfuserCont.get(), AdvancedInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.EliteInfuserCont.get(), EliteInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.SuperiorInfuserCont.get(), SuperiorInfuserScreen::new);
+            MenuScreens.register(MechaniCraftContainers.UltimateInfuserCont.get(), UltimateInfuserScreen::new);
             MenuScreens.register(MechaniCraftContainers.BasicSolidFuelGeneratorContainer.get(), BasicSolidFuelGeneratorScreen::new);
+
+            //PIPES
+            MenuScreens.register(MechaniCraftContainers.PipeConfigCont.get(), PipeConfigScreen::new);
+            MenuScreens.register(MechaniCraftContainers.PipeFilterCont.get(), PipeFilterScreen::new);
         }
     }
 }

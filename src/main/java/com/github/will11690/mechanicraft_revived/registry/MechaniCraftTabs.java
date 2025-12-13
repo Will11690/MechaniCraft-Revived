@@ -204,15 +204,51 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.UltimateGearBox.get());
 
                 output.accept(MechaniCraftBlocks.PrimitiveInfuser.get());
+                output.accept(MechaniCraftBlocks.BasicInfuser.get());
+                output.accept(MechaniCraftBlocks.EnhancedInfuser.get());
+                output.accept(MechaniCraftBlocks.AdvancedInfuser.get());
+                output.accept(MechaniCraftBlocks.EliteInfuser.get());
+                output.accept(MechaniCraftBlocks.SuperiorInfuser.get());
+                output.accept(MechaniCraftBlocks.UltimateInfuser.get());
 
                 output.accept(MechaniCraftBlocks.BasicSolidFuelGenerator.get());
-                output.accept(MechaniCraftBlocks.BasicEnergyPipe.get());
+
                 output.accept(MechaniCraftBlocks.MiningWell.get());
             }).build()
     );
 
-    public static final RegistryObject<CreativeModeTab> ArmorTab = CREATIVEMODETABS.register("armor_tab", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> TransportTab = CREATIVEMODETABS.register("transport_tab", () -> CreativeModeTab.builder()
             .withTabsAfter(MechaniCraftTabs.MachinesTab.getKey())
+            .icon(() -> new ItemStack(MechaniCraftBlocks.BasicEnergyPipe.get()))
+            .title(Component.translatable("creativemodetab.mechanicraft_revived.machines_tab"))
+            .displayItems((itemDisplayParameters, output) -> {
+
+                output.accept(MechaniCraftBlocks.BasicEnergyPipe.get());
+                output.accept(MechaniCraftBlocks.EnhancedEnergyPipe.get());
+                output.accept(MechaniCraftBlocks.AdvancedEnergyPipe.get());
+                output.accept(MechaniCraftBlocks.EliteEnergyPipe.get());
+                output.accept(MechaniCraftBlocks.SuperiorEnergyPipe.get());
+                output.accept(MechaniCraftBlocks.UltimateEnergyPipe.get());
+
+                output.accept(MechaniCraftBlocks.BasicItemPipe.get());
+                //output.accept(MechaniCraftBlocks.EnhancedItemPipe.get());
+                //output.accept(MechaniCraftBlocks.AdvancedItemPipe.get());
+                //output.accept(MechaniCraftBlocks.EliteItemPipe.get());
+                //output.accept(MechaniCraftBlocks.SuperiorItemPipe.get());
+                //output.accept(MechaniCraftBlocks.UltimateItemPipe.get());
+
+                output.accept(MechaniCraftBlocks.BasicFluidPipe.get());
+                //output.accept(MechaniCraftBlocks.EnhancedFluidPipe.get());
+                //output.accept(MechaniCraftBlocks.AdvancedFluidPipe.get());
+                //output.accept(MechaniCraftBlocks.EliteFluidPipe.get());
+                //output.accept(MechaniCraftBlocks.SuperiorFluidPipe.get());
+                //output.accept(MechaniCraftBlocks.UltimateFluidPipe.get());
+
+            }).build()
+    );
+
+    public static final RegistryObject<CreativeModeTab> ArmorTab = CREATIVEMODETABS.register("armor_tab", () -> CreativeModeTab.builder()
+            .withTabsAfter(MechaniCraftTabs.TransportTab.getKey())
             .icon(() -> new ItemStack(MechaniCraftItems.EndoniumCrystalChestplate.get()))
             .title(Component.translatable("creativemodetab.mechanicraft_revived.armor_tab"))
             .displayItems((itemDisplayParameters, output) -> {

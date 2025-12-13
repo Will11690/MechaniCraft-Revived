@@ -1,13 +1,13 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"1": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_cap_1_output",
-		"2": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_walls",
-		"3": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_cap_1",
-		"4": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_cap_2",
-		"5": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_wall_interior",
-		"6": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_cap_2_output",
-		"particle": "mechanicraft_revived:model/fluid_tank/superior_fluid_tank/tank_walls"
+		"1": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_cap_1_output",
+		"2": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_walls",
+		"3": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_cap_1",
+		"4": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_cap_2",
+		"5": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_wall_interior",
+		"6": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_cap_2_output",
+		"particle": "mechanicraft_revived:block/model/fluid_tank/superior_fluid_tank/tank_walls"
 	},
 	"elements": [
 		{

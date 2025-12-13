@@ -10,11 +10,11 @@ import net.minecraftforge.items.ItemStackHandler;
  *
  * CONSUMER:
  *   Speed:      time  *= 0.9  each, energy *= 1.05 each
- *   Efficiency: time  *= 1.05 each, energy *= 0.9  each
+ *   Efficiency: time  *= 1.05 each, energy *= 0.95 each
  *
  * PRODUCER:
  *   Speed:      burn  *= 0.9  each, totalFE *= 0.95 each
- *   Efficiency: burn  *= 1.05 each, totalFE *= 1.10 each
+ *   Efficiency: burn  *= 1.05 each, totalFE *= 1.05 each
  *
  * No cap on upgrade counts; only constraint is min 1 tick for time/burn.
  */
@@ -61,15 +61,15 @@ public class UpgradeHandlerMath {
     }
 
     // ---------------------------------------------------------------------
-    // CONSUMER: apply to processing time + energy cost
+    // CONSUMER: apply to processing time + FE/t cost
     // ---------------------------------------------------------------------
 
     /**
      * Apply speed/efficiency to a consumer machine.
      *
      * @param baseTime    base processing time in ticks
-     * @param baseEnergy  base energy cost per operation (FE)
-     * @return ConsumerResult with upgraded time and energy cost
+     * @param baseEnergy  base FE/t cost
+     * @return ConsumerResult with upgraded time and FE/t
      */
     public ConsumerResult applyToConsumer(int baseTime, int baseEnergy) {
         if (baseTime <= 0 || baseEnergy <= 0) {
@@ -82,20 +82,20 @@ public class UpgradeHandlerMath {
         }
 
         // Speed:      time *= 0.9 each, energy *= 1.05 each
-        // Efficiency: time *= 1.05 each, energy *= 0.9 each
+        // Efficiency: time *= 1.05 each, energy *= 0.95 each
         double timeMultiplier =
                 Math.pow(0.9, totalSpeed) *
                         Math.pow(1.05, totalEfficiency);
 
         double energyMultiplier =
                 Math.pow(1.05, totalSpeed) *
-                        Math.pow(0.9, totalEfficiency);
+                        Math.pow(0.95, totalEfficiency);
 
         int newTime = (int) Math.round(baseTime * timeMultiplier);
         int newEnergy = (int) Math.round(baseEnergy * energyMultiplier);
 
         if (newTime < 1) newTime = 1;      // min 1 tick
-        if (newEnergy < 1) newEnergy = 1;  // avoid zero-cost ops
+        if (newEnergy < 1) newEnergy = 1;  // min 1 FE/t
 
         return new ConsumerResult(newTime, newEnergy);
     }
@@ -122,14 +122,14 @@ public class UpgradeHandlerMath {
         }
 
         // Speed:      burn   *= 0.9  each, totalFE *= 0.95 each
-        // Efficiency: burn   *= 1.05 each, totalFE *= 1.10 each
+        // Efficiency: burn   *= 1.05 each, totalFE *= 1.05 each
         double burnMultiplier =
                 Math.pow(0.9, totalSpeed) *
                         Math.pow(1.05, totalEfficiency);
 
         double energyMultiplier =
                 Math.pow(0.95, totalSpeed) *
-                        Math.pow(1.10, totalEfficiency);
+                        Math.pow(1.05, totalEfficiency);
 
         int newBurn = (int) Math.round(baseBurnTime * burnMultiplier);
         int newTotalFE = (int) Math.round(baseTotalFE * energyMultiplier);

@@ -3,9 +3,9 @@
 	"parent": "block/cube_all",
 	"texture_size": [32, 32],
 	"textures": {
-		"1": "mechanicraft_revived:model/energy_pipe/superior_energy_pipe_connector",
-		"2": "mechanicraft_revived:model/energy_pipe/superior_energy_pipe_extension",
-		"particle": "mechanicraft_revived:model/energy_pipe/superior_energy_pipe_core"
+		"1": "mechanicraft_revived:block/model/energy_pipe/superior_energy_pipe_connector",
+		"2": "mechanicraft_revived:block/model/energy_pipe/superior_energy_pipe_extension",
+		"particle": "mechanicraft_revived:block/model/energy_pipe/superior_energy_pipe_core"
 	},
 	"elements": [
 		{

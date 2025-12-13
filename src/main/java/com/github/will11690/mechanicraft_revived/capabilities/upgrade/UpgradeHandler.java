@@ -9,21 +9,32 @@ import net.minecraftforge.items.ItemStackHandler;
  * Concrete implementation of IUpgradeHandler.
  *
  * - Holds the upgrade inventory (variable slot count).
- * - Delegates math to SpeedEfficiencyUpgradeHandler.
+ * - Delegates math to UpgradeHandlerMath.
  * - Handles NBT for the inventory.
+ *
+ * NOTE: New constructor allows passing an external inventory so machines
+ * can use one unified upgrade slot group for ALL upgrade types.
  */
 public class UpgradeHandler implements IUpgradeHandler, INBTSerializable<CompoundTag> {
 
     private static final String NBT_INVENTORY = "Upgrades";
 
-    private final UpgradeInventory upgrades;
+    private final ItemStackHandler upgrades;
     private final UpgradeHandlerMath math;
 
     /**
-     * @param slots number of upgrade slots this machine/generator supports.
+     * Default ctor: creates a new UpgradeInventory(slots).
      */
     public UpgradeHandler(int slots) {
         this.upgrades = new UpgradeInventory(slots);
+        this.math = new UpgradeHandlerMath(upgrades);
+    }
+
+    /**
+     * New ctor: use a provided inventory (ex: MachineUpgradeInventory).
+     */
+    public UpgradeHandler(ItemStackHandler externalInventory) {
+        this.upgrades = externalInventory;
         this.math = new UpgradeHandlerMath(upgrades);
     }
 

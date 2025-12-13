@@ -278,6 +278,17 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
 
             for (int slot = 0; slot < handler.getSlots() && remainingForSide > 0; slot++) {
 
+                ItemStack available = handler.extractItem(slot, remainingForSide, true);
+                if (available.isEmpty()) continue;
+                if (!filter.test(available)) continue;
+
+                ItemStack simRemaining =
+                        network.distributeItems(available, true, logicMode, handler, channel);
+
+                int toExtract = available.getCount() - simRemaining.getCount();
+                if (toExtract <= 0) continue;
+
+                ItemStack extracted = handler.extractItem(slot, toExtract, false);
                 ItemStack simulated = handler.extractItem(slot, remainingForSide, true);
                 if (simulated.isEmpty()) continue;
                 if (!filter.test(simulated)) continue;
@@ -299,6 +310,13 @@ public abstract class ItemPipeBlockEntity extends BasePipeBlockEntity implements
 
                 if (!leftoverReal.isEmpty()) {
 
+                    ItemStack remainder = handler.insertItem(slot, leftoverReal, false);
+
+                    if (!remainder.isEmpty()) {
+                        for (int backSlot = 0; backSlot < handler.getSlots() && !remainder.isEmpty(); backSlot++) {
+                            remainder = handler.insertItem(backSlot, remainder, false);
+                        }
+                    }
                     handler.insertItem(slot, leftoverReal, false);
                 }
             }

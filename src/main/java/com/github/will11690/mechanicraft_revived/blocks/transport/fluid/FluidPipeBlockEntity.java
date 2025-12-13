@@ -258,6 +258,33 @@ public abstract class FluidPipeBlockEntity extends BasePipeBlockEntity implement
 
             for (int tank = 0; tank < handler.getTanks() && remainingForSide > 0; tank++) {
 
+                FluidStack available = handler.drain(remainingForSide, IFluidHandler.FluidAction.SIMULATE);
+                if (available.isEmpty()) continue;
+                if (!filter.test(available)) continue;
+
+                int acceptedSim =
+                        network.distributeFluid(available, true, cfg.logicMode, handler, channel);
+
+                int toExtract = Math.min(Math.min(acceptedSim, available.getAmount()), remainingForSide);
+                if (toExtract <= 0) continue;
+
+                FluidStack extracted = handler.drain(toExtract, IFluidHandler.FluidAction.EXECUTE);
+                if (extracted.isEmpty()) continue;
+
+                int acceptedReal =
+                        network.distributeFluid(extracted, false, cfg.logicMode, handler, channel);
+
+                remainingForSide -= acceptedReal;
+
+                int leftover = extracted.getAmount() - acceptedReal;
+                if (leftover > 0) {
+                    FluidStack toReturn = new FluidStack(extracted, leftover);
+                    int returned = handler.fill(toReturn, IFluidHandler.FluidAction.EXECUTE);
+
+                    int stillLeft = leftover - returned;
+                    if (stillLeft > 0) {
+                        network.distributeFluid(new FluidStack(extracted, stillLeft), false, cfg.logicMode, handler, channel);
+                    }
                 FluidStack simulated = handler.drain(remainingForSide, IFluidHandler.FluidAction.SIMULATE);
                 if (simulated.isEmpty()) continue;
                 if (!filter.test(simulated)) continue;

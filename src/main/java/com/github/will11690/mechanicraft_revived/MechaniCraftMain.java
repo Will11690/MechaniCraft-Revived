@@ -7,6 +7,8 @@ import com.github.will11690.mechanicraft_revived.blocks.machines.elite.infuser.E
 import com.github.will11690.mechanicraft_revived.blocks.machines.enhanced.infuser.EnhancedInfuserScreen;
 import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuserScreen;
 import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuserScreen;
+import com.github.will11690.mechanicraft_revived.blocks.storages.base.energycube.gui.EnergyCubeContainer;
+import com.github.will11690.mechanicraft_revived.blocks.storages.base.energycube.gui.EnergyCubeScreen;
 import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeConfigScreen;
 import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeFilterScreen;
 import com.github.will11690.mechanicraft_revived.blocks.transport.base.network.PipeEndpointFinders;
@@ -131,6 +133,8 @@ public class MechaniCraftMain {
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
 
             //Register screens on the client
+
+            //MACHINES
             MenuScreens.register(MechaniCraftContainers.PrimitiveInfuserCont.get(), PrimitiveInfuserScreen::new);
             MenuScreens.register(MechaniCraftContainers.BasicInfuserCont.get(), BasicInfuserScreen::new);
             MenuScreens.register(MechaniCraftContainers.EnhancedInfuserCont.get(), EnhancedInfuserScreen::new);
@@ -143,6 +147,9 @@ public class MechaniCraftMain {
             //PIPES
             MenuScreens.register(MechaniCraftContainers.PipeConfigCont.get(), PipeConfigScreen::new);
             MenuScreens.register(MechaniCraftContainers.PipeFilterCont.get(), PipeFilterScreen::new);
+
+            //STORAGES
+            MenuScreens.register(MechaniCraftContainers.EnergyCubeCont.get(), EnergyCubeScreen::new);
         }
     }
 }

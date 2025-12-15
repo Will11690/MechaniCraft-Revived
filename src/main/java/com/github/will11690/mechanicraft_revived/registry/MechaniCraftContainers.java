@@ -10,6 +10,7 @@ import com.github.will11690.mechanicraft_revived.blocks.machines.misc.miningwell
 import com.github.will11690.mechanicraft_revived.blocks.machines.primitive.infuser.PrimitiveInfuserContainer;
 import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuserContainer;
 import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuserContainer;
+import com.github.will11690.mechanicraft_revived.blocks.storages.base.energycube.gui.EnergyCubeContainer;
 import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeConfigContainer;
 import com.github.will11690.mechanicraft_revived.blocks.transport.base.gui.PipeFilterContainer;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -25,6 +26,11 @@ public class MechaniCraftContainers {
 
     public static final DeferredRegister<MenuType<?>> CONTAINERS = DeferredRegister.create(ForgeRegistries.MENU_TYPES, MechaniCraftMain.MODID);
 
+    //STORAGES
+    public static final RegistryObject<MenuType<EnergyCubeContainer>> EnergyCubeCont =
+            registerContainer(EnergyCubeContainer::new, "energy_cube_container");
+
+    //MACHINES
     public static final RegistryObject<MenuType<PrimitiveInfuserContainer>> PrimitiveInfuserCont =
             registerContainer(PrimitiveInfuserContainer::new, "primitive_metallic_infuser_container");
 

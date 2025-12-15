@@ -106,20 +106,20 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftItems.TinPureChunks.get());
 
                 output.accept(MechaniCraftItems.AuFeGear.get());
-                //output.accept(MechaniCraftItems.BronzeGear.get());
-                //output.accept(MechaniCraftItems.CopperGear.get());
-                //output.accept(MechaniCraftItems.DiamondGear.get());
+                output.accept(MechaniCraftItems.BronzeGear.get());
+                output.accept(MechaniCraftItems.CopperGear.get());
+                output.accept(MechaniCraftItems.DiamondGear.get());
                 output.accept(MechaniCraftItems.DiamoniumGear.get());
-                //output.accept(MechaniCraftItems.EmeraldGear.get());
+                output.accept(MechaniCraftItems.EmeraldGear.get());
                 output.accept(MechaniCraftItems.EmeroniumGear.get());
                 output.accept(MechaniCraftItems.EndoniumGear.get());
                 output.accept(MechaniCraftItems.IronGear.get());
-                //output.accept(MechaniCraftItems.LeadGear.get());
+                output.accept(MechaniCraftItems.LeadGear.get());
                 output.accept(MechaniCraftItems.ObsidiumGear.get());
                 output.accept(MechaniCraftItems.RuboniumGear.get());
                 output.accept(MechaniCraftItems.SaphoniumGear.get());
                 output.accept(MechaniCraftItems.StoneGear.get());
-                //output.accept(MechaniCraftItems.TinGear.get());
+                output.accept(MechaniCraftItems.TinGear.get());
                 output.accept(MechaniCraftItems.WoodenGear.get());
 
                 output.accept(MechaniCraftItems.StringMesh.get());
@@ -229,6 +229,8 @@ public class MechaniCraftTabs {
                 output.accept(MechaniCraftBlocks.EliteEnergyPipe.get());
                 output.accept(MechaniCraftBlocks.SuperiorEnergyPipe.get());
                 output.accept(MechaniCraftBlocks.UltimateEnergyPipe.get());
+
+                output.accept(MechaniCraftBlocks.BasicEnergyCube.get());
 
                 output.accept(MechaniCraftBlocks.BasicItemPipe.get());
                 output.accept(MechaniCraftBlocks.EnhancedItemPipe.get());

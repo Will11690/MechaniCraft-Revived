@@ -1,7 +1,9 @@
 package com.github.will11690.mechanicraft_revived.network;
 
 import com.github.will11690.mechanicraft_revived.MechaniCraftMain;
+import com.github.will11690.mechanicraft_revived.network.packet.client.EnergyCubeSyncPacket;
 import com.github.will11690.mechanicraft_revived.network.packet.client.InfuserSyncPacket;
+import com.github.will11690.mechanicraft_revived.network.packet.server.EnergyCubeConfigPacket;
 import com.github.will11690.mechanicraft_revived.network.packet.server.OpenPipeConfigPacket;
 import com.github.will11690.mechanicraft_revived.network.packet.server.OpenPipeFilterPacket;
 import com.github.will11690.mechanicraft_revived.network.packet.server.UpdatePipeSideConfigPacket;
@@ -43,11 +45,21 @@ public class MechaniCraftNetwork {
                 UpdatePipeSideConfigPacket::decode,
                 UpdatePipeSideConfigPacket::handle);
 
+        CHANNEL.registerMessage(nextId(), EnergyCubeConfigPacket.class,
+                EnergyCubeConfigPacket::encode,
+                EnergyCubeConfigPacket::decode,
+                EnergyCubeConfigPacket::handle);
+
         // Client-bound GUI sync for all infuser tiers that implement IInfuserSync
         CHANNEL.registerMessage(nextId(), InfuserSyncPacket.class,
                 InfuserSyncPacket::encode,
                 InfuserSyncPacket::decode,
                 InfuserSyncPacket::handle);
+
+        CHANNEL.registerMessage(nextId(), EnergyCubeSyncPacket.class,
+                EnergyCubeSyncPacket::encode,
+                EnergyCubeSyncPacket::decode,
+                EnergyCubeSyncPacket::handle);
     }
 
     public static void sendToServer(Object msg) {

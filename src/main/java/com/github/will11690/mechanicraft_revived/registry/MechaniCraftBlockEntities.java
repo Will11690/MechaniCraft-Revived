@@ -8,6 +8,7 @@ import com.github.will11690.mechanicraft_revived.blocks.machines.elite.infuser.E
 import com.github.will11690.mechanicraft_revived.blocks.machines.enhanced.infuser.EnhancedInfuserBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuserBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuserBlockEntity;
+import com.github.will11690.mechanicraft_revived.blocks.storages.basic.energycube.BasicEnergyCubeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.advanced.AdvancedEnergyPipeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.basic.BasicEnergyPipeBlockEntity;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.elite.EliteEnergyPipeBlockEntity;
@@ -43,6 +44,12 @@ public class MechaniCraftBlockEntities {
     public static final RegistryObject<BlockEntityType<PrimitiveInfuserBlockEntity>> PrimitiveInfuserBE = BLOCK_ENTITIES.register
             ("primitive_metallic_infuser_be", () -> BlockEntityType.Builder.of(PrimitiveInfuserBlockEntity::new, MechaniCraftBlocks.PrimitiveInfuser.get()).build(null));
 
+
+    //STORAGES
+    public static final RegistryObject<BlockEntityType<BasicEnergyCubeBlockEntity>> BasicEnergyCubeBE = BLOCK_ENTITIES.register
+            ("basic_energy_cube", () -> BlockEntityType.Builder.of(BasicEnergyCubeBlockEntity::new, MechaniCraftBlocks.BasicEnergyCube.get()).build(null));
+
+    //MACHINES
     public static final RegistryObject<BlockEntityType<BasicInfuserBlockEntity>> BasicInfuserBE = BLOCK_ENTITIES.register
             ("basic_metallic_infuser_be", () -> BlockEntityType.Builder.of(BasicInfuserBlockEntity::new, MechaniCraftBlocks.BasicInfuser.get()).build(null));
 

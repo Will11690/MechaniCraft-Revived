@@ -235,6 +235,23 @@ public abstract class BaseMachineBlockEntity extends BlockEntity implements Menu
     }
 
     /* --------------------------------------------------------------------- */
+    /* Initial sync on load                                                  */
+    /* --------------------------------------------------------------------- */
+
+    @Override
+    public void onLoad() {
+        super.onLoad();
+
+        // Ensure the client gets up-to-date NBT (including energy) as soon as
+        // the BE loads, so the GUI shows correct FE on first open after a world load.
+        if (level != null && !level.isClientSide) {
+            setChanged();
+            BlockState state = level.getBlockState(worldPosition);
+            level.sendBlockUpdated(worldPosition, state, state, 3);
+        }
+    }
+
+    /* --------------------------------------------------------------------- */
     /* Tick                                                                  */
     /* --------------------------------------------------------------------- */
 

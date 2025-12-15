@@ -9,6 +9,7 @@ import com.github.will11690.mechanicraft_revived.blocks.machines.elite.infuser.E
 import com.github.will11690.mechanicraft_revived.blocks.machines.enhanced.infuser.EnhancedInfuser;
 import com.github.will11690.mechanicraft_revived.blocks.machines.superior.infuser.SuperiorInfuser;
 import com.github.will11690.mechanicraft_revived.blocks.machines.ultimate.infuser.UltimateInfuser;
+import com.github.will11690.mechanicraft_revived.blocks.storages.basic.energycube.BasicEnergyCube;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.advanced.AdvancedEnergyPipe;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.basic.BasicEnergyPipe;
 import com.github.will11690.mechanicraft_revived.blocks.transport.energy.elite.EliteEnergyPipe;
@@ -90,10 +91,10 @@ public class MechaniCraftBlocks {
     public static final RegistryObject<Block> SuperiorGearBox = registerBlock("superior_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> UltimateGearBox = registerBlock("ultimate_gear_box", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
-    /* TODO List (Blocks with custom block bases and/or tiles)
-     *
-     *  public static final RegistryObject<Block> BasicEnergyCube = registerBlock("basic_energy_cube", () -> new BasicEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> EnhancedEnergyCube = registerBlock("enhanced_energy_cube", () -> new EnhancedEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+    /* TODO List (Blocks with custom block bases and/or tiles)  */
+
+     public static final RegistryObject<Block> BasicEnergyCube = registerBlock("basic_energy_cube", () -> new BasicEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+     /*  public static final RegistryObject<Block> EnhancedEnergyCube = registerBlock("enhanced_energy_cube", () -> new EnhancedEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> AdvancedEnergyCube = registerBlock("advanced_energy_cube", () -> new AdvancedEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> EliteEnergyCube = registerBlock("elite_energy_cube", () -> new EliteEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
      *  public static final RegistryObject<Block> SuperiorEnergyCube = registerBlock("superior_energy_cube", () -> new SuperiorEnergyCube(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -130,7 +131,7 @@ public class MechaniCraftBlocks {
      public static final RegistryObject<Block> SuperiorEnergyPipe = registerBlock("superior_energy_pipe", () -> new SuperiorEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
      public static final RegistryObject<Block> UltimateEnergyPipe = registerBlock("ultimate_energy_pipe", () -> new UltimateEnergyPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
 
-     public static final RegistryObject<Block> BasicItemPipe = registerBlock("basic_item_pipe", () -> new BasicItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
+    public static final RegistryObject<Block> BasicItemPipe = registerBlock("basic_item_pipe", () -> new BasicItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
     public static final RegistryObject<Block> EnhancedItemPipe = registerBlock("enhanced_item_pipe", () -> new EnhancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
     public static final RegistryObject<Block> AdvancedItemPipe = registerBlock("advanced_item_pipe", () -> new AdvancedItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
     public static final RegistryObject<Block> EliteItemPipe = registerBlock("elite_item_pipe", () -> new EliteItemPipe(Block.Properties.of().strength(1.0F).noOcclusion()));
@@ -154,69 +155,65 @@ public class MechaniCraftBlocks {
     public static final RegistryObject<Block> PrimitiveInfuser = registerBlock("primitive_metallic_infuser", () -> new PrimitiveInfuser(BlockBehaviour.Properties.copy(
             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
 
-     /*
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_coal_generator", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_furnace", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     */
     public static final RegistryObject<Block> BasicSolidFuelGenerator = registerBlock("basic_solid_fuel_generator", () -> new BasicSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> BasicInfuser = registerBlock("basic_metallic_infuser", () -> new BasicInfuser(BlockBehaviour.Properties.copy(
             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> BasicSmelter = registerBlock("basic_smelter", () -> new BasicSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> BasicOreWasher = registerBlock("basic_ore_washer", () -> new BasicOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> BasicSlurryProcessor = registerBlock("basic_slurry_processor", () -> new BasicSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> BasicCrusher = registerBlock("basic_crusher", () -> new BasicCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> BasicPoweredSieve = registerBlock("basic_powered_sieve", () -> new BasicPoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> BasicPress = registerBlock("basic_press", () -> new BasicPress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));*/
 
+    //public static final RegistryObject<Block> EnhancedSolidFuelGenerator = registerBlock("enhanced_solid_fuel_generator", () -> new EnhancedSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> EnhancedInfuser = registerBlock("enhanced_metallic_infuser", () -> new EnhancedInfuser(BlockBehaviour.Properties.copy(
-            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> EnhancedSmelter = registerBlock("enhanced_smelter", () -> new EnhancedSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EnhancedOreWasher = registerBlock("enhanced_ore_washer", () -> new EnhancedOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EnhancedSlurryProcessor = registerBlock("enhanced_slurry_processor", () -> new EnhancedSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EnhancedCrusher = registerBlock("enhanced_crusher", () -> new EnhancedCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EnhancedPoweredSieve = registerBlock("enhanced_powered_sieve", () -> new EnhancedPoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EnhancedPress = registerBlock("enhanced_press", () -> new EnhancedPress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));*/
 
+    //public static final RegistryObject<Block> AdvancedSolidFuelGenerator = registerBlock("advanced_solid_fuel_generator", () -> new AdvancedSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> AdvancedInfuser = registerBlock("advanced_metallic_infuser", () -> new AdvancedInfuser(BlockBehaviour.Properties.copy(
-            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> AdvancedSmelter = registerBlock("advanced_smelter", () -> new AdvancedSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> AdvancedOreWasher = registerBlock("advanced_ore_washer", () -> new AdvancedOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> AdvancedSlurryProcessor = registerBlock("advanced_slurry_processor", () -> new AdvancedSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> AdvancedCrusher = registerBlock("advanced_crusher", () -> new AdvancedCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> AdvancedPoweredSieve = registerBlock("advanced_powered_sieve", () -> new AdvancedPoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> AdvancedPress = registerBlock("advanced_press", () -> new AdvancedPress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));*/
 
+    //public static final RegistryObject<Block> EliteSolidFuelGenerator = registerBlock("elite_solid_fuel_generator", () -> new EliteSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> EliteInfuser = registerBlock("elite_metallic_infuser", () -> new EliteInfuser(BlockBehaviour.Properties.copy(
-            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> EliteSmelter = registerBlock("elite_smelter", () -> new EliteSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EliteOreWasher = registerBlock("elite_ore_washer", () -> new EliteOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EliteSlurryProcessor = registerBlock("elite_slurry_processor", () -> new EliteSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> EliteCrusher = registerBlock("elite_crusher", () -> new EliteCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> ElitePoweredSieve = registerBlock("elite_powered_sieve", () -> new ElitePoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> ElitePress = registerBlock("elite_press", () -> new ElitePress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));*/
 
+    //public static final RegistryObject<Block> SuperiorSolidFuelGenerator = registerBlock("superior_solid_fuel_generator", () -> new SuperiorSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> SuperiorInfuser = registerBlock("superior_metallic_infuser", () -> new SuperiorInfuser(BlockBehaviour.Properties.copy(
-            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> SuperiorSmelter = registerBlock("superior_smelter", () -> new SuperiorSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> SuperiorOreWasher = registerBlock("superior_ore_washer", () -> new SuperiorOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> SuperiorSlurryProcessor = registerBlock("superior_slurry_processor", () -> new SuperiorSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> SuperiorCrusher = registerBlock("superior_crusher", () -> new SuperiorCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> SuperiorPoweredSieve = registerBlock("superior_powered_sieve", () -> new SuperiorPoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> SuperiorPress = registerBlock("superior_press", () -> new SuperiorPress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));*/
 
+    //public static final RegistryObject<Block> UltimateSolidFuelGenerator = registerBlock("ultimate_solid_fuel_generator", () -> new UltimateSolidFuelGenerator(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
     public static final RegistryObject<Block> UltimateInfuser = registerBlock("ultimate_metallic_infuser", () -> new UltimateInfuser(BlockBehaviour.Properties.copy(
-            Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
-     /*  public static final RegistryObject<Block> TestBlock = registerBlock("basic_smelter", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("basic_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("enhanced_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("advanced_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("elite_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("superior_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_ore_washer", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_slurry_processor", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_crusher", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_metallic_infuser", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_powered_sieve", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
-     *  public static final RegistryObject<Block> TestBlock = registerBlock("ultimate_press", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+             Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     /*  public static final RegistryObject<Block> UltimateSmelter = registerBlock("ultimate_smelter", () -> new UltimateSmelter(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> UltimateOreWasher = registerBlock("ultimate_ore_washer", () -> new UltimateOreWasher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> UltimateSlurryProcessor = registerBlock("ultimate_slurry_processor", () -> new UltimateSlurryProcessor(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> UltimateCrusher = registerBlock("ultimate_crusher", () -> new UltimateCrusher(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> UltimatePoweredSieve = registerBlock("ultimate_powered_sieve", () -> new UltimatePoweredSieve(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
+     *  public static final RegistryObject<Block> UltimatePress = registerBlock("ultimate_press", () -> new UltimatePress(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).lightLevel(state -> state.getValue(BaseMachine.LIT) ? 13 : 0)));
      */
 
     public static final RegistryObject<Block> MiningWell = registerBlock("mining_well", () -> new MiningWell(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
